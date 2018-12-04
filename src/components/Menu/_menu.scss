@@ -1,6 +1,6 @@
 .menu {
   width: 650px;
-  height: 630px;
+  height: 655px;
 }
 
 @mixin path($height, $width, $top, $left) {
@@ -17,6 +17,7 @@
   position: relative;
   top: $top;
   left: $left;
+  z-index: 3;
 }
 
 @mixin planet($top, $left) {
@@ -35,6 +36,23 @@
   top: $top;
   left: $left;
   transition: .5s ease;
+  z-index: 4;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: black;
+  position: relative;
+  top: 2px;
+  right: 101px;
+  z-index: 5;
+  width: 110px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 15px;
+  transform: rotate(-20deg);
+  background: rgba(0, 208, 255, 0.894);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 .favorites-path {
