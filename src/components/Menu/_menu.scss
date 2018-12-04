@@ -34,6 +34,7 @@
   position: absolute;
   top: $top;
   left: $left;
+  transition: .5s ease;
 }
 
 .favorites-path {
@@ -55,21 +56,45 @@
 .favorites-planet {
   @include planet(287px, 289px);
   animation: slideIn 150s linear infinite;
+
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem #00D1FF);
+    transition: .5s ease;
+    cursor: pointer;
+  }
 }
 
-.vehicle-planet {
+.vehicles-planet {
   @include planet(226px, 228px);
   animation: slideIn2 140s linear infinite;
+
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem #00D1FF);
+    transition: .5s ease;
+    cursor: pointer;
+  }
 }
 
-.planet-planet {
+.planets-planet {
   @include planet(150px, 150px);
   animation: slideIn3 130s linear infinite;
+
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem #00D1FF);
+    transition: .5s ease;
+    cursor: pointer;
+  }
 }
 
 .people-planet {
   @include planet(77px, 78px);
   animation: slideIn4 120s linear infinite;
+
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem #00D1FF);
+    transition: .5s ease;
+    cursor: pointer;
+  }
 }
 
 @keyframes slideIn {

@@ -18,6 +18,13 @@ class App extends Component {
   }
 
   render() {
+    const renderHelper = {
+      // landing: <Landing />,
+      menu: <Menu changePage={this.changePage}/>,
+      // people: <Main category='people'/>,
+      // planets: <Main category='planets'/>,
+      // vehicles: <Main category='vehicles'/>,
+    }
     const { currentPage } = this.state
     return (
       <div className="App">
@@ -28,15 +35,6 @@ class App extends Component {
   }
 }
 
-/*************
- PRIVATE
-*************/
-const renderHelper = {
-  // landing: <Landing />,
-  menu: <Menu />,
-  // people: <Main category='people'/>,
-  // planets: <Main category='planets'/>,
-  // vehicles: <Main category='vehicles'/>,
-}
+
 
 export default App;

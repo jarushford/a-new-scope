@@ -17,8 +17,8 @@ export default class StarHousingComponent extends Component {
   tick = () => {
     let newX
     this.state.direction ? 
-      newX = this.state.deltaX + 0.025
-        : newX = this.state.deltaX - 0.025
+      newX = this.state.deltaX + 0.04
+        : newX = this.state.deltaX - 0.04
     if (newX > 180 || newX < 0) {
       this.setState({
         deltaX: newX,
