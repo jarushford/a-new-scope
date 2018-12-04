@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Card from '../Card/Card'
+import { uid } from 'react-uid'
+
 
 export default class Main extends Component {
   constructor() {
@@ -14,7 +16,12 @@ export default class Main extends Component {
     const url = `https://swapi.co/api/${category.toLowerCase()}`
     const response = await fetch(url)
     const data = await response.json()
-    const categoryData = await this.getPeople(data.results)
+    const categoryHelper = {
+      People: await this.getPeople(data.results),
+      Planets: await this.getPlanets(data.results),
+      Vehicles: await this.getVehicles(data.results)
+    }
+    const categoryData = categoryHelper[category]
     this.setState({ categoryData })
   }
 
@@ -43,10 +50,6 @@ export default class Main extends Component {
   getVehicles = (data) => {
 
   }
-  
-  getFavorites = (data) => {
-
-  }
 
 
   render() {
@@ -57,7 +60,7 @@ export default class Main extends Component {
       render = <h1 className='loading'>Loading...</h1>
     } else {
       render = categoryData.map(current => {
-        return <Card cardData={current}/>
+        return <Card cardData={current} key={uid(current)}/>
       })
     }
     return (
