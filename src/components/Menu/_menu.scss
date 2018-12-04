@@ -1,0 +1,109 @@
+.menu {
+  width: 650px;
+  height: 630px;
+}
+
+@mixin path($height, $width, $top, $left) {
+  border: 5px solid rgba(0, 208, 255, 0.99);
+  border-radius: 50%;
+  box-shadow: 0 0 2px 1px #00D1FF,
+              0 0 15px 2px #00D1FF,
+              0 0 25px 1px #00D1FF,
+        inset 0 0 2px 1px #00D1FF,
+        inset 0 0 25px 1px #00D1FF,
+        inset 0 0 15px 2px #00D1FF;
+  height: $height;
+  width: $width;
+  position: relative;
+  top: $top;
+  left: $left;
+}
+
+@mixin planet($top, $left) {
+  border: 5px solid rgba(0, 208, 255, 0.99);
+  background: rgba(0, 208, 255, 0.99);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 1px #00D1FF,
+              0 0 15px 2px #00D1FF,
+              0 0 25px 1px #00D1FF,
+        inset 0 0 2px 1px #00D1FF,
+        inset 0 0 25px 1px #00D1FF,
+        inset 0 0 15px 2px #00D1FF;
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+.favorites-path {
+  @include path(620px, 620px, 0, 10px);
+}
+
+.vehicles-path {
+  @include path(500px, 500px, 67px, 43px);
+}
+
+.planets-path {
+  @include path(350px, 350px, 80px, 90px);
+}
+
+.people-path {
+  @include path(200px, 200px, 50px, 47px);
+}
+
+.favorites-planet {
+  @include planet(287px, 289px);
+  animation: slideIn 150s linear infinite;
+}
+
+.vehicle-planet {
+  @include planet(226px, 228px);
+  animation: slideIn2 140s linear infinite;
+}
+
+.planet-planet {
+  @include planet(150px, 150px);
+  animation: slideIn3 130s linear infinite;
+}
+
+.people-planet {
+  @include planet(77px, 78px);
+  animation: slideIn4 120s linear infinite;
+}
+
+@keyframes slideIn {
+    from { 
+      transform: rotate(0deg) translateX(312px) rotate(0deg);
+    }
+    to { 
+      transform: rotate(360deg) translateX(312px) rotate(-360deg); 
+    }
+}
+
+@keyframes slideIn2 {
+    from { 
+      transform: rotate(30deg) translateX(250px) rotate(-30deg);
+    }
+    to { 
+      transform: rotate(390deg) translateX(250px) rotate(-390deg); 
+    }
+}
+
+@keyframes slideIn3 {
+    from { 
+      transform: rotate(120deg) translateX(175px) rotate(-120deg);
+    }
+    to { 
+      transform: rotate(480deg) translateX(175px) rotate(-480deg); 
+    }
+}
+
+@keyframes slideIn4 {
+    from { 
+      transform: rotate(0deg) translateX(101px) rotate(0deg);
+    }
+    to { 
+      transform: rotate(360deg) translateX(101px) rotate(-360deg); 
+    }
+}

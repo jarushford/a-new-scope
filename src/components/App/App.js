@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import StarHousingComponent from '../Stars/StarHousingComponent'
 // import Landing from '../Landing/Landing'
-// import Menu from '../Menu/Menu'
+import Menu from '../Menu/Menu'
 // import Main from '../Main/Main'
 import './app.scss'
 
@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: 'landing'
+      currentPage: 'menu'
     }
   }
 
@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
       <StarHousingComponent />
-        {/* {renderHelper[currentPage]} */}
+        {renderHelper[currentPage]}
       </div>
     )
   }
@@ -31,12 +31,12 @@ class App extends Component {
 /*************
  PRIVATE
 *************/
-// const renderHelper = {
-//   landing: <Landing />,
-//   menu: <Menu />,
-//   people: <Main category='people'/>,
-//   planets: <Main category='planets'/>,
-//   vehicles: <Main category='vehicles'/>,
-// }
+const renderHelper = {
+  // landing: <Landing />,
+  menu: <Menu />,
+  // people: <Main category='people'/>,
+  // planets: <Main category='planets'/>,
+  // vehicles: <Main category='vehicles'/>,
+}
 
 export default App;

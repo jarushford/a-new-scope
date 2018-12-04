@@ -34,7 +34,9 @@ export default class StarHousingComponent extends Component {
 
   render() {
     return (
-      <Stars deltaX={this.state.deltaX}/>
+      <div className="star-housing">
+        <Stars deltaX={this.state.deltaX}/>
+      </div>
     )
   }
 }
