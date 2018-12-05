@@ -1,9 +1,162 @@
+@mixin title($width, $margin) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $margin;
+  padding: 5px 15px 5px 15px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: $width;
+  background: #207D9B;
+}
+
 .card {
-  background: white;
-  width: 240px;
+  background: #353535;
+  border-radius: 12px;
+  width: 300px;
+  height: 270px;
   margin: 0 auto;
+  transform: rotate3d(0, 0, 0, 0);
+  transition: 1.5s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+  }
 
   h1 {
+    font-family: 'Pathway Gothic One';
+    letter-spacing: 1px;
+    margin: 0;
     color: #FCDD2B;
   }
+
+  i {
+    color: #353535;
+    font-size: 1.5rem;
+    padding-left: 5px;
+    transition: .4s ease;
+
+    &:hover {
+      text-shadow: 0 0 8px #FCDD2B;
+      transition: .4s ease;
+      cursor: pointer;
+    }
+  }
 }
+
+.species {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.card-title {
+  @include title(75%, 22px auto 5px 0px);
+}
+
+.homeworld-title {
+  @include title(35%, 10px auto 5px 0px);
+}
+
+.stats-container {
+  margin: 5px auto 0px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-family: 'Pathway Gothic One';
+    margin: 5px;
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+h1.homeworld {
+  margin-left: 20px;
+}
+
+h1.population {
+  margin-left: 30px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.flipped {
+  animation: flipCard 1.5s ease;
+  animation-fill-mode: both;
+
+  .card-title {
+    animation: flipTitle 1.5s ease;
+    animation-fill-mode: both;
+  }
+
+  &::before {
+    animation: fadeIn 1.5s ease;
+    animation-fill-mode: both;
+  }
+}
+
+.unflipped {
+  animation: unflipCard 1.5s ease;
+  animation-fill-mode: both;
+
+  .card-title {
+    animation: unflipTitle 1.5s ease;
+    animation-fill-mode: both;
+  }
+
+  &::before {
+    animation: fadeOut 1.5s ease;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes flipCard {
+  0% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+@keyframes unflipCard {
+  0% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+

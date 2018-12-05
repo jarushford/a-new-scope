@@ -38,7 +38,7 @@ export default class Main extends Component {
         weight: person.mass,
         species: speciesData.name,
         homeworld: homeData.name,
-        population: homeData.population
+        population: this.convertPopulation(homeData.population)
       }
     })
     return Promise.all(unresolvedPromises)
@@ -50,6 +50,20 @@ export default class Main extends Component {
 
   getVehicles = (data) => {
 
+  }
+
+  convertPopulation = (population) => {
+    let returnPop = population
+    if (population > 1000) {
+      returnPop =  `${population / 1000}K`
+    }
+    if (population > 1000000) {
+      returnPop = `${population / 1000000} million`
+    }
+    if (population > 1000000000) {
+      returnPop = `${population / 1000000000} billion`
+    }
+    return returnPop  
   }
 
 

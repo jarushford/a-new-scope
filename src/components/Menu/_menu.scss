@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
+
 .menu {
   width: 650px;
   height: 655px;
@@ -41,11 +43,14 @@
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-family: 'Pathway Gothic One';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
   color: black;
   position: relative;
-  top: 2px;
-  right: 101px;
+  top: 1px;
+  right: 104px;
   z-index: 5;
   width: 110px;
   text-align: center;
@@ -114,6 +119,14 @@ h3 {
     transition: .5s ease;
     cursor: pointer;
   }
+}
+
+.starwars-logo2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 89px;
+  width: 200px;
 }
 
 @keyframes slideIn {

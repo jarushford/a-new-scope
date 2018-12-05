@@ -9,11 +9,11 @@ export default function Landing({ continueToSite, episode }) {
           <h2 className='landing-title'>{episode.title}</h2>
           <h2 className='landing-year'>{episode.year.substring(0, 4)}</h2>
         </div>
-        <div className='continue-to-site-btn' onClick={() => continueToSite('menu')}>
+        <div className='continue-to-site-btn'>
+          <h2 className='enter-btn' onClick={() => continueToSite('menu')}>ENTER</h2>
           <img src='./images/outerring.svg' alt='ring' className='outerring ring'></img>
           <img src='./images/outerring.svg' alt='ring' className='middlering ring'></img>
           <img src='./images/outerring.svg' alt='ring' className='innerring ring'></img>
-          <h2 class='enter-btn'>ENTER</h2>
         </div>
         <img className='starwars-logo' alt='Star Wars Logo' src='./images/starwars_logo.svg'></img>
       </header>
