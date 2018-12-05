@@ -5,13 +5,13 @@ export default class Card extends Component {
     super()
     this.state = {
       flipped: false,
-      unflipped: false
+      unflipped: false,
+      cardObj: null
     }
-    this.cardObj = {}
   }
 
   componentDidMount() {
-    this.cardObj = {
+    const cardObj = {
       name: this.props.cardData.name,
       type: this.props.cardData.type,
       main1Label: '',
@@ -25,22 +25,24 @@ export default class Card extends Component {
 
     switch(this.props.cardType) {
       case 'People':
-        this.cardObj.main1Label = 'Height'
-        this.cardObj.main2Label = 'Weight'
-        this.cardObj.secHeader = 'Homeworld'
+        cardObj.main1Label = 'Height'
+        cardObj.main2Label = 'Weight'
+        cardObj.secHeader = 'Homeworld'
         break;
       case 'Vehicles':
-        this.cardObj.main1Label = 'Model'
-        this.cardObj.main2Label = 'Class'
-        this.cardObj.secHeader = 'Passengers'
+        cardObj.main1Label = 'Model'
+        cardObj.main2Label = 'Class'
+        cardObj.secHeader = 'Passengers'
         break;
       case 'Planets':
-        this.cardObj.main1Label = 'Popuplation'
-        this.cardObj.main2Label = 'Climate'
-        this.cardObj.secHeader = 'Residents' 
+        cardObj.main1Label = 'Popuplation'
+        cardObj.main2Label = 'Climate'
+        cardObj.secHeader = 'Residents' 
         break;
       default: break;
     }
+
+    this.setState({ cardObj })
   }
 
 
@@ -59,37 +61,40 @@ export default class Card extends Component {
   }
 
   render() {
-    const { flipped, unflipped } = this.state 
-
-    return (
-      <div
-        className={`card ${flipped && 'flipped'} ${unflipped && 'unflipped'}`}
-        onClick={() => this.flipCard()}
-      >
-        <div className='card-title'>
-          <h1>{this.cardObj.name}</h1>
-          <i className="fas fa-star"></i>
-        </div>
-        <h1 className='species'>{this.cardObj.type}</h1>
-        <div className='stats-container'>
-          <div className='stat'>
-            <h1>{this.cardObj.main1Label}</h1>
-            <p>{this.cardObj.main1}cm</p>
+    const { flipped, unflipped, cardObj } = this.state 
+    if (cardObj === null) {
+      return (<div></div>)
+    } else {
+      return (
+        <div
+          className={`card ${flipped && 'flipped'} ${unflipped && 'unflipped'}`}
+          onClick={() => this.flipCard()}
+        >
+          <div className='card-title'>
+            <h1>{cardObj.name}</h1>
+            <i className="fas fa-star"></i>
           </div>
-          <div className='stat'>
-            <h1>{this.cardObj.main2Label}</h1>
-            <p>{this.cardObj.main2}kg</p>
+          <h1 className='species'>{cardObj.type}</h1>
+          <div className='stats-container'>
+            <div className='stat'>
+              <h1>{cardObj.main1Label}</h1>
+              <p>{cardObj.main1}cm</p>
+            </div>
+            <div className='stat'>
+              <h1>{cardObj.main2Label}</h1>
+              <p>{cardObj.main2}kg</p>
+            </div>
+          </div>
+          <div>
+            <div className='homeworld-title'>
+              <h1>{cardObj.secHeader}</h1>
+            </div>
+            <h1 className='homeworld'>{cardObj.secInfoMain}</h1>
+            <h1 className='population'>{cardObj.secInfoOther}</h1>
           </div>
         </div>
-        <div>
-          <div className='homeworld-title'>
-            <h1>{this.cardObj.secHeader}</h1>
-          </div>
-          <h1 className='homeworld'>{this.cardObj.secInfoMain}</h1>
-          <h1 className='population'>{this.cardObj.secInfoOther}</h1>
-        </div>
-      </div>
-    )
+      )
+    }
   }
 }
 

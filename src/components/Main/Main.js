@@ -47,7 +47,7 @@ export default class Main extends Component {
         main1: person.height,
         main2: person.mass,
         secInfoMain: homeData.name,
-        secInfoOther: homeData.population
+        secInfoOther: this.convertPopulation(homeData.population)
       }
     })
     return Promise.all(unresolvedPromises)
@@ -59,7 +59,7 @@ export default class Main extends Component {
       return {
         name: planet.name,
         type: planet.terrain,
-        main1: planet.population,
+        main1: this.convertPopulation(planet.population),
         main2: planet.climate,
         secInfoMain: residents,
         secInfoOther: ''
