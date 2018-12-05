@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Card from '../Card/Card'
 import { uid } from 'react-uid'
+import Loading from '../Loading/Loading'
 
 
 export default class Main extends Component {
@@ -57,7 +58,9 @@ export default class Main extends Component {
     const { categoryData } = this.state
     let render
     if (!categoryData.length) {
-      render = <h1 className='loading'>Loading...</h1>
+      render =  <div className="App">
+      <Loading />
+    </div>
     } else {
       render = categoryData.map(current => {
         return <Card cardData={current} key={uid(current)}/>

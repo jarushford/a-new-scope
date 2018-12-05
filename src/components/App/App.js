@@ -3,6 +3,7 @@ import StarHousingComponent from '../Stars/StarHousingComponent'
 import Landing from '../Landing/Landing'
 import Menu from '../Menu/Menu'
 import Main from '../Main/Main'
+import Loading from '../Loading/Loading'
 import './app.scss'
 
 class App extends Component {
@@ -57,7 +58,12 @@ class App extends Component {
     }
 
     if (!landingScroll) {
-      return <div>LOADING</div>
+      return (
+      <div className="App">
+        <StarHousingComponent />
+        <Loading />
+      </div>
+      )
     }
     return (
       <div className="App">
