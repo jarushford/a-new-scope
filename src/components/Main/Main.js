@@ -113,13 +113,14 @@ export default class Main extends Component {
       <Loading />
     </div>
     } else {
-      // render = categoryData.map(current => {
-      //   return <Card 
-      //     cardData={current} 
-      //     key={uid(current)}/>
-      render = (<div></div>)
-      
-    }
+      render = categoryData.map(current => {
+        return ( <Card 
+          cardData={current} 
+          key={uid(current)}
+          cardType={category}/>
+      )
+    })
+  }
     return (
       <main className='main'>
         <div className='header-container'>
