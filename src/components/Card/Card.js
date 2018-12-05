@@ -7,7 +7,35 @@ export default class Card extends Component {
       flipped: false,
       unflipped: false
     }
+    this.cardObj = {
+      name: cardData.name,
+      type: cardData.type,
+      main1Label: '',
+      main1: cardData.main1,
+      main2Label: '',
+      main2: cardData.main2,
+      secHeader:'',
+      secInfoMain: cardData.secInfoMain,
+      secInfoOther: cardData.secInfoOther || '',
+    }
   }
+
+
+  secInfoJSX = () => {
+    if(typeof cardData !== 'object') {
+      return ( 
+        <div className='secInfo'>
+          <h2>{cardData.secInfoMain}</h2>
+        </div>
+      )
+    }
+    return (
+      cardData.secInfoMain.map( person => {
+        return <h3 className='person'>{person}</h3>
+      })
+    )
+  }
+
 
   flipCard = () => {
     if (this.state.flipped === true) {
@@ -57,3 +85,28 @@ export default class Card extends Component {
     )
   }
 }
+
+
+/*********PRIVATE */
+
+/**************** */
+
+// const formatCards = (cardType) => {
+//   switch(cardType) {
+//     case 'character':
+//       cardObj.main1Label = 'Height'
+//       cardObj.main2Label = 'Weight'
+//       cardObj.secHeader = 'Homeworld'
+//       break;
+//     case 'vehicle':
+//       cardObj.main1Label = 'Model'
+//       cardObj.main2Label = 'Class'
+//       cardObj.secHeader = 'Passengers'
+//       break;
+//     case 'planet':
+//       cardObj.main1Label = 'Popuplation'
+//       cardObj.main2Label = 'Climate'
+//       cardObj.secHeader = 'Residents' 
+//       break;
+//   }
+// }
