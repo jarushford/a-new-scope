@@ -17,12 +17,21 @@ export default class Main extends Component {
     const url = `https://swapi.co/api/${category.toLowerCase()}`
     const response = await fetch(url)
     const data = await response.json()
-    const categoryHelper = {
-      People: await this.getPeople(data.results),
-      Planets: await this.getPlanets(data.results),
-      Vehicles: await this.getVehicles(data.results)
+    let categoryData = ''
+    switch(category) {
+      case 'People':
+        categoryData = await this.getPeople(data.results)
+        break;
+      case 'Vehicles':
+        categoryData = await this.getVehicles(data.results)
+        break;
+      case 'Planets':
+        categoryData = await this.getPlanets(data.results)
+        break;
+      default: 
+        break;
     }
-    const categoryData = categoryHelper[category]
+
     this.setState({ categoryData })
   }
 
@@ -34,22 +43,49 @@ export default class Main extends Component {
       const speciesData = await species.json()
       return {
         name: person.name,
-        height: person.height,
-        weight: person.mass,
-        species: speciesData.name,
-        homeworld: homeData.name,
-        population: this.convertPopulation(homeData.population)
+        type: speciesData.name,
+        main1: person.height,
+        main2: person.mass,
+        secInfoMain: homeData.name,
+        secInfoOther: homeData.population
       }
     })
     return Promise.all(unresolvedPromises)
   }
 
-  getPlanets = (data) => {
-
+  getPlanets = (planets) => {
+    const unresolvedPromises = planets.map(async planet => {
+      const residents = await this.getResidents(planet.residents)
+      return {
+        name: planet.name,
+        type: planet.terrain,
+        main1: planet.population,
+        main2: planet.climate,
+        secInfoMain: residents,
+        secInfoOther: ''
+      }
+    })
+    return Promise.all(unresolvedPromises) 
   }
 
-  getVehicles = (data) => {
+  getResidents = (residents) => {
+    return residents.map(async residentLink => {
+      const resident = await fetch(residentLink)
+      const residentData = await resident.json()
+      return residentData.name
+    })
+  }
 
+  getVehicles = (vehicles) => {
+    return vehicles.map(vehicle => {
+      return {
+        name: vehicle.name,
+        type: 'vehicle',
+        main1: vehicle.vehicle_class,
+        secInfoMain: vehicle.passengers,
+        secInfoOther: ''
+      }
+    })
   }
 
   convertPopulation = (population) => {
@@ -71,15 +107,20 @@ export default class Main extends Component {
     const { category, changePage } = this.props
     const { categoryData } = this.state
     let render
+
     if (!categoryData.length) {
       render =  <div className="App">
       <Loading />
     </div>
     } else {
       render = categoryData.map(current => {
-        return <Card cardData={current} key={uid(current)}/>
-      })
-    }
+        return ( <Card 
+          cardData={current} 
+          key={uid(current)}
+          cardType={category}/>
+      )
+    })
+  }
     return (
       <main className='main'>
         <div className='header-container'>
