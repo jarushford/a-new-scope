@@ -17,6 +17,11 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 15px;
+  height: 300px;
+}
+
+.header-right {
+  width: 200px;
 }
 
 .landing-year {
@@ -27,6 +32,66 @@ body {
 .starwars-logo {
   height: 89px;
   width: 200px;
+}
+
+.continue-to-site-btn {
+  animation: fadeIn 3s ease 3.5s;
+  animation-fill-mode: both;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .enter-btn {
+    color: #00D1FF;
+    text-shadow: 1px 1px 1px #00D1FF;
+  }
+
+  &:hover .ring {
+    animation: rotateToTop .5s ease;
+    animation-fill-mode: forwards;
+  }
+  
+}
+
+.enter-btn {
+  color: white;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 3em;
+  position: relative;
+  top: 240px;
+  text-shadow: 1px 1px 1px white;
+  transition: all .4s;
+}
+
+.ring {
+  animation: rotateRing 20s linear 0s infinite;
+  position: absolute;
+  transition: all .5s
+}
+
+.outerring {
+  height: 280px;
+  width: 280px;
+}
+
+.middlering {
+  top: 40px;
+  height: 200px;
+  transform: rotate(170deg);
+  width: 200px;
+}
+
+.innerring {
+  top: 90px;
+  height: 100px;
+  transform: rotate(70deg);
+  width: 100px;
 }
 
 .scroll-text{
@@ -58,9 +123,89 @@ body {
   z-index: 1;
 }
 
+.millenium-landing {
+  animation: milleniumZoom 4s ease;
+  animation-fill-mode: forwards;
+  position: absolute;
+  left: 400px;
+  transform: perspective(400px);
+  top: 300px;
+  transform: rotate(-60deg) perspective(50em) rotateX(38deg) rotateY(55deg);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotateRing {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateToTop {
+  100% {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes milleniumZoom {
+  0% {
+    transform: 
+      translateX(-500px) 
+      translateY(560px)
+  }
+  
+  60% {
+    transform: 
+      rotate(-65deg) 
+      perspective(50em) 
+      rotateX(38deg) 
+      rotateY(55deg) 
+      perspective(50em) 
+      translate(-60px, 40px)
+      scale(1);
+  }
+
+  87% {
+    transform: 
+      rotate(-70deg) 
+      perspective(50em) 
+      rotateX(38deg) 
+      rotateY(55deg) 
+      perspective(50em) 
+      translate(-44px, 45px)
+      scale(1.1);
+  }
+  99% {
+    transform: 
+      rotate(-80deg) 
+      perspective(50em) 
+      rotateX(38deg) 
+      rotateY(55deg) 
+      translate(1034px, -1000px)
+      scale(0.1)
+  }
+  100% {
+    transform: 
+      rotate(-800deg) 
+      perspective(50em) 
+      rotateX(38deg) 
+      rotateY(55deg) 
+      translate(1034px, -1000px)
+      scale(0)
+      
+  }
+}
+
 @keyframes crawl {
   0% {
-    top: 1000px;
+    top: 800px;
     transform: rotateX(20deg) translateZ(0);
   }
   100% { 

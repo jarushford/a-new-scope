@@ -10,6 +10,10 @@ export default function Landing({ continueToSite, episode }) {
           <h2 className='landing-year'>{episode.year.substring(0, 4)}</h2>
         </div>
         <div className='continue-to-site-btn' onClick={() => continueToSite('menu')}>
+          <img src='./images/outerring.svg' alt='ring' className='outerring ring'></img>
+          <img src='./images/outerring.svg' alt='ring' className='middlering ring'></img>
+          <img src='./images/outerring.svg' alt='ring' className='innerring ring'></img>
+          <h2 class='enter-btn'>ENTER</h2>
         </div>
         <img className='starwars-logo' alt='Star Wars Logo' src='./images/starwars_logo.svg'></img>
       </header>
@@ -32,5 +36,6 @@ export default function Landing({ continueToSite, episode }) {
 *****************/
 
 Landing.propTypes = {
-  continueToSite: propTypes.func.isRequired
+  continueToSite: propTypes.func.isRequired,
+
 }
