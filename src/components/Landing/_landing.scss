@@ -127,7 +127,7 @@ body {
   animation: milleniumZoom 4s ease;
   animation-fill-mode: forwards;
   position: absolute;
-  left: 400px;
+  left: calc(50% - 300px);
   transform: perspective(400px);
   top: 300px;
   transform: rotate(-60deg) perspective(50em) rotateX(38deg) rotateY(55deg);
