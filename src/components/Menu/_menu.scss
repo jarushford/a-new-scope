@@ -1,6 +1,7 @@
 .menu {
   width: 650px;
   height: 655px;
+  margin: 30px auto;
 }
 
 @mixin path($height, $width, $top, $left) {
