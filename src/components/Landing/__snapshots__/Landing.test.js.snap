@@ -1,0 +1,890 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Landing
+    continueToSite={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "menu",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    episode={
+      Object {
+        "text": "text",
+        "title": "A New Hope",
+        "year": "1995",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <header
+          className="landing-header"
+        >
+          <div
+            className="header-right"
+          >
+            <h2
+              className="landing-title"
+            >
+              A New Hope
+            </h2>
+            <h2
+              className="landing-year"
+            >
+              1995
+            </h2>
+          </div>
+          <div
+            className="continue-to-site-btn"
+            onClick={[Function]}
+          >
+            <img
+              alt="ring"
+              className="outerring ring"
+              src="./images/outerring.svg"
+            />
+            <img
+              alt="ring"
+              className="middlering ring"
+              src="./images/outerring.svg"
+            />
+            <img
+              alt="ring"
+              className="innerring ring"
+              src="./images/outerring.svg"
+            />
+            <h2
+              class="enter-btn"
+            >
+              ENTER
+            </h2>
+          </div>
+          <img
+            alt="Star Wars Logo"
+            className="starwars-logo"
+            src="./images/starwars_logo.svg"
+          />
+        </header>,
+        <section
+          className="scroll-text"
+        >
+          <div
+            className="fade-overlay"
+          />
+          <div
+            className="crawl"
+          >
+            <div
+              className="title"
+            >
+              <h1
+                className="scroll-title"
+              >
+                A New Hope
+              </h1>
+            </div>
+            <p>
+              text
+            </p>
+          </div>
+        </section>,
+        <img
+          alt="Millenium Falcon"
+          className="millenium-landing"
+          src="./images/millenium_color.png"
+        />,
+      ],
+      "className": "landing",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="header-right"
+            >
+              <h2
+                className="landing-title"
+              >
+                A New Hope
+              </h2>
+              <h2
+                className="landing-year"
+              >
+                1995
+              </h2>
+            </div>,
+            <div
+              className="continue-to-site-btn"
+              onClick={[Function]}
+            >
+              <img
+                alt="ring"
+                className="outerring ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="middlering ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="innerring ring"
+                src="./images/outerring.svg"
+              />
+              <h2
+                class="enter-btn"
+              >
+                ENTER
+              </h2>
+            </div>,
+            <img
+              alt="Star Wars Logo"
+              className="starwars-logo"
+              src="./images/starwars_logo.svg"
+            />,
+          ],
+          "className": "landing-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2
+                  className="landing-title"
+                >
+                  A New Hope
+                </h2>,
+                <h2
+                  className="landing-year"
+                >
+                  1995
+                </h2>,
+              ],
+              "className": "header-right",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "A New Hope",
+                  "className": "landing-title",
+                },
+                "ref": null,
+                "rendered": "A New Hope",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "1995",
+                  "className": "landing-year",
+                },
+                "ref": null,
+                "rendered": "1995",
+                "type": "h2",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="ring"
+                  className="outerring ring"
+                  src="./images/outerring.svg"
+                />,
+                <img
+                  alt="ring"
+                  className="middlering ring"
+                  src="./images/outerring.svg"
+                />,
+                <img
+                  alt="ring"
+                  className="innerring ring"
+                  src="./images/outerring.svg"
+                />,
+                <h2
+                  class="enter-btn"
+                >
+                  ENTER
+                </h2>,
+              ],
+              "className": "continue-to-site-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "outerring ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "middlering ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "innerring ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "ENTER",
+                  "class": "enter-btn",
+                },
+                "ref": null,
+                "rendered": "ENTER",
+                "type": "h2",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Star Wars Logo",
+              "className": "starwars-logo",
+              "src": "./images/starwars_logo.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="fade-overlay"
+            />,
+            <div
+              className="crawl"
+            >
+              <div
+                className="title"
+              >
+                <h1
+                  className="scroll-title"
+                >
+                  A New Hope
+                </h1>
+              </div>
+              <p>
+                text
+              </p>
+            </div>,
+          ],
+          "className": "scroll-text",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fade-overlay",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="title"
+                >
+                  <h1
+                    className="scroll-title"
+                  >
+                    A New Hope
+                  </h1>
+                </div>,
+                <p>
+                  text
+                </p>,
+              ],
+              "className": "crawl",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <h1
+                    className="scroll-title"
+                  >
+                    A New Hope
+                  </h1>,
+                  "className": "title",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "A New Hope",
+                    "className": "scroll-title",
+                  },
+                  "ref": null,
+                  "rendered": "A New Hope",
+                  "type": "h1",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "text",
+                },
+                "ref": null,
+                "rendered": "text",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Millenium Falcon",
+          "className": "millenium-landing",
+          "src": "./images/millenium_color.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <header
+            className="landing-header"
+          >
+            <div
+              className="header-right"
+            >
+              <h2
+                className="landing-title"
+              >
+                A New Hope
+              </h2>
+              <h2
+                className="landing-year"
+              >
+                1995
+              </h2>
+            </div>
+            <div
+              className="continue-to-site-btn"
+              onClick={[Function]}
+            >
+              <img
+                alt="ring"
+                className="outerring ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="middlering ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="innerring ring"
+                src="./images/outerring.svg"
+              />
+              <h2
+                class="enter-btn"
+              >
+                ENTER
+              </h2>
+            </div>
+            <img
+              alt="Star Wars Logo"
+              className="starwars-logo"
+              src="./images/starwars_logo.svg"
+            />
+          </header>,
+          <section
+            className="scroll-text"
+          >
+            <div
+              className="fade-overlay"
+            />
+            <div
+              className="crawl"
+            >
+              <div
+                className="title"
+              >
+                <h1
+                  className="scroll-title"
+                >
+                  A New Hope
+                </h1>
+              </div>
+              <p>
+                text
+              </p>
+            </div>
+          </section>,
+          <img
+            alt="Millenium Falcon"
+            className="millenium-landing"
+            src="./images/millenium_color.png"
+          />,
+        ],
+        "className": "landing",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="header-right"
+              >
+                <h2
+                  className="landing-title"
+                >
+                  A New Hope
+                </h2>
+                <h2
+                  className="landing-year"
+                >
+                  1995
+                </h2>
+              </div>,
+              <div
+                className="continue-to-site-btn"
+                onClick={[Function]}
+              >
+                <img
+                  alt="ring"
+                  className="outerring ring"
+                  src="./images/outerring.svg"
+                />
+                <img
+                  alt="ring"
+                  className="middlering ring"
+                  src="./images/outerring.svg"
+                />
+                <img
+                  alt="ring"
+                  className="innerring ring"
+                  src="./images/outerring.svg"
+                />
+                <h2
+                  class="enter-btn"
+                >
+                  ENTER
+                </h2>
+              </div>,
+              <img
+                alt="Star Wars Logo"
+                className="starwars-logo"
+                src="./images/starwars_logo.svg"
+              />,
+            ],
+            "className": "landing-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h2
+                    className="landing-title"
+                  >
+                    A New Hope
+                  </h2>,
+                  <h2
+                    className="landing-year"
+                  >
+                    1995
+                  </h2>,
+                ],
+                "className": "header-right",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "A New Hope",
+                    "className": "landing-title",
+                  },
+                  "ref": null,
+                  "rendered": "A New Hope",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "1995",
+                    "className": "landing-year",
+                  },
+                  "ref": null,
+                  "rendered": "1995",
+                  "type": "h2",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="ring"
+                    className="outerring ring"
+                    src="./images/outerring.svg"
+                  />,
+                  <img
+                    alt="ring"
+                    className="middlering ring"
+                    src="./images/outerring.svg"
+                  />,
+                  <img
+                    alt="ring"
+                    className="innerring ring"
+                    src="./images/outerring.svg"
+                  />,
+                  <h2
+                    class="enter-btn"
+                  >
+                    ENTER
+                  </h2>,
+                ],
+                "className": "continue-to-site-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "outerring ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "middlering ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "innerring ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "ENTER",
+                    "class": "enter-btn",
+                  },
+                  "ref": null,
+                  "rendered": "ENTER",
+                  "type": "h2",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Star Wars Logo",
+                "className": "starwars-logo",
+                "src": "./images/starwars_logo.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="fade-overlay"
+              />,
+              <div
+                className="crawl"
+              >
+                <div
+                  className="title"
+                >
+                  <h1
+                    className="scroll-title"
+                  >
+                    A New Hope
+                  </h1>
+                </div>
+                <p>
+                  text
+                </p>
+              </div>,
+            ],
+            "className": "scroll-text",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fade-overlay",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="title"
+                  >
+                    <h1
+                      className="scroll-title"
+                    >
+                      A New Hope
+                    </h1>
+                  </div>,
+                  <p>
+                    text
+                  </p>,
+                ],
+                "className": "crawl",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h1
+                      className="scroll-title"
+                    >
+                      A New Hope
+                    </h1>,
+                    "className": "title",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "A New Hope",
+                      "className": "scroll-title",
+                    },
+                    "ref": null,
+                    "rendered": "A New Hope",
+                    "type": "h1",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "text",
+                  },
+                  "ref": null,
+                  "rendered": "text",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Millenium Falcon",
+            "className": "millenium-landing",
+            "src": "./images/millenium_color.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
