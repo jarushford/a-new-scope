@@ -8,7 +8,7 @@ body {
 .landing {
   color: #FCDD2B;
   font-family: 'Roboto', sans-serif;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   width: 100%;
 }
@@ -16,7 +16,7 @@ body {
 .landing-header {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 10px 15px 15px 30px;
   height: 300px;
 }
 
@@ -24,12 +24,21 @@ body {
   width: 200px;
 }
 
+.landing-title {
+  animation: fadeIn 3s ease 3.5s;
+  animation-fill-mode: both;
+}
+
 .landing-year {
+  animation: fadeIn 3s ease 3.5s;
+  animation-fill-mode: both;
   font-weight: 300;
   font-style: italic
 }
 
 .starwars-logo {
+  animation: fadeIn 3s ease 3.5s;
+  animation-fill-mode: both;
   height: 89px;
   width: 200px;
 }
@@ -42,21 +51,6 @@ body {
   display: flex;
   justify-content: center;
   z-index: 5;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:hover .enter-btn {
-    color: #00D1FF;
-    text-shadow: 1px 1px 1px #00D1FF;
-  }
-
-  &:hover .ring {
-    animation: rotateToTop .5s ease;
-    animation-fill-mode: forwards;
-  }
-  
 }
 
 .enter-btn {
@@ -66,13 +60,27 @@ body {
   position: relative;
   top: 240px;
   text-shadow: 1px 1px 1px white;
+  height: 80px;
   transition: all .4s;
+  z-index: 100;
+
+  &:hover {
+    color: #00D1FF;
+    text-shadow: 1px 1px 1px #00D1FF;
+    cursor: pointer;
+  }
+
+  &:hover ~ .ring {
+    animation: rotateToTop .5s ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+  }
 }
 
 .ring {
   animation: rotateRing 20s linear 0s infinite;
   position: absolute;
-  transition: all .5s
+  transition: all .5s;
 }
 
 .outerring {
@@ -118,7 +126,7 @@ body {
   height: 550px;
   position: absolute;
   top:0;
-  background-image: linear-gradient(black, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(black 2%, rgba(0, 0, 0, 0) 98%);
   width: 100%;
   z-index: 1;
 }

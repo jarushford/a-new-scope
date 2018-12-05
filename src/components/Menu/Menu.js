@@ -3,6 +3,7 @@ import React from 'react'
 export default function Menu({ changePage }) {
   return (
     <div className='menu'>
+      <img className='starwars-logo2' alt='Star Wars Logo' src='./images/starwars_logo.svg'></img>
       <div className='favorites-path'>
         <div 
           onClick={() => changePage('favorites')}
