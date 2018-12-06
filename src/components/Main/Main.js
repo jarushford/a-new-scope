@@ -69,11 +69,12 @@ export default class Main extends Component {
   }
 
   getResidents = (residents) => {
-    return residents.map(async residentLink => {
+    const unresolvedPromises = residents.map(async residentLink => {
       const resident = await fetch(residentLink)
       const residentData = await resident.json()
       return residentData.name
     })
+    return Promise.all(unresolvedPromises)
   }
 
   getVehicles = (vehicles) => {
