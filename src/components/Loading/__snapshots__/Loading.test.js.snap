@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading Component Should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Loading />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="loading-animation"
+        >
+          <div
+            className="millenium-div"
+          >
+            <img
+              alt="millenium falcon"
+              className="loading-millenium"
+              src="./images/load_millenium.svg"
+            />
+            <div
+              className="blaster1 blaster"
+            />
+            <div
+              className="blaster2 blaster"
+            />
+          </div>
+          <div
+            className="tie-div"
+          >
+            <img
+              alt="millenium falcon"
+              className="loading-tiefighter"
+              src="./images/load_tiefighter.svg"
+            />
+          </div>
+        </div>,
+        <h2
+          className="loading-text"
+        >
+          Loading...
+        </h2>,
+      ],
+      "className": "loading-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="millenium-div"
+            >
+              <img
+                alt="millenium falcon"
+                className="loading-millenium"
+                src="./images/load_millenium.svg"
+              />
+              <div
+                className="blaster1 blaster"
+              />
+              <div
+                className="blaster2 blaster"
+              />
+            </div>,
+            <div
+              className="tie-div"
+            >
+              <img
+                alt="millenium falcon"
+                className="loading-tiefighter"
+                src="./images/load_tiefighter.svg"
+              />
+            </div>,
+          ],
+          "className": "loading-animation",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="millenium falcon"
+                  className="loading-millenium"
+                  src="./images/load_millenium.svg"
+                />,
+                <div
+                  className="blaster1 blaster"
+                />,
+                <div
+                  className="blaster2 blaster"
+                />,
+              ],
+              "className": "millenium-div",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "millenium falcon",
+                  "className": "loading-millenium",
+                  "src": "./images/load_millenium.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "blaster1 blaster",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "blaster2 blaster",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="millenium falcon"
+                className="loading-tiefighter"
+                src="./images/load_tiefighter.svg"
+              />,
+              "className": "tie-div",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "millenium falcon",
+                "className": "loading-tiefighter",
+                "src": "./images/load_tiefighter.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Loading...",
+          "className": "loading-text",
+        },
+        "ref": null,
+        "rendered": "Loading...",
+        "type": "h2",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="loading-animation"
+          >
+            <div
+              className="millenium-div"
+            >
+              <img
+                alt="millenium falcon"
+                className="loading-millenium"
+                src="./images/load_millenium.svg"
+              />
+              <div
+                className="blaster1 blaster"
+              />
+              <div
+                className="blaster2 blaster"
+              />
+            </div>
+            <div
+              className="tie-div"
+            >
+              <img
+                alt="millenium falcon"
+                className="loading-tiefighter"
+                src="./images/load_tiefighter.svg"
+              />
+            </div>
+          </div>,
+          <h2
+            className="loading-text"
+          >
+            Loading...
+          </h2>,
+        ],
+        "className": "loading-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="millenium-div"
+              >
+                <img
+                  alt="millenium falcon"
+                  className="loading-millenium"
+                  src="./images/load_millenium.svg"
+                />
+                <div
+                  className="blaster1 blaster"
+                />
+                <div
+                  className="blaster2 blaster"
+                />
+              </div>,
+              <div
+                className="tie-div"
+              >
+                <img
+                  alt="millenium falcon"
+                  className="loading-tiefighter"
+                  src="./images/load_tiefighter.svg"
+                />
+              </div>,
+            ],
+            "className": "loading-animation",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="millenium falcon"
+                    className="loading-millenium"
+                    src="./images/load_millenium.svg"
+                  />,
+                  <div
+                    className="blaster1 blaster"
+                  />,
+                  <div
+                    className="blaster2 blaster"
+                  />,
+                ],
+                "className": "millenium-div",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "millenium falcon",
+                    "className": "loading-millenium",
+                    "src": "./images/load_millenium.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "blaster1 blaster",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "blaster2 blaster",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="millenium falcon"
+                  className="loading-tiefighter"
+                  src="./images/load_tiefighter.svg"
+                />,
+                "className": "tie-div",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "millenium falcon",
+                  "className": "loading-tiefighter",
+                  "src": "./images/load_tiefighter.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Loading...",
+            "className": "loading-text",
+          },
+          "ref": null,
+          "rendered": "Loading...",
+          "type": "h2",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

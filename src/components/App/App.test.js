@@ -31,22 +31,32 @@ describe('App', () => {
     wrapper = shallow(<App />, { disableLifecycleMethods: true})
     expect(wrapper.state().currentPage).toEqual('landing')
   })
-
-  it('should change current page to the value passed into changePage', () => {
-    wrapper.instance().changePage('menu')
-    expect(wrapper.instance().state.currentPage).toEqual('menu')
-  })
-
-  it('should match the snapshot', () => {
+  
+  it('should match the snapshot when loading', () => {
+    wrapper.setState({
+      landingScroll: mockFilm
+    })
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should match the snapshot when page is loaded', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  describe('Changepage', () => {
+    
+    it('should change current page to the value passed into changePage', () => {
+      wrapper.instance().changePage('menu')
+      expect(wrapper.instance().state.currentPage).toEqual('menu')
+    })
+  })
+
 
   describe('ComponentDidMount', () => {
 
     describe('Success', () => {
 
       it('should update landingScroll in state if fetch is successful', async () => {
-      
         const expectedState = {
           currentPage: 'landing',
           landingScroll: {

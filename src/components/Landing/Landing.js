@@ -37,5 +37,8 @@ export default function Landing({ continueToSite, episode }) {
 
 Landing.propTypes = {
   continueToSite: propTypes.func.isRequired,
-
+  episode: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.object
+  ]),
 }
