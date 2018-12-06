@@ -1,7 +1,7 @@
 import Main from './Main'
 import { shallow } from 'enzyme'
 import React from 'react';
-import { buildCategoryObj } from '../../utils/api/apiCalls'
+import { buildCategoryObj } from '../../utils/api/apiHelper'
 
 const mockCategoryData = [
   {
@@ -16,7 +16,7 @@ const mockCategoryData = [
   }
 ]
 
-jest.mock('../../utils/api/apiCalls')
+jest.mock('../../utils/api/apiHelper')
 
 beforeAll(() => {
   buildCategoryObj.mockImplementation(() => mockCategoryData)
