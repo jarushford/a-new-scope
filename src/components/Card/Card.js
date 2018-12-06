@@ -6,7 +6,7 @@ export default class Card extends Component {
     super()
     this.state = {
       flipped: false,
-      unflipped: true,
+      unflipped: false,
       cardObj: null
     }
   }
@@ -25,17 +25,19 @@ export default class Card extends Component {
     }
 
     switch(this.props.cardType) {
-      case 'People':
+      case 'people':
         cardObj.main1Label = 'Height'
+        cardObj.main1 += ' cm'
         cardObj.main2Label = 'Weight'
+        cardObj.main2 += ' kg'
         cardObj.secHeader = 'Homeworld'
         break;
-      case 'Vehicles':
+      case 'vehicles':
         cardObj.main1Label = 'Model'
         cardObj.main2Label = 'Class'
         cardObj.secHeader = 'Passengers'
         break;
-      case 'Planets':
+      case 'planets':
         cardObj.main1Label = 'Population'
         cardObj.main2Label = 'Climate'
         cardObj.secHeader = 'Residents' 
@@ -79,11 +81,11 @@ export default class Card extends Component {
           <div className='stats-container'>
             <div className='stat'>
               <h1>{cardObj.main1Label}</h1>
-              <p>{cardObj.main1}cm</p>
+              <p>{cardObj.main1}</p>
             </div>
             <div className='stat'>
               <h1>{cardObj.main2Label}</h1>
-              <p>{cardObj.main2}kg</p>
+              <p>{cardObj.main2}</p>
             </div>
           </div>
           <div>

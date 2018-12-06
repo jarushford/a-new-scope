@@ -15,7 +15,7 @@ export default function Landing({ continueToSite, episode }) {
           <img src='./images/outerring.svg' alt='ring' className='middlering ring'></img>
           <img src='./images/outerring.svg' alt='ring' className='innerring ring'></img>
         </div>
-        <img className='starwars-logo' alt='Star Wars Logo' src='./images/starwars_logo.svg'></img>
+        <h1 className='main-title2'>a new scope</h1>
       </header>
       <section className="scroll-text">
         <div className='fade-overlay'></div>

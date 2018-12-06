@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <StarHousingComponent />,
-        undefined,
+        <Error />,
       ],
       "className": "App",
     },
@@ -34,7 +34,15 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -46,7 +54,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <StarHousingComponent />,
-          undefined,
+          <Error />,
         ],
         "className": "App",
       },
@@ -61,7 +69,15 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
       ],
       "type": "div",
     },

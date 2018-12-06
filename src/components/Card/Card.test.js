@@ -29,11 +29,11 @@ describe('Card', () => {
     }
   })
 
-  it('Should default flipped to false, and unflipped to true', () => {
+  it('Should default flipped to false, and unflipped to false', () => {
     wrapper = shallow(<Card cardType={'Planets'} cardData={mockData}/>, { disableLifecycleMethods: true})
     const expected = {
       flipped: false,
-      unflipped: true,
+      unflipped: false,
       cardObj: null
     }
 

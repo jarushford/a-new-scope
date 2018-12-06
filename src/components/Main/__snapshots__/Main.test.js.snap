@@ -21,11 +21,26 @@ ShallowWrapper {
         <div
           className="header-container"
         >
-          <button
+          <div
+            className="continue-to-site-btn back-rings"
             onClick={[Function]}
           >
-            BACK
-          </button>
+            <img
+              alt="ring"
+              className="outerring ring"
+              src="./images/outerring.svg"
+            />
+            <img
+              alt="ring"
+              className="middlering ring"
+              src="./images/outerring.svg"
+            />
+            <img
+              alt="ring"
+              className="innerring ring"
+              src="./images/outerring.svg"
+            />
+          </div>
           <h1
             className="main-header"
           />
@@ -50,11 +65,26 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <button
+            <div
+              className="continue-to-site-btn back-rings"
               onClick={[Function]}
             >
-              BACK
-            </button>,
+              <img
+                alt="ring"
+                className="outerring ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="middlering ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="innerring ring"
+                src="./images/outerring.svg"
+              />
+            </div>,
             <h1
               className="main-header"
             />,
@@ -68,12 +98,69 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "BACK",
+              "children": Array [
+                <img
+                  alt="ring"
+                  className="outerring ring"
+                  src="./images/outerring.svg"
+                />,
+                <img
+                  alt="ring"
+                  className="middlering ring"
+                  src="./images/outerring.svg"
+                />,
+                <img
+                  alt="ring"
+                  className="innerring ring"
+                  src="./images/outerring.svg"
+                />,
+              ],
+              "className": "continue-to-site-btn back-rings",
               "onClick": [Function],
             },
             "ref": null,
-            "rendered": "BACK",
-            "type": "button",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "outerring ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "middlering ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "innerring ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -138,11 +225,26 @@ ShallowWrapper {
           <div
             className="header-container"
           >
-            <button
+            <div
+              className="continue-to-site-btn back-rings"
               onClick={[Function]}
             >
-              BACK
-            </button>
+              <img
+                alt="ring"
+                className="outerring ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="middlering ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="innerring ring"
+                src="./images/outerring.svg"
+              />
+            </div>
             <h1
               className="main-header"
             />
@@ -167,11 +269,26 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <button
+              <div
+                className="continue-to-site-btn back-rings"
                 onClick={[Function]}
               >
-                BACK
-              </button>,
+                <img
+                  alt="ring"
+                  className="outerring ring"
+                  src="./images/outerring.svg"
+                />
+                <img
+                  alt="ring"
+                  className="middlering ring"
+                  src="./images/outerring.svg"
+                />
+                <img
+                  alt="ring"
+                  className="innerring ring"
+                  src="./images/outerring.svg"
+                />
+              </div>,
               <h1
                 className="main-header"
               />,
@@ -185,12 +302,69 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "BACK",
+                "children": Array [
+                  <img
+                    alt="ring"
+                    className="outerring ring"
+                    src="./images/outerring.svg"
+                  />,
+                  <img
+                    alt="ring"
+                    className="middlering ring"
+                    src="./images/outerring.svg"
+                  />,
+                  <img
+                    alt="ring"
+                    className="innerring ring"
+                    src="./images/outerring.svg"
+                  />,
+                ],
+                "className": "continue-to-site-btn back-rings",
                 "onClick": [Function],
               },
               "ref": null,
-              "rendered": "BACK",
-              "type": "button",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "outerring ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "middlering ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "innerring ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -287,11 +461,26 @@ ShallowWrapper {
         <div
           className="header-container"
         >
-          <button
+          <div
+            className="continue-to-site-btn back-rings"
             onClick={[Function]}
           >
-            BACK
-          </button>
+            <img
+              alt="ring"
+              className="outerring ring"
+              src="./images/outerring.svg"
+            />
+            <img
+              alt="ring"
+              className="middlering ring"
+              src="./images/outerring.svg"
+            />
+            <img
+              alt="ring"
+              className="innerring ring"
+              src="./images/outerring.svg"
+            />
+          </div>
           <h1
             className="main-header"
           />
@@ -316,11 +505,26 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <button
+            <div
+              className="continue-to-site-btn back-rings"
               onClick={[Function]}
             >
-              BACK
-            </button>,
+              <img
+                alt="ring"
+                className="outerring ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="middlering ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="innerring ring"
+                src="./images/outerring.svg"
+              />
+            </div>,
             <h1
               className="main-header"
             />,
@@ -334,12 +538,69 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "BACK",
+              "children": Array [
+                <img
+                  alt="ring"
+                  className="outerring ring"
+                  src="./images/outerring.svg"
+                />,
+                <img
+                  alt="ring"
+                  className="middlering ring"
+                  src="./images/outerring.svg"
+                />,
+                <img
+                  alt="ring"
+                  className="innerring ring"
+                  src="./images/outerring.svg"
+                />,
+              ],
+              "className": "continue-to-site-btn back-rings",
               "onClick": [Function],
             },
             "ref": null,
-            "rendered": "BACK",
-            "type": "button",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "outerring ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "middlering ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "ring",
+                  "className": "innerring ring",
+                  "src": "./images/outerring.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -404,11 +665,26 @@ ShallowWrapper {
           <div
             className="header-container"
           >
-            <button
+            <div
+              className="continue-to-site-btn back-rings"
               onClick={[Function]}
             >
-              BACK
-            </button>
+              <img
+                alt="ring"
+                className="outerring ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="middlering ring"
+                src="./images/outerring.svg"
+              />
+              <img
+                alt="ring"
+                className="innerring ring"
+                src="./images/outerring.svg"
+              />
+            </div>
             <h1
               className="main-header"
             />
@@ -433,11 +709,26 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <button
+              <div
+                className="continue-to-site-btn back-rings"
                 onClick={[Function]}
               >
-                BACK
-              </button>,
+                <img
+                  alt="ring"
+                  className="outerring ring"
+                  src="./images/outerring.svg"
+                />
+                <img
+                  alt="ring"
+                  className="middlering ring"
+                  src="./images/outerring.svg"
+                />
+                <img
+                  alt="ring"
+                  className="innerring ring"
+                  src="./images/outerring.svg"
+                />
+              </div>,
               <h1
                 className="main-header"
               />,
@@ -451,12 +742,69 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "BACK",
+                "children": Array [
+                  <img
+                    alt="ring"
+                    className="outerring ring"
+                    src="./images/outerring.svg"
+                  />,
+                  <img
+                    alt="ring"
+                    className="middlering ring"
+                    src="./images/outerring.svg"
+                  />,
+                  <img
+                    alt="ring"
+                    className="innerring ring"
+                    src="./images/outerring.svg"
+                  />,
+                ],
+                "className": "continue-to-site-btn back-rings",
                 "onClick": [Function],
               },
               "ref": null,
-              "rendered": "BACK",
-              "type": "button",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "outerring ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "middlering ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "ring",
+                    "className": "innerring ring",
+                    "src": "./images/outerring.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
