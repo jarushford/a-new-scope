@@ -51,7 +51,11 @@ export default class Main extends Component {
     return (
       <main className='main'>
         <div className='header-container'>
-          <button onClick={() => changePage('menu')}>BACK</button>
+          <div className='continue-to-site-btn back-rings' onClick={() => changePage('menu')}>
+            <img src='./images/outerring.svg' alt='ring' className='outerring ring'></img>
+            <img src='./images/outerring.svg' alt='ring' className='middlering ring'></img>
+            <img src='./images/outerring.svg' alt='ring' className='innerring ring'></img>
+          </div>
           <h1 className='main-header'>{category}</h1>
         </div>
         <section className='card-section'>

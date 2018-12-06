@@ -5,6 +5,7 @@ import Landing from '../Landing/Landing'
 import Menu from '../Menu/Menu'
 import Main from '../Main/Main'
 import Loading from '../Loading/Loading'
+import Error from '../Error/Error'
 import './app.scss'
 
 class App extends Component {
@@ -47,14 +48,29 @@ class App extends Component {
   render() {
     const { currentPage, landingScroll } = this.state
     const renderHelper = {
-      menu: <Menu changePage={this.changePage}/>,
-      people: <Main category='People' changePage={this.changePage}/>,
-      planets: <Main category='Planets' changePage={this.changePage}/>,
-      vehicles: <Main category='Vehicles' changePage={this.changePage}/>,
-      favorites: <Main category='Favorites' changePage={this.changePage}/>,
+      menu: <Menu
+        changePage={this.changePage}
+      />,
+      people: <Main
+        category='people'
+        changePage={this.changePage}
+      />,
+      planets: <Main
+        category='planets'
+        changePage={this.changePage}
+      />,
+      vehicles: <Main
+        category='vehicles'
+        changePage={this.changePage}
+      />,
+      favorites: <Main
+        category='favorites'
+        changePage={this.changePage}
+      />,
       landing: <Landing 
         continueToSite={this.changePage} 
         episode={landingScroll}/>,
+      error: <Error />
     }
 
     if (!landingScroll) {

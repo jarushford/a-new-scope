@@ -3,13 +3,29 @@
   color: #FCDD2B
 }
 
+.back-rings {
+  position: absolute;
+  top: -112px;
+  left: 25px;
+  cursor: pointer;
+  animation: fade 2s ease;
+
+  &:hover .ring {
+    animation: rotateToSide .5s ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+  }
+}
+
 .header-container {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 
   h1 {
-    font-size: 3rem;
+    font-size: 5rem;
+    font-family: 'Jedi';
+    margin: 0;
   }
 
   button {
@@ -24,6 +40,7 @@
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  animation: fade 2s ease;
 }
 
 .card-section {
@@ -32,4 +49,19 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   grid-gap: 45px 35px;
+}
+
+@keyframes rotateToSide {
+  100% {
+    transform: rotate(190deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,8 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
-@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
+@font-face {
+  font-family: 'Jedi';
+  src: url('../../utils/fonts/Starjedi.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pathway Gothic One';
+  src: url('../../utils/fonts/PathwayGothicOne-Regular.ttf') format('truetype');
+}
 
 body {
   background-color: black;
+}
+
+.main-title2 {
+  color: #FCDD2B;
+  font-family: 'Jedi';
+  position: relative;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  line-height: 100%;
+  top: -15px;
+  right: 5px;
+  height: 50px;
+  width: 200px;
+  opacity: 0;
+  animation: fadeIn 3s ease 3.5s;
+  animation-fill-mode: both;
 }
 
 .landing {
@@ -33,7 +56,8 @@ body {
   animation: fadeIn 3s ease 3.5s;
   animation-fill-mode: both;
   font-weight: 300;
-  font-style: italic
+  font-style: italic;
+  margin-top: -10px;
 }
 
 .starwars-logo {
@@ -125,7 +149,7 @@ body {
 .fade-overlay {
   height: 550px;
   position: absolute;
-  top:0;
+  top: -20px;
   background-image: linear-gradient(black 2%, rgba(0, 0, 0, 0) 98%);
   width: 100%;
   z-index: 1;

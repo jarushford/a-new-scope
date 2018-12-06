@@ -8,7 +8,7 @@ export const fetchTitleScroll = async () => {
 }
 
 export const getCategoryData = async (category) => {
-  const response = await fetch(`https://swapi.co/api/${category.toLowerCase()}`)
+  const response = await fetch(`https://swapi.co/api/${category}`)
   if (response.ok) {
     return await response.json()
   } else {
@@ -22,13 +22,13 @@ export const buildCategoryObj = async (category) => {
   let categoryData = ''
 
   switch(category) {
-    case 'People':
+    case 'people':
       categoryData = await getPeople(data.results)
       break;
-    case 'Vehicles':
+    case 'vehicles':
       categoryData = await getVehicles(data.results)
       break;
-    case 'Planets':
+    case 'planets':
       categoryData = await getPlanets(data.results)
       break;
     default: 

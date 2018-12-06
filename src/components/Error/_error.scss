@@ -1,0 +1,39 @@
+.error-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sith-happens {
+  font-family: 'Jedi';
+  color: #FCDD2B;
+  font-size: 4rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.error-sub {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 10px;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.error-darth {
+  width: 400px;
+  margin-top: 20px;
+  animation: pulse 3s infinite ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1)
+  }
+}

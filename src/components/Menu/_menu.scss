@@ -4,6 +4,20 @@
   width: 650px;
   height: 655px;
   margin: 30px auto;
+  animation: fade 2s ease;
+}
+
+.main-title {
+  color: #FCDD2B;
+  font-family: 'Jedi';
+  position: absolute;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  line-height: 100%;
+  top: -15px;
+  right: 5px;
+  height: 50px;
+  width: 200px;
 }
 
 @mixin path($height, $width, $top, $left) {
@@ -121,14 +135,6 @@ h3 {
   }
 }
 
-.starwars-logo2 {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 89px;
-  width: 200px;
-}
-
 @keyframes slideIn {
     from { 
       transform: rotate(0deg) translateX(312px) rotate(0deg);
@@ -163,4 +169,13 @@ h3 {
     to { 
       transform: rotate(360deg) translateX(101px) rotate(-360deg); 
     }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
