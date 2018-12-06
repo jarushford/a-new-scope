@@ -1,0 +1,816 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    cardData={
+      Object {
+        "main1": "200K",
+        "main2": "Warm",
+        "name": "Test Planet",
+        "secInfoMain": Array [
+          "Jim",
+          "Bob",
+        ],
+        "secInfoOther": "None",
+        "type": "Fun Terrrain",
+      }
+    }
+    cardType="Planets"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-title"
+        >
+          <h1>
+            Test Planet
+          </h1>
+          <i
+            className="fas fa-star"
+          />
+        </div>,
+        <h1
+          className="species"
+        >
+          Fun Terrrain
+        </h1>,
+        <div
+          className="stats-container"
+        >
+          <div
+            className="stat"
+          >
+            <h1>
+              Population
+            </h1>
+            <p>
+              200K
+              cm
+            </p>
+          </div>
+          <div
+            className="stat"
+          >
+            <h1>
+              Climate
+            </h1>
+            <p>
+              Warm
+              kg
+            </p>
+          </div>
+        </div>,
+        <div>
+          <div
+            className="homeworld-title"
+          >
+            <h1>
+              Residents
+            </h1>
+          </div>
+          <h1
+            className="homeworld"
+          >
+            Jim
+            Bob
+          </h1>
+          <h1
+            className="population"
+          >
+            None
+          </h1>
+        </div>,
+      ],
+      "className": "card false unflipped",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              Test Planet
+            </h1>,
+            <i
+              className="fas fa-star"
+            />,
+          ],
+          "className": "card-title",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Test Planet",
+            },
+            "ref": null,
+            "rendered": "Test Planet",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-star",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Fun Terrrain",
+          "className": "species",
+        },
+        "ref": null,
+        "rendered": "Fun Terrrain",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="stat"
+            >
+              <h1>
+                Population
+              </h1>
+              <p>
+                200K
+                cm
+              </p>
+            </div>,
+            <div
+              className="stat"
+            >
+              <h1>
+                Climate
+              </h1>
+              <p>
+                Warm
+                kg
+              </p>
+            </div>,
+          ],
+          "className": "stats-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1>
+                  Population
+                </h1>,
+                <p>
+                  200K
+                  cm
+                </p>,
+              ],
+              "className": "stat",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Population",
+                },
+                "ref": null,
+                "rendered": "Population",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "200K",
+                    "cm",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "200K",
+                  "cm",
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1>
+                  Climate
+                </h1>,
+                <p>
+                  Warm
+                  kg
+                </p>,
+              ],
+              "className": "stat",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Climate",
+                },
+                "ref": null,
+                "rendered": "Climate",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Warm",
+                    "kg",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Warm",
+                  "kg",
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="homeworld-title"
+            >
+              <h1>
+                Residents
+              </h1>
+            </div>,
+            <h1
+              className="homeworld"
+            >
+              Jim
+              Bob
+            </h1>,
+            <h1
+              className="population"
+            >
+              None
+            </h1>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h1>
+                Residents
+              </h1>,
+              "className": "homeworld-title",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Residents",
+              },
+              "ref": null,
+              "rendered": "Residents",
+              "type": "h1",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Jim",
+                "Bob",
+              ],
+              "className": "homeworld",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Jim",
+              "Bob",
+            ],
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "None",
+              "className": "population",
+            },
+            "ref": null,
+            "rendered": "None",
+            "type": "h1",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-title"
+          >
+            <h1>
+              Test Planet
+            </h1>
+            <i
+              className="fas fa-star"
+            />
+          </div>,
+          <h1
+            className="species"
+          >
+            Fun Terrrain
+          </h1>,
+          <div
+            className="stats-container"
+          >
+            <div
+              className="stat"
+            >
+              <h1>
+                Population
+              </h1>
+              <p>
+                200K
+                cm
+              </p>
+            </div>
+            <div
+              className="stat"
+            >
+              <h1>
+                Climate
+              </h1>
+              <p>
+                Warm
+                kg
+              </p>
+            </div>
+          </div>,
+          <div>
+            <div
+              className="homeworld-title"
+            >
+              <h1>
+                Residents
+              </h1>
+            </div>
+            <h1
+              className="homeworld"
+            >
+              Jim
+              Bob
+            </h1>
+            <h1
+              className="population"
+            >
+              None
+            </h1>
+          </div>,
+        ],
+        "className": "card false unflipped",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                Test Planet
+              </h1>,
+              <i
+                className="fas fa-star"
+              />,
+            ],
+            "className": "card-title",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Test Planet",
+              },
+              "ref": null,
+              "rendered": "Test Planet",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fas fa-star",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Fun Terrrain",
+            "className": "species",
+          },
+          "ref": null,
+          "rendered": "Fun Terrrain",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="stat"
+              >
+                <h1>
+                  Population
+                </h1>
+                <p>
+                  200K
+                  cm
+                </p>
+              </div>,
+              <div
+                className="stat"
+              >
+                <h1>
+                  Climate
+                </h1>
+                <p>
+                  Warm
+                  kg
+                </p>
+              </div>,
+            ],
+            "className": "stats-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h1>
+                    Population
+                  </h1>,
+                  <p>
+                    200K
+                    cm
+                  </p>,
+                ],
+                "className": "stat",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Population",
+                  },
+                  "ref": null,
+                  "rendered": "Population",
+                  "type": "h1",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "200K",
+                      "cm",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "200K",
+                    "cm",
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h1>
+                    Climate
+                  </h1>,
+                  <p>
+                    Warm
+                    kg
+                  </p>,
+                ],
+                "className": "stat",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Climate",
+                  },
+                  "ref": null,
+                  "rendered": "Climate",
+                  "type": "h1",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Warm",
+                      "kg",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Warm",
+                    "kg",
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="homeworld-title"
+              >
+                <h1>
+                  Residents
+                </h1>
+              </div>,
+              <h1
+                className="homeworld"
+              >
+                Jim
+                Bob
+              </h1>,
+              <h1
+                className="population"
+              >
+                None
+              </h1>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h1>
+                  Residents
+                </h1>,
+                "className": "homeworld-title",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Residents",
+                },
+                "ref": null,
+                "rendered": "Residents",
+                "type": "h1",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Jim",
+                  "Bob",
+                ],
+                "className": "homeworld",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Jim",
+                "Bob",
+              ],
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "None",
+                "className": "population",
+              },
+              "ref": null,
+              "rendered": "None",
+              "type": "h1",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Card Should render an empty div if cardObj is null 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    cardData={
+      Object {
+        "main1": "200K",
+        "main2": "Warm",
+        "name": "Test Planet",
+        "secInfoMain": Array [
+          "Jim",
+          "Bob",
+        ],
+        "secInfoOther": "None",
+        "type": "Fun Terrrain",
+      }
+    }
+    cardType="Planets"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {},
+    "ref": null,
+    "rendered": null,
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {},
+      "ref": null,
+      "rendered": null,
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

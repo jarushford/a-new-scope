@@ -12,7 +12,7 @@ describe( 'Landing', () => {
     />)
 
   it('should change to the menu screen when the enter button is clicked', () => {
-    wrapper.find('.continue-to-site-btn').simulate('click')
+    wrapper.find('.enter-btn').simulate('click')
     expect(mockChange).toBeCalled()
     expect(mockChange).toBeCalledWith('menu')
   })

@@ -18,7 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <Stars
-        deltaX={180.04}
+        deltaX={180.08}
       />,
       "className": "star-housing",
     },
@@ -28,7 +28,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "deltaX": 180.04,
+        "deltaX": 180.08,
       },
       "ref": null,
       "rendered": null,
@@ -43,7 +43,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <Stars
-          deltaX={180.04}
+          deltaX={180.08}
         />,
         "className": "star-housing",
       },
@@ -53,7 +53,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "deltaX": 180.04,
+          "deltaX": 180.08,
         },
         "ref": null,
         "rendered": null,

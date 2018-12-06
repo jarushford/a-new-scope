@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import propTypes from 'prop-types'
 
 export default class Card extends Component {
   constructor() {
     super()
     this.state = {
       flipped: false,
-      unflipped: false,
+      unflipped: true,
       cardObj: null
     }
   }
@@ -35,7 +36,7 @@ export default class Card extends Component {
         cardObj.secHeader = 'Passengers'
         break;
       case 'Planets':
-        cardObj.main1Label = 'Popuplation'
+        cardObj.main1Label = 'Population'
         cardObj.main2Label = 'Climate'
         cardObj.secHeader = 'Residents' 
         break;
@@ -96,4 +97,9 @@ export default class Card extends Component {
       )
     }
   }
+}
+
+Card.propTypes = {
+  cardType: propTypes.string,
+  cardData: propTypes.object
 }

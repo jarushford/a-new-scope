@@ -3,6 +3,7 @@ import Card from '../Card/Card'
 import { uid } from 'react-uid'
 import Loading from '../Loading/Loading'
 import * as API from '../../utils/api/apiCalls'
+import propTypes from 'prop-types'
 
 
 export default class Main extends Component {
@@ -59,4 +60,8 @@ export default class Main extends Component {
       </main>
     )
   }
+}
+
+Main.propTypes = {
+  category: propTypes.string
 }
