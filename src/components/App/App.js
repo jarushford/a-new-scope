@@ -20,11 +20,11 @@ class App extends Component {
     try {
       const films = await Promise.race([
         API.fetchTitleScroll(), 
-        new Promise( reject => {
+        new Promise(reject => {
           setTimeout(()=> reject(new Error()), 8000)
         })
       ])
-      const randomNumber = Math.round(Math.random() * 6)
+      const randomNumber = Math.round(Math.random() * 8)
       const film = films.results[randomNumber]
       this.setState({ 
         landingScroll: {

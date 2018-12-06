@@ -8,14 +8,20 @@ const mockFilm = {
   release_date: '1995', 
   opening_crawl: 'starwars'
 }
+
 const mockFilms = {results: [mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm]}
 
 jest.mock('../../utils/api/apiCalls', () => ({
-  fetchTitleScroll: () => mockFilms
+  fetchTitleScroll: (url) => {
+    if (url === 'https://swapi.co/api/films/') {
+      return mockFilms
+    }
+    return new Error()
+  },
 }))
 
 describe('App', () => {
-    let wrapper
+  let wrapper
   
   beforeEach(() => {
     wrapper = shallow(<App />)
@@ -37,29 +43,37 @@ describe('App', () => {
 
   describe('ComponentDidMount', () => {
 
-    it('should update landingScroll in state if fetch is successful', async () => {
-    
-      const expectedState = {
-        currentPage: 'landing',
-        landingScroll: {
-          title: 'ep1', 
-          year: '1995', 
-          text: 'starwars'
+    describe('Success', () => {
+
+      it('should update landingScroll in state if fetch is successful', async () => {
+      
+        const expectedState = {
+          currentPage: 'landing',
+          landingScroll: {
+            title: 'ep1', 
+            year: '1995', 
+            text: 'starwars'
+          }
         }
-      }
 
-      await fetchTitleScroll()
-      expect(wrapper.state()).toEqual(expectedState)
+        await fetchTitleScroll('https://swapi.co/api/films/')
+        expect(wrapper.state()).toEqual(expectedState)
+      })
     })
-  
-    it('should update currentPage to error in state if fetch rejects', async () => {      
-      const expectedState = {
-        currentPage: 'error',
-        landingScroll: ''
-      }
+    
+    describe('Error', () => {
+      
+      it('should update currentPage to error in state if fetch rejects', async () => {      
+        const wrapper1 = shallow(<App />)
 
-      await fetchTitleScroll()
-      expect(wrapper.state()).toEqual(expectedState)
+        const expectedState = {
+          currentPage: 'error',
+          landingScroll: ''
+        }
+
+        await fetchTitleScroll('stuff that doesnt work')
+        expect(wrapper1.state()).toEqual(expectedState)
+      })
     })
   })
 })
