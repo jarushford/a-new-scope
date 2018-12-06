@@ -85,7 +85,8 @@ export const getVehicles = (vehicles) => {
     return {
       name: vehicle.name,
       type: 'vehicle',
-      main1: vehicle.vehicle_class,
+      main1: vehicle.model,
+      main2: vehicle.vehicle_class,
       secInfoMain: vehicle.passengers,
       secInfoOther: ''
     }

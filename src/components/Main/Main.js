@@ -36,7 +36,7 @@ export default class Main extends Component {
     let render
 
     if (!categoryData.length) {
-      render =  <div className="App">
+      render = <div className="App">
       <Loading />
     </div>
     } else {
