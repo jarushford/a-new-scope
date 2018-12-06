@@ -36,7 +36,7 @@ export default class Card extends Component {
         cardObj.main1Label = 'Model'
         cardObj.main2Label = 'Class'
         cardObj.secHeader = 'Passengers'
-        break;
+        break;  
       case 'planets':
         cardObj.main1Label = 'Population'
         cardObj.main2Label = 'Climate'

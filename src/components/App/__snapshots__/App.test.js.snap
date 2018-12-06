@@ -121,7 +121,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <StarHousingComponent />,
-        <Loading />,
+        <Error />,
       ],
       "className": "App",
     },
@@ -156,7 +156,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <StarHousingComponent />,
-          <Loading />,
+          <Error />,
         ],
         "className": "App",
       },

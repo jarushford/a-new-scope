@@ -24,7 +24,7 @@ body {
   height: 50px;
   width: 200px;
   opacity: 0;
-  animation: fadeIn 3s ease 3.5s;
+  animation: fadeIn 3s ease 4.2s;
   animation-fill-mode: both;
 }
 
@@ -48,12 +48,12 @@ body {
 }
 
 .landing-title {
-  animation: fadeIn 3s ease 3.5s;
+  animation: fadeIn 3s ease 4.2s;
   animation-fill-mode: both;
 }
 
 .landing-year {
-  animation: fadeIn 3s ease 3.5s;
+  animation: fadeIn 3s ease 4.2s;
   animation-fill-mode: both;
   font-weight: 300;
   font-style: italic;
@@ -61,14 +61,14 @@ body {
 }
 
 .starwars-logo {
-  animation: fadeIn 3s ease 3.5s;
+  animation: fadeIn 3s ease 4.2s;
   animation-fill-mode: both;
   height: 89px;
   width: 200px;
 }
 
 .continue-to-site-btn {
-  animation: fadeIn 3s ease 3.5s;
+  animation: fadeIn 3s ease 4.2s;
   animation-fill-mode: both;
   position: relative;
   flex-grow: 1;
@@ -129,7 +129,7 @@ body {
 .scroll-text{
   display: flex;
   justify-content: center;
-  height: 800px;
+  height: 80%;
   perspective: 400px;
   color: #feda4a;
   font-family: 'Pathway Gothic One', sans-serif;
@@ -155,13 +155,21 @@ body {
   z-index: 1;
 }
 
+.crawl {
+  animation: crawl 80s linear;
+  animation-fill-mode: forwards;
+  position: relative;
+  top: 0px;
+  transform-origin: 50% 100%;
+}
+
 .millenium-landing {
-  animation: milleniumZoom 4s ease;
+  animation: milleniumZoom 5s ease;
   animation-fill-mode: forwards;
   position: absolute;
   left: calc(50% - 300px);
   transform: perspective(400px);
-  top: 300px;
+  bottom: 160px;
   transform: rotate(-60deg) perspective(50em) rotateX(38deg) rotateY(55deg);
 }
 
@@ -237,19 +245,11 @@ body {
 
 @keyframes crawl {
   0% {
-    top: 800px;
+    top: 100%;
     transform: rotateX(20deg) translateZ(0);
   }
   100% { 
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
   }
-}
-
-.crawl {
-  animation: crawl 80s linear;
-  animation-fill-mode: forwards;
-  position: relative;
-  top: -100px;
-  transform-origin: 50% 100%;
 }

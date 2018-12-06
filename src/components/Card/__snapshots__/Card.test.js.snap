@@ -17,7 +17,7 @@ ShallowWrapper {
         "type": "Fun Terrrain",
       }
     }
-    cardType="Planets"
+    cardType="planets"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -55,7 +55,7 @@ ShallowWrapper {
             className="stat"
           >
             <h1>
-              
+              Population
             </h1>
             <p>
               200K
@@ -65,7 +65,7 @@ ShallowWrapper {
             className="stat"
           >
             <h1>
-              
+              Climate
             </h1>
             <p>
               Warm
@@ -77,7 +77,7 @@ ShallowWrapper {
             className="homeworld-title"
           >
             <h1>
-              
+              Residents
             </h1>
           </div>
           <h1
@@ -162,7 +162,7 @@ ShallowWrapper {
               className="stat"
             >
               <h1>
-                
+                Population
               </h1>
               <p>
                 200K
@@ -172,7 +172,7 @@ ShallowWrapper {
               className="stat"
             >
               <h1>
-                
+                Climate
               </h1>
               <p>
                 Warm
@@ -190,7 +190,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h1>
-                  
+                  Population
                 </h1>,
                 <p>
                   200K
@@ -205,10 +205,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "",
+                  "children": "Population",
                 },
                 "ref": null,
-                "rendered": "",
+                "rendered": "Population",
                 "type": "h1",
               },
               Object {
@@ -232,7 +232,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h1>
-                  
+                  Climate
                 </h1>,
                 <p>
                   Warm
@@ -247,10 +247,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "",
+                  "children": "Climate",
                 },
                 "ref": null,
-                "rendered": "",
+                "rendered": "Climate",
                 "type": "h1",
               },
               Object {
@@ -280,7 +280,7 @@ ShallowWrapper {
               className="homeworld-title"
             >
               <h1>
-                
+                Residents
               </h1>
             </div>,
             <h1
@@ -304,7 +304,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <h1>
-                
+                Residents
               </h1>,
               "className": "homeworld-title",
             },
@@ -314,10 +314,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "",
+                "children": "Residents",
               },
               "ref": null,
-              "rendered": "",
+              "rendered": "Residents",
               "type": "h1",
             },
             "type": "div",
@@ -387,7 +387,7 @@ ShallowWrapper {
               className="stat"
             >
               <h1>
-                
+                Population
               </h1>
               <p>
                 200K
@@ -397,7 +397,7 @@ ShallowWrapper {
               className="stat"
             >
               <h1>
-                
+                Climate
               </h1>
               <p>
                 Warm
@@ -409,7 +409,7 @@ ShallowWrapper {
               className="homeworld-title"
             >
               <h1>
-                
+                Residents
               </h1>
             </div>
             <h1
@@ -494,7 +494,7 @@ ShallowWrapper {
                 className="stat"
               >
                 <h1>
-                  
+                  Population
                 </h1>
                 <p>
                   200K
@@ -504,7 +504,7 @@ ShallowWrapper {
                 className="stat"
               >
                 <h1>
-                  
+                  Climate
                 </h1>
                 <p>
                   Warm
@@ -522,7 +522,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h1>
-                    
+                    Population
                   </h1>,
                   <p>
                     200K
@@ -537,10 +537,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "",
+                    "children": "Population",
                   },
                   "ref": null,
-                  "rendered": "",
+                  "rendered": "Population",
                   "type": "h1",
                 },
                 Object {
@@ -564,7 +564,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h1>
-                    
+                    Climate
                   </h1>,
                   <p>
                     Warm
@@ -579,10 +579,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "",
+                    "children": "Climate",
                   },
                   "ref": null,
-                  "rendered": "",
+                  "rendered": "Climate",
                   "type": "h1",
                 },
                 Object {
@@ -612,7 +612,7 @@ ShallowWrapper {
                 className="homeworld-title"
               >
                 <h1>
-                  
+                  Residents
                 </h1>
               </div>,
               <h1
@@ -636,7 +636,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <h1>
-                  
+                  Residents
                 </h1>,
                 "className": "homeworld-title",
               },
@@ -646,10 +646,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "",
+                  "children": "Residents",
                 },
                 "ref": null,
-                "rendered": "",
+                "rendered": "Residents",
                 "type": "h1",
               },
               "type": "div",
@@ -728,7 +728,7 @@ ShallowWrapper {
         "type": "Fun Terrrain",
       }
     }
-    cardType="Planets"
+    cardType="planets"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

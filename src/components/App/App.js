@@ -73,7 +73,7 @@ class App extends Component {
       error: <Error />
     }
 
-    if (!landingScroll) {
+    if (!landingScroll && currentPage !== 'error') {
       return (
       <div className="App">
         <StarHousingComponent />
