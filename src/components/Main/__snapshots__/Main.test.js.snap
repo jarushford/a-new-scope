@@ -53,11 +53,24 @@ ShallowWrapper {
         <section
           className="card-section"
         >
-          <div
-            className="App"
-          >
-            <Loading />
-          </div>
+          <Card
+            cardData={
+              Object {
+                "homeworld": "Tatooine",
+                "name": "Luke",
+                "species": "Human",
+              }
+            }
+          />
+          <Card
+            cardData={
+              Object {
+                "homeworld": "Tatooine",
+                "name": "R2-D2",
+                "species": "droid",
+              }
+            }
+          />
         </section>,
         <img
           alt="Landing Btn"
@@ -195,34 +208,63 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <div
-            className="App"
-          >
-            <Loading />
-          </div>,
+          "children": Array [
+            <Card
+              cardData={
+                Object {
+                  "homeworld": "Tatooine",
+                  "name": "Luke",
+                  "species": "Human",
+                }
+              }
+            />,
+            <Card
+              cardData={
+                Object {
+                  "homeworld": "Tatooine",
+                  "name": "R2-D2",
+                  "species": "droid",
+                }
+              }
+            />,
+          ],
           "className": "card-section",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <Loading />,
-            "className": "App",
-          },
-          "ref": null,
-          "rendered": Object {
+        "rendered": Array [
+          Object {
             "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {},
+            "key": "uid1",
+            "nodeType": "class",
+            "props": Object {
+              "cardData": Object {
+                "homeworld": "Tatooine",
+                "name": "Luke",
+                "species": "Human",
+              },
+              "cardType": undefined,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          "type": "div",
-        },
+          Object {
+            "instance": null,
+            "key": "uid2",
+            "nodeType": "class",
+            "props": Object {
+              "cardData": Object {
+                "homeworld": "Tatooine",
+                "name": "R2-D2",
+                "species": "droid",
+              },
+              "cardType": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": "section",
       },
       Object {
@@ -281,11 +323,24 @@ ShallowWrapper {
           <section
             className="card-section"
           >
-            <div
-              className="App"
-            >
-              <Loading />
-            </div>
+            <Card
+              cardData={
+                Object {
+                  "homeworld": "Tatooine",
+                  "name": "Luke",
+                  "species": "Human",
+                }
+              }
+            />
+            <Card
+              cardData={
+                Object {
+                  "homeworld": "Tatooine",
+                  "name": "R2-D2",
+                  "species": "droid",
+                }
+              }
+            />
           </section>,
           <img
             alt="Landing Btn"
@@ -423,34 +478,63 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <div
-              className="App"
-            >
-              <Loading />
-            </div>,
+            "children": Array [
+              <Card
+                cardData={
+                  Object {
+                    "homeworld": "Tatooine",
+                    "name": "Luke",
+                    "species": "Human",
+                  }
+                }
+              />,
+              <Card
+                cardData={
+                  Object {
+                    "homeworld": "Tatooine",
+                    "name": "R2-D2",
+                    "species": "droid",
+                  }
+                }
+              />,
+            ],
             "className": "card-section",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <Loading />,
-              "className": "App",
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {},
+              "key": "uid1",
+              "nodeType": "class",
+              "props": Object {
+                "cardData": Object {
+                  "homeworld": "Tatooine",
+                  "name": "Luke",
+                  "species": "Human",
+                },
+                "cardType": undefined,
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            "type": "div",
-          },
+            Object {
+              "instance": null,
+              "key": "uid2",
+              "nodeType": "class",
+              "props": Object {
+                "cardData": Object {
+                  "homeworld": "Tatooine",
+                  "name": "R2-D2",
+                  "species": "droid",
+                },
+                "cardType": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": "section",
         },
         Object {
@@ -544,11 +628,24 @@ ShallowWrapper {
         <section
           className="card-section"
         >
-          <div
-            className="App"
-          >
-            <Loading />
-          </div>
+          <Card
+            cardData={
+              Object {
+                "homeworld": "Tatooine",
+                "name": "Luke",
+                "species": "Human",
+              }
+            }
+          />
+          <Card
+            cardData={
+              Object {
+                "homeworld": "Tatooine",
+                "name": "R2-D2",
+                "species": "droid",
+              }
+            }
+          />
         </section>,
         <img
           alt="Landing Btn"
@@ -686,34 +783,63 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <div
-            className="App"
-          >
-            <Loading />
-          </div>,
+          "children": Array [
+            <Card
+              cardData={
+                Object {
+                  "homeworld": "Tatooine",
+                  "name": "Luke",
+                  "species": "Human",
+                }
+              }
+            />,
+            <Card
+              cardData={
+                Object {
+                  "homeworld": "Tatooine",
+                  "name": "R2-D2",
+                  "species": "droid",
+                }
+              }
+            />,
+          ],
           "className": "card-section",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <Loading />,
-            "className": "App",
-          },
-          "ref": null,
-          "rendered": Object {
+        "rendered": Array [
+          Object {
             "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {},
+            "key": "uid1",
+            "nodeType": "class",
+            "props": Object {
+              "cardData": Object {
+                "homeworld": "Tatooine",
+                "name": "Luke",
+                "species": "Human",
+              },
+              "cardType": undefined,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          "type": "div",
-        },
+          Object {
+            "instance": null,
+            "key": "uid2",
+            "nodeType": "class",
+            "props": Object {
+              "cardData": Object {
+                "homeworld": "Tatooine",
+                "name": "R2-D2",
+                "species": "droid",
+              },
+              "cardType": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": "section",
       },
       Object {
@@ -772,11 +898,24 @@ ShallowWrapper {
           <section
             className="card-section"
           >
-            <div
-              className="App"
-            >
-              <Loading />
-            </div>
+            <Card
+              cardData={
+                Object {
+                  "homeworld": "Tatooine",
+                  "name": "Luke",
+                  "species": "Human",
+                }
+              }
+            />
+            <Card
+              cardData={
+                Object {
+                  "homeworld": "Tatooine",
+                  "name": "R2-D2",
+                  "species": "droid",
+                }
+              }
+            />
           </section>,
           <img
             alt="Landing Btn"
@@ -914,34 +1053,63 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <div
-              className="App"
-            >
-              <Loading />
-            </div>,
+            "children": Array [
+              <Card
+                cardData={
+                  Object {
+                    "homeworld": "Tatooine",
+                    "name": "Luke",
+                    "species": "Human",
+                  }
+                }
+              />,
+              <Card
+                cardData={
+                  Object {
+                    "homeworld": "Tatooine",
+                    "name": "R2-D2",
+                    "species": "droid",
+                  }
+                }
+              />,
+            ],
             "className": "card-section",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <Loading />,
-              "className": "App",
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {},
+              "key": "uid1",
+              "nodeType": "class",
+              "props": Object {
+                "cardData": Object {
+                  "homeworld": "Tatooine",
+                  "name": "Luke",
+                  "species": "Human",
+                },
+                "cardType": undefined,
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            "type": "div",
-          },
+            Object {
+              "instance": null,
+              "key": "uid2",
+              "nodeType": "class",
+              "props": Object {
+                "cardData": Object {
+                  "homeworld": "Tatooine",
+                  "name": "R2-D2",
+                  "species": "droid",
+                },
+                "cardType": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": "section",
         },
         Object {

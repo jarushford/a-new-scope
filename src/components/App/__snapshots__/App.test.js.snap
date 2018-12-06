@@ -19,7 +19,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <StarHousingComponent />,
-        <Error />,
+        <Landing
+          continueToSite={[Function]}
+          episode={
+            Object {
+              "opening_crawl": "starwars",
+              "release_date": "1995",
+              "title": "ep1",
+            }
+          }
+        />,
       ],
       "className": "App",
     },
@@ -38,7 +47,14 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "continueToSite": [Function],
+          "episode": Object {
+            "opening_crawl": "starwars",
+            "release_date": "1995",
+            "title": "ep1",
+          },
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -54,7 +70,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <StarHousingComponent />,
-          <Error />,
+          <Landing
+            continueToSite={[Function]}
+            episode={
+              Object {
+                "opening_crawl": "starwars",
+                "release_date": "1995",
+                "title": "ep1",
+              }
+            }
+          />,
         ],
         "className": "App",
       },
@@ -73,7 +98,14 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "continueToSite": [Function],
+            "episode": Object {
+              "opening_crawl": "starwars",
+              "release_date": "1995",
+              "title": "ep1",
+            },
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -121,7 +153,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <StarHousingComponent />,
-        <Error />,
+        <Landing
+          continueToSite={[Function]}
+          episode={
+            Object {
+              "text": "starwars",
+              "title": "ep1",
+              "year": "1995",
+            }
+          }
+        />,
       ],
       "className": "App",
     },
@@ -140,7 +181,14 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "continueToSite": [Function],
+          "episode": Object {
+            "text": "starwars",
+            "title": "ep1",
+            "year": "1995",
+          },
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -156,7 +204,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <StarHousingComponent />,
-          <Error />,
+          <Landing
+            continueToSite={[Function]}
+            episode={
+              Object {
+                "text": "starwars",
+                "title": "ep1",
+                "year": "1995",
+              }
+            }
+          />,
         ],
         "className": "App",
       },
@@ -175,7 +232,14 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "continueToSite": [Function],
+            "episode": Object {
+              "text": "starwars",
+              "title": "ep1",
+              "year": "1995",
+            },
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

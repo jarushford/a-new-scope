@@ -11,14 +11,11 @@ const mockFilm = {
 
 const mockFilms = {results: [mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm]}
 
-jest.mock('../../utils/api/apiCalls', () => ({
-  fetchTitleScroll: (url) => {
-    if (url === 'https://swapi.co/api/films/') {
-      return mockFilms
-    }
-    return new Error()
-  },
-}))
+jest.mock('../../utils/api/apiCalls')
+
+beforeAll(() => {
+  fetchTitleScroll.mockImplementation(() => mockFilms)
+})
 
 describe('App', () => {
   let wrapper
@@ -57,6 +54,8 @@ describe('App', () => {
     describe('Success', () => {
 
       it('should update landingScroll in state if fetch is successful', async () => {
+
+
         const expectedState = {
           currentPage: 'landing',
           landingScroll: {
@@ -66,23 +65,23 @@ describe('App', () => {
           }
         }
 
-        await fetchTitleScroll('https://swapi.co/api/films/')
+        await wrapper.instance().componentDidMount()
         expect(wrapper.state()).toEqual(expectedState)
       })
     })
     
     describe('Error', () => {
-      
+
       it('should update currentPage to error in state if fetch rejects', async () => {      
-        const wrapper1 = shallow(<App />)
+        
+        fetchTitleScroll.mockImplementation(() => {
+          throw new Error('Could not fetch')
+        })
 
-        const expectedState = {
-          currentPage: 'error',
-          landingScroll: ''
-        }
+        const expectedState = 'error'
 
-        await fetchTitleScroll('stuff that doesnt work')
-        expect(wrapper1.state()).toEqual(expectedState)
+        await wrapper.instance().componentDidMount()
+        expect(wrapper.state().currentPage).toEqual(expectedState)
       })
     })
   })

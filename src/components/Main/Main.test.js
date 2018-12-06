@@ -1,6 +1,26 @@
 import Main from './Main'
 import { shallow } from 'enzyme'
 import React from 'react';
+import { buildCategoryObj } from '../../utils/api/apiCalls'
+
+const mockCategoryData = [
+  {
+    name: 'Luke',
+    species: 'Human',
+    homeworld: 'Tatooine'
+  },
+  {
+    name: 'R2-D2',
+    species: 'droid',
+    homeworld: 'Tatooine'
+  }
+]
+
+jest.mock('../../utils/api/apiCalls')
+
+beforeAll(() => {
+  buildCategoryObj.mockImplementation(() => mockCategoryData)
+})
 
 describe('Main', () => {
   let wrapper
@@ -12,9 +32,9 @@ describe('Main', () => {
   })
 
   it('should default state to no error', () => {
-    const expected = {categoryData: [], error: false}
+    const expected = false
 
-    expect(wrapper.state()).toEqual(expected)
+    expect(wrapper.state().error).toEqual(expected)
   })
 
   it('should redirect to Landing when the millenium falcon btn is clicked', () => {
@@ -40,12 +60,35 @@ describe('Main', () => {
 
   describe('ComponentDidMount', () => {
 
-    it('Should return category data when everything is ok', () => {
+    it('Should return category data when everything is ok', async () => {
 
+      const expected = [
+        {
+          name: 'Luke',
+          species: 'Human',
+          homeworld: 'Tatooine'
+        },
+        {
+          name: 'R2-D2',
+          species: 'droid',
+          homeworld: 'Tatooine'
+        }
+      ]
+
+      await wrapper.instance().componentDidMount()
+      expect(wrapper.state().categoryData).toEqual(expected)
     })
 
-    it('Should set state to error when everything is not ok', () => {
+    it('Should set state to error when everything is not ok', async () => {
 
+      buildCategoryObj.mockImplementation(() => {
+        throw new Error('Could not fetch')
+      })
+
+      const expected = true
+
+      await wrapper.instance().componentDidMount()
+      expect(wrapper.state().error).toEqual(expected)
     })
   })
 
