@@ -3,7 +3,10 @@
 exports[`Main Should match the snapshot when finished loading 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Main />,
+  Symbol(enzyme.__unrendered__): <Main
+    category="vehicles"
+    changePage={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -43,7 +46,9 @@ ShallowWrapper {
           </div>
           <h1
             className="main-header"
-          />
+          >
+            vehicles
+          </h1>
         </div>,
         <section
           className="card-section"
@@ -54,6 +59,12 @@ ShallowWrapper {
             <Loading />
           </div>
         </section>,
+        <img
+          alt="Landing Btn"
+          className="return-to-landing-btn"
+          onClick={[Function]}
+          src="./images/millenium_color.png"
+        />,
       ],
       "className": "main",
     },
@@ -87,7 +98,9 @@ ShallowWrapper {
             </div>,
             <h1
               className="main-header"
-            />,
+            >
+              vehicles
+            </h1>,
           ],
           "className": "header-container",
         },
@@ -167,11 +180,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "vehicles",
               "className": "main-header",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "vehicles",
             "type": "h1",
           },
         ],
@@ -212,6 +225,20 @@ ShallowWrapper {
         },
         "type": "section",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Landing Btn",
+          "className": "return-to-landing-btn",
+          "onClick": [Function],
+          "src": "./images/millenium_color.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
     ],
     "type": "main",
   },
@@ -247,7 +274,9 @@ ShallowWrapper {
             </div>
             <h1
               className="main-header"
-            />
+            >
+              vehicles
+            </h1>
           </div>,
           <section
             className="card-section"
@@ -258,6 +287,12 @@ ShallowWrapper {
               <Loading />
             </div>
           </section>,
+          <img
+            alt="Landing Btn"
+            className="return-to-landing-btn"
+            onClick={[Function]}
+            src="./images/millenium_color.png"
+          />,
         ],
         "className": "main",
       },
@@ -291,7 +326,9 @@ ShallowWrapper {
               </div>,
               <h1
                 className="main-header"
-              />,
+              >
+                vehicles
+              </h1>,
             ],
             "className": "header-container",
           },
@@ -371,11 +408,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "vehicles",
                 "className": "main-header",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "vehicles",
               "type": "h1",
             },
           ],
@@ -415,6 +452,20 @@ ShallowWrapper {
             "type": "div",
           },
           "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Landing Btn",
+            "className": "return-to-landing-btn",
+            "onClick": [Function],
+            "src": "./images/millenium_color.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
         },
       ],
       "type": "main",
@@ -443,7 +494,10 @@ ShallowWrapper {
 exports[`Main Should match the snapshot when loading 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Main />,
+  Symbol(enzyme.__unrendered__): <Main
+    category="vehicles"
+    changePage={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -483,7 +537,9 @@ ShallowWrapper {
           </div>
           <h1
             className="main-header"
-          />
+          >
+            vehicles
+          </h1>
         </div>,
         <section
           className="card-section"
@@ -494,6 +550,12 @@ ShallowWrapper {
             <Loading />
           </div>
         </section>,
+        <img
+          alt="Landing Btn"
+          className="return-to-landing-btn"
+          onClick={[Function]}
+          src="./images/millenium_color.png"
+        />,
       ],
       "className": "main",
     },
@@ -527,7 +589,9 @@ ShallowWrapper {
             </div>,
             <h1
               className="main-header"
-            />,
+            >
+              vehicles
+            </h1>,
           ],
           "className": "header-container",
         },
@@ -607,11 +671,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "vehicles",
               "className": "main-header",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "vehicles",
             "type": "h1",
           },
         ],
@@ -652,6 +716,20 @@ ShallowWrapper {
         },
         "type": "section",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Landing Btn",
+          "className": "return-to-landing-btn",
+          "onClick": [Function],
+          "src": "./images/millenium_color.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
     ],
     "type": "main",
   },
@@ -687,7 +765,9 @@ ShallowWrapper {
             </div>
             <h1
               className="main-header"
-            />
+            >
+              vehicles
+            </h1>
           </div>,
           <section
             className="card-section"
@@ -698,6 +778,12 @@ ShallowWrapper {
               <Loading />
             </div>
           </section>,
+          <img
+            alt="Landing Btn"
+            className="return-to-landing-btn"
+            onClick={[Function]}
+            src="./images/millenium_color.png"
+          />,
         ],
         "className": "main",
       },
@@ -731,7 +817,9 @@ ShallowWrapper {
               </div>,
               <h1
                 className="main-header"
-              />,
+              >
+                vehicles
+              </h1>,
             ],
             "className": "header-container",
           },
@@ -811,11 +899,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "vehicles",
                 "className": "main-header",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "vehicles",
               "type": "h1",
             },
           ],
@@ -855,6 +943,20 @@ ShallowWrapper {
             "type": "div",
           },
           "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Landing Btn",
+            "className": "return-to-landing-btn",
+            "onClick": [Function],
+            "src": "./images/millenium_color.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
         },
       ],
       "type": "main",

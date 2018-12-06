@@ -61,11 +61,18 @@ export default class Main extends Component {
         <section className='card-section'>
           {render}
         </section>
+        <img 
+          className='return-to-landing-btn' 
+          alt='Landing Btn' 
+          src='./images/millenium_color.png'
+          onClick={() => changePage('landing')}
+          ></img>
       </main>
     )
   }
 }
 
 Main.propTypes = {
+  changePage: propTypes.func,
   category: propTypes.string
 }

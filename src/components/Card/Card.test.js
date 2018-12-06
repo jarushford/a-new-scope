@@ -15,7 +15,7 @@ describe('Card', () => {
   let formattedData
 
   beforeEach(() => {
-    wrapper = shallow(<Card cardType={'Planets'} cardData={mockData}/>)
+    wrapper = shallow(<Card cardType={'planets'} cardData={mockData}/>)
     formattedData = {
       name: 'Test Planet',
       type: 'Fun Terrrain',
@@ -30,7 +30,7 @@ describe('Card', () => {
   })
 
   it('Should default flipped to false, and unflipped to false', () => {
-    wrapper = shallow(<Card cardType={'Planets'} cardData={mockData}/>, { disableLifecycleMethods: true})
+    wrapper = shallow(<Card cardType={'planets'} cardData={mockData}/>, { disableLifecycleMethods: true})
     const expected = {
       flipped: false,
       unflipped: false,
@@ -41,7 +41,7 @@ describe('Card', () => {
   })
 
   it('Should render an empty div if cardObj is null', () => {
-    wrapper = shallow(<Card cardType={'Planets'} cardData={mockData}/>, { disableLifecycleMethods: true})
+    wrapper = shallow(<Card cardType={'planets'} cardData={mockData}/>, { disableLifecycleMethods: true})
 
     expect(wrapper).toMatchSnapshot()
   })
@@ -55,7 +55,7 @@ describe('Card', () => {
     it('Should set CardObj to reformatted cardData', () => {
       const expected = {
         flipped: false,
-        unflipped: true,
+        unflipped: false,
         cardObj: formattedData
       }
 
@@ -63,7 +63,7 @@ describe('Card', () => {
     })
 
     it('Should set CardObj labels to vehicle labels if category is vehicle', () => {
-      wrapper = shallow(<Card cardType={'Vehicles'} cardData={mockData}/>)
+      wrapper = shallow(<Card cardType={'vehicles'} cardData={mockData}/>)
       const expected = {
         name: 'Test Planet',
         type: 'Fun Terrrain',
@@ -80,14 +80,14 @@ describe('Card', () => {
     })
 
     it('Should set CardObj labels to character labels if category is characters', () => {
-      wrapper = shallow(<Card cardType={'People'} cardData={mockData}/>)
+      wrapper = shallow(<Card cardType={'people'} cardData={mockData}/>)
       const expected = {
         name: 'Test Planet',
         type: 'Fun Terrrain',
         main1Label: 'Height',
-        main1: '200K',
+        main1: '200K cm',
         main2Label: 'Weight',
-        main2: 'Warm',
+        main2: 'Warm kg',
         secHeader: 'Homeworld',
         secInfoMain: ['Jim', 'Bob'],
         secInfoOther: 'None'
