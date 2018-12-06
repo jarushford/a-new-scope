@@ -7,7 +7,7 @@ describe('Star Housing Component', () => {
 
   it('should increment deltaX on tick', () => {
     wrapper.instance().tick()
-    expect(wrapper.instance().state.deltaX).toEqual(0.04)
+    expect(wrapper.instance().state.deltaX).toEqual(0.08)
   })
 
   it('should change direction when deltaX reaches 180', () => {

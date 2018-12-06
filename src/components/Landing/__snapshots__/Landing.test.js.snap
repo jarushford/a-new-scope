@@ -83,11 +83,11 @@ ShallowWrapper {
               src="./images/outerring.svg"
             />
           </div>
-          <img
-            alt="Star Wars Logo"
-            className="starwars-logo"
-            src="./images/starwars_logo.svg"
-          />
+          <h1
+            className="main-title2"
+          >
+            a new scope
+          </h1>
         </header>,
         <section
           className="scroll-text"
@@ -167,11 +167,11 @@ ShallowWrapper {
                 src="./images/outerring.svg"
               />
             </div>,
-            <img
-              alt="Star Wars Logo"
-              className="starwars-logo"
-              src="./images/starwars_logo.svg"
-            />,
+            <h1
+              className="main-title2"
+            >
+              a new scope
+            </h1>,
           ],
           "className": "landing-header",
         },
@@ -317,13 +317,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "Star Wars Logo",
-              "className": "starwars-logo",
-              "src": "./images/starwars_logo.svg",
+              "children": "a new scope",
+              "className": "main-title2",
             },
             "ref": null,
-            "rendered": null,
-            "type": "img",
+            "rendered": "a new scope",
+            "type": "h1",
           },
         ],
         "type": "header",
@@ -501,11 +500,11 @@ ShallowWrapper {
                 src="./images/outerring.svg"
               />
             </div>
-            <img
-              alt="Star Wars Logo"
-              className="starwars-logo"
-              src="./images/starwars_logo.svg"
-            />
+            <h1
+              className="main-title2"
+            >
+              a new scope
+            </h1>
           </header>,
           <section
             className="scroll-text"
@@ -585,11 +584,11 @@ ShallowWrapper {
                   src="./images/outerring.svg"
                 />
               </div>,
-              <img
-                alt="Star Wars Logo"
-                className="starwars-logo"
-                src="./images/starwars_logo.svg"
-              />,
+              <h1
+                className="main-title2"
+              >
+                a new scope
+              </h1>,
             ],
             "className": "landing-header",
           },
@@ -735,13 +734,12 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "Star Wars Logo",
-                "className": "starwars-logo",
-                "src": "./images/starwars_logo.svg",
+                "children": "a new scope",
+                "className": "main-title2",
               },
               "ref": null,
-              "rendered": null,
-              "type": "img",
+              "rendered": "a new scope",
+              "type": "h1",
             },
           ],
           "type": "header",
