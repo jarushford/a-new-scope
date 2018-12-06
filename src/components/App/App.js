@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import * as API from '../../utils/api/apiCalls'
 import StarHousingComponent from '../Stars/StarHousingComponent'
 import Landing from '../Landing/Landing'
 import Menu from '../Menu/Menu'
@@ -10,16 +11,20 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: 'menu',
+      currentPage: 'landing',
       landingScroll: '',
     }
   }
 
-  componentDidMount() {
-    const fetchtitleScroll = async() => {
-      const response = await fetch('https://swapi.co/api/films/')
-      const films = await response.json();
-      const randomNumber = Math.round(Math.random() * 7)
+  async componentDidMount() {
+    try {
+      const films = await Promise.race([
+        API.fetchTitleScroll(), 
+        new Promise( reject => {
+          setTimeout(()=> reject(new Error()), 8000)
+        })
+      ])
+      const randomNumber = Math.round(Math.random() * 6)
       const film = films.results[randomNumber]
       this.setState({ 
         landingScroll: {
@@ -28,16 +33,11 @@ class App extends Component {
           text: film.opening_crawl
         }
       })
+    } catch(error) {
+      this.setState({
+        currentPage: 'error'
+      })
     }
-    fetchtitleScroll()
-    
-    setTimeout(() => {
-      if (!this.state.landingScroll) {
-        this.setState({
-          landingScroll: 'error'
-        })
-      }
-    }, 6000)
   }
 
   changePage = (page) => {

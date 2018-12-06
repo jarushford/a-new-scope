@@ -17,10 +17,49 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "LOADING",
+      "children": Array [
+        <StarHousingComponent />,
+        <Landing
+          continueToSite={[Function]}
+          episode={
+            Object {
+              "text": "starwars",
+              "title": "ep1",
+              "year": "1995",
+            }
+          }
+        />,
+      ],
+      "className": "App",
     },
     "ref": null,
-    "rendered": "LOADING",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "continueToSite": [Function],
+          "episode": Object {
+            "text": "starwars",
+            "title": "ep1",
+            "year": "1995",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +68,49 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "LOADING",
+        "children": Array [
+          <StarHousingComponent />,
+          <Landing
+            continueToSite={[Function]}
+            episode={
+              Object {
+                "text": "starwars",
+                "title": "ep1",
+                "year": "1995",
+              }
+            }
+          />,
+        ],
+        "className": "App",
       },
       "ref": null,
-      "rendered": "LOADING",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "continueToSite": [Function],
+            "episode": Object {
+              "text": "starwars",
+              "title": "ep1",
+              "year": "1995",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
