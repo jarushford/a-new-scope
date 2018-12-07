@@ -9,21 +9,23 @@ export default class Card extends Component {
       flipped: false,
       unflipped: false,
       cardObj: null,
-      favorite: false
     }
   }
 
   componentDidMount() {
+    const { cardData } = this.props
     const cardObj = {
-      name: this.props.cardData.name,
-      type: this.props.cardData.type,
+      category: cardData.category,
+      favorite: cardData.favorite,
+      name: cardData.name,
+      type: cardData.type,
       main1Label: '',
-      main1: this.props.cardData.main1,
+      main1: cardData.main1,
       main2Label: '',
-      main2: this.props.cardData.main2,
+      main2: cardData.main2,
       secHeader:'',
-      secInfoMain: this.props.cardData.secInfoMain,
-      secInfoOther: this.props.cardData.secInfoOther || '',
+      secInfoMain: cardData.secInfoMain,
+      secInfoOther: cardData.secInfoOther || '',
     }
 
     switch(this.props.cardType) {
@@ -52,7 +54,8 @@ export default class Card extends Component {
 
 
   flipCard = (e) => {
-    if(e.target.classList.contains('resident-arrow')) {return}
+    if(e.target.classList.contains('resident-arrow') 
+      || e.target.classList.contains('favorite-btn') ) {return}
 
     if (this.state.flipped === true) {
       this.setState({
@@ -68,12 +71,14 @@ export default class Card extends Component {
   }
 
   toggleFavorite = (cardObj) => {
-    this.setState({ favorite: !this.state.favorite })
-    this.props.handleStoreData('favorites', cardObj)
+    const newCardObj = {...cardObj, favorite: !cardObj.favorite}
+    this.setState({cardObj: newCardObj}, () => { 
+      this.props.handleStoreData('favorites', newCardObj, newCardObj.favorite, cardObj.category)
+    })
   }
 
   render() {
-    const { flipped, unflipped, cardObj, favorite } = this.state 
+    const { flipped, unflipped, cardObj } = this.state 
     const { cardType } = this.props
     if (cardObj === null) {
       return (<div></div>)
@@ -89,7 +94,7 @@ export default class Card extends Component {
           <div className={` card-title card-header-${cardType}`}>
             <h1>{cardObj.name}</h1>
             <i
-              className={`fas fa-star ${favorite && 'favorite'}`}
+              className={`fas fa-star ${cardObj.favorite && 'favorite'} favorite-btn`}
               onClick={() => this.toggleFavorite(cardObj)}
             >
             </i>

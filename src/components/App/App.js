@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: 'landing',
+      currentPage: 'people',
       landingScroll: '',
     }
   }
@@ -41,9 +41,10 @@ class App extends Component {
     }
   }
 
-  handleStoreData = (category, categoryData) => {
+  handleStoreData = (category, categoryData, favorite, favoriteCategory) => {
     if (category === 'favorites') { 
-      this.storeFavorite(categoryData)
+      this.storeFavorite(categoryData, favorite)
+      this.updateStoredData(favoriteCategory, categoryData)
     } else {
       this.storeData(category, categoryData)
     }
@@ -60,20 +61,27 @@ class App extends Component {
     localStorage.setItem('storedData', JSON.stringify(newStorage))
   }
 
-  storeFavorite = (data) => {
-    let favorites = JSON.parse(localStorage.getItem('favorites'))
-    if (favorites) {
-      const matches = favorites.find(favorite => favorite.name === data.name)
-      if (matches) {
-        favorites = favorites.filter(favorite => {
-          return favorite.name !== data.name
-        })
-      } else {
-        favorites.push(data)
-      }
+  updateStoredData(category, updatedCard) {
+    let storage = (JSON.parse(localStorage.getItem('storedData')))
+    let cardToUpdateIndex = 0
+    storage[category].find( (card, i ) => {
+      if (card.name === updatedCard.name)
+      cardToUpdateIndex = i
+    })
+    storage[category][cardToUpdateIndex] = updatedCard
+    localStorage.setItem('storedData', JSON.stringify(storage))
+  }
+
+  storeFavorite = (data, favorite) => {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || []
+    if (!favorite) {
+      const match = favorites.find(favorite => favorite.name === data.name)
+      favorites = favorites.filter(favorite => {
+        return favorite.name !== match.name
+      })
     } else {
-      favorites = [data]
-    }
+      favorites.push(data)
+      }
     localStorage.setItem('favorites', JSON.stringify(favorites))
   }
 
