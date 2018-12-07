@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import propTypes from 'prop-types'
+import { uid } from 'react-uid'
 
 export default class ResidentsScroller extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       residents: [],
       content1: '',
@@ -13,20 +14,25 @@ export default class ResidentsScroller extends Component {
   }
 
   componentDidMount() {
-    if (typeof this.props.content1 !== 'string') {
+    const { content1, content2 } = this.props
+    if (content1.length === 0) {
       this.setState({
-        residents: this.props.content1.map( (resident, i) => {
-          let formattedResident
-          i === 0 ? 
+        residents: [{name: 'none', display: ''}],
+      })
+    } else if (typeof content1 !== 'string') {
+      this.setState({
+        residents: content1.map( (resident, i) => {
+          let formattedResident = {name: resident, display: 'none'} 
+          if (i === 0) {
             formattedResident = {name: resident, display: ''} 
-            : formattedResident = {name: resident, display: 'none'}
+          } 
           return formattedResident
         })
       })
     } else {
       this.setState({
-        content1: this.props.content1,
-        content2: this.props.content2
+        content1: content1,
+        content2: content2
       })
     }
   }
@@ -74,7 +80,7 @@ export default class ResidentsScroller extends Component {
         {
           residents.map( resident => {
             return (
-              <h4 className={`resident ${resident.display}`}>{resident.name}</h4>
+              <h4 className={`resident ${resident.display}`} key={uid(resident)}>{resident.name}</h4>
             )
           })
         }
