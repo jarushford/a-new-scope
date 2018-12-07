@@ -74,6 +74,7 @@ export default class Card extends Component {
 
   render() {
     const { flipped, unflipped, cardObj, favorite } = this.state 
+    const { cardType } = this.props
     if (cardObj === null) {
       return (<div></div>)
     } else {
@@ -82,7 +83,10 @@ export default class Card extends Component {
           className={`card ${flipped && 'flipped'} ${unflipped && 'unflipped'}`}
           onClick={(e) => this.flipCard(e)}
         >
-          <div className='card-title'>
+          <div className='card-front'>
+            <img className='front-image' src={`./images/${cardObj.name.replace('\/', '-')}.jpg`} alt='card-image'></img>
+          </div>
+          <div className={` card-title card-header-${cardType}`}>
             <h1>{cardObj.name}</h1>
             <i
               className={`fas fa-star ${favorite && 'favorite'}`}
@@ -103,15 +107,15 @@ export default class Card extends Component {
             </div>
           </div>
           <div>
-            <div className='homeworld-title'>
-              <h1>{cardObj.secHeader}</h1>
+            <div className={`homeworld-title card-header-${cardType}`}>
+              <h1 className={`card-header-${cardType}`}>{cardObj.secHeader}</h1>
             </div>
             <ResidentsScroller 
               content1={cardObj.secInfoMain} 
               content2={cardObj.secInfoOther} 
             />
           </div>
-          <img className='card-icon' alt='card icon' src={`./images/${this.props.cardType}_icon.svg`}></img>
+          <img className='card-icon' alt='card icon' src={`./images/${cardType}_icon.svg`}></img>
         </div>
       )
     }

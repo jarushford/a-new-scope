@@ -44,13 +44,17 @@
 }
 
 .card-section {
+  cursor: url('../../images/crosshair.svg'), auto;
   width: 80%;
   margin: 40px auto 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   grid-gap: 45px 35px;
-}
 
+  &:active {
+    cursor: url("../../images/crosshair_clicked.svg"), auto;
+  }
+}
 .return-to-landing-btn {
   bottom: 10px;
   left: 10px;

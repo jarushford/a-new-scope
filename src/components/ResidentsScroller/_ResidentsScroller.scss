@@ -24,12 +24,14 @@
   }
 
   .fa-caret-right {
-    right: 0px;
+    right: -3px;
   }
   
   .resident {
     bottom: -25px;
     color: white;
+    font-weight: 200;
+    font-style: italic;
     text-align: center;
     position: relative;
   }  
