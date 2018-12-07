@@ -128,6 +128,8 @@ describe('API', () => {
 
     it('should return the correct data if successful', async () => {
       mockPeople = [{
+        category: 'people',
+        favorite: false,
         name: 'Luke',
         species: 'species',
         homeworld: 'home',
@@ -150,6 +152,8 @@ describe('API', () => {
       })
 
       const expected = [{
+        category: 'people',
+        favorite: false,
         name: 'Luke',
         type: 'human',
         main1: 30,
@@ -169,6 +173,8 @@ describe('API', () => {
 
     beforeEach(() => {
       mockPlanets = [{
+        category: 'planets',
+        favorite: false,
         name: 'Alderaan',
         terrain: 'grassland, mountains',
         climate: 'temperate',
@@ -185,6 +191,8 @@ describe('API', () => {
 
     it('should call getResidents with the correct params', async () => {
       const expected = [{
+        category: 'planets',
+        favorite: false,
         name: 'Alderaan',
         type: 'grassland, mountains',
         main1: '2 billion',
@@ -261,6 +269,8 @@ describe('API', () => {
     it('should return an array of data objects', () => {
       const expected = [
         {
+          category: 'vehicles',
+          favorite: false,
           name: 'Sand Crawler',
           type: 'vehicle',
           main1: 'Digger Crawler',
@@ -269,6 +279,8 @@ describe('API', () => {
           secInfoOther: ''
         },
         {
+          category: 'vehicles',
+          favorite: false,
           name: 'Snowspeeder',
           type: 'vehicle',
           main1: 't-47 airspeeder',
