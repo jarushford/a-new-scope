@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import propTypes from 'prop-types'
+import ResidentsScroller from '../ResidentsScroller/ResidentsScroller'
 
 export default class Card extends Component {
   constructor() {
@@ -49,7 +50,9 @@ export default class Card extends Component {
   }
 
 
-  flipCard = () => {
+  flipCard = (e) => {
+    if(e.target.classList.contains('resident-arrow')) {return}
+
     if (this.state.flipped === true) {
       this.setState({
         flipped: false,
@@ -71,18 +74,19 @@ export default class Card extends Component {
       return (
         <div
           className={`card ${flipped && 'flipped'} ${unflipped && 'unflipped'}`}
-          onClick={() => this.flipCard()}
+          onClick={(e) => this.flipCard(e)}
         >
           <div className='card-title'>
             <h1>{cardObj.name}</h1>
             <i className="fas fa-star"></i>
           </div>
-          <h1 className='species'>{cardObj.type}</h1>
+          <h1 className='card-type'>{cardObj.type}</h1>
           <div className='stats-container'>
             <div className='stat'>
               <h1>{cardObj.main1Label}</h1>
               <p>{cardObj.main1}</p>
             </div>
+            <div className='div-line'></div>
             <div className='stat'>
               <h1>{cardObj.main2Label}</h1>
               <p>{cardObj.main2}</p>
@@ -92,9 +96,12 @@ export default class Card extends Component {
             <div className='homeworld-title'>
               <h1>{cardObj.secHeader}</h1>
             </div>
-            <h1 className='homeworld'>{cardObj.secInfoMain}</h1>
-            <h1 className='population'>{cardObj.secInfoOther}</h1>
+            <ResidentsScroller 
+              content1={cardObj.secInfoMain} 
+              content2={cardObj.secInfoOther} 
+            />
           </div>
+          <img className='card-icon' alt='card icon' src={`./images/${this.props.cardType}_icon.svg`}></img>
         </div>
       )
     }

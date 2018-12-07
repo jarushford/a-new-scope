@@ -18,6 +18,7 @@
   margin: 0 auto;
   transform: rotate3d(0, 0, 0, 0);
   transition: 1.5s;
+  position: relative;
   animation: fadeIn 1s ease;
 
   &::before {
@@ -36,7 +37,7 @@
     font-family: 'Pathway Gothic One';
     letter-spacing: 1px;
     margin: 0;
-    color: #FCDD2B;
+    color: white;
   }
 
   i {
@@ -53,9 +54,24 @@
   }
 }
 
-.species {
+.card-type {
   text-align: center;
   font-size: 1.2rem;
+  font-weight: 200
+}
+
+.div-line {
+  background-color: grey;
+  height: 46px;
+  margin-top: 6px;
+  width: 1px;
+}
+
+.card-icon {
+  position: absolute;
+  width: 100px;
+  bottom: 10px;
+  right: 25px;
 }
 
 .card-title {
@@ -94,6 +110,10 @@ h1.population {
   margin-left: 30px;
   color: white;
   font-size: 1.2rem;
+}
+
+.card-icon {
+
 }
 
 .flipped {
