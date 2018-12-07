@@ -10,26 +10,31 @@ export default class Main extends Component {
   constructor() {
     super()
     this.state = {
+      storedData: {},
       categoryData: [],
       error: false
     }
   }
 
   async componentDidMount() {
-    const { category } = this.props
-    try {
-      const categoryData = await Promise.race([
-        APIHelper.buildCategoryObj(category), 
-        new Promise(reject => {
-          setTimeout(()=> reject(new Error()), 8000)
-        })
-      ])
-      this.setState({ 
-        categoryData,
-
-        })
-    } catch {
-      this.setState({ error: true })
+    const { category, storeData } = this.props
+    let categoryData
+    const storage = JSON.parse(localStorage.getItem('storedData'))
+    if (!storage[category]) {
+      try {
+        categoryData = await Promise.race([
+          API.buildCategoryObj(category), 
+          new Promise(reject => {
+            setTimeout(()=> reject(new Error()), 8000)
+          })
+        ])
+        this.setState({ categoryData })
+      } catch {
+        this.setState({ error: true }, this.props.changePage('error'))
+      }
+      storeData(category, categoryData)
+    } else {
+      this.setState({ categoryData: storage[category] })
     }
   }
 
@@ -69,7 +74,7 @@ export default class Main extends Component {
           alt='Landing Btn' 
           src='./images/millenium_color.png'
           onClick={() => changePage('landing')}
-          ></img>
+        />
       </main>
     )
   }

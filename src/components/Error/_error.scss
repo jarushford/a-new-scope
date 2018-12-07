@@ -23,6 +23,26 @@
   font-family: 'Pathway Gothic One', sans-serif;
 }
 
+.error-button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 5px;
+  transition: .4s ease;
+  text-shadow: 0 0 25px #FCDD2B,
+                0 0 15px #FCDD2B,
+                0 0 10px #FCDD2B;
+
+  &:hover {
+    transform: translateY(-2px);
+    transition: .4s ease;
+    text-shadow: 0 0 25px #FCDD2B,
+                0 0 15px #FCDD2B,
+                0 0 10px #FCDD2B,
+                0 0 7px #FCDD2B;
+  }
+}
+
 .error-darth {
   width: 400px;
   margin-top: 20px;

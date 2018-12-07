@@ -41,6 +41,22 @@ class App extends Component {
     }
   }
 
+  storeData = (category, categoryData) => {
+    const storage = JSON.parse(localStorage.getItem('storedData'))
+    let storageKeys
+
+    if (storage) {
+      storageKeys = Object.keys(storage)
+      if (!storageKeys.includes(category)) {
+        const newStorage = Object.assign({[category]: categoryData, ...storage})
+        localStorage.setItem('storedData', JSON.stringify(newStorage))
+      }
+    } else {
+      const newStorage = { [category]: categoryData }
+      localStorage.setItem('storedData', JSON.stringify(newStorage))
+    }
+  }
+
   changePage = (page) => {
     this.setState({ currentPage: page })
   }
@@ -52,25 +68,29 @@ class App extends Component {
         changePage={this.changePage}
       />,
       people: <Main
+        storeData={this.storeData}
         category='people'
         changePage={this.changePage}
       />,
       planets: <Main
+        storeData={this.storeData}
         category='planets'
         changePage={this.changePage}
       />,
       vehicles: <Main
+        storeData={this.storeData}
         category='vehicles'
         changePage={this.changePage}
       />,
       favorites: <Main
+        storeData={this.storeData}
         category='favorites'
         changePage={this.changePage}
       />,
       landing: <Landing 
         continueToSite={this.changePage} 
         episode={landingScroll}/>,
-      error: <Error />
+      error: <Error changePage={this.changePage}/>
     }
 
     if (!landingScroll && currentPage !== 'error') {
