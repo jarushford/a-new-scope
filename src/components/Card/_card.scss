@@ -45,12 +45,18 @@
     font-size: 1.5rem;
     padding-left: 5px;
     transition: .4s ease;
+    position: relative;
+    z-index: 3;
 
     &:hover {
       text-shadow: 0 0 8px #FCDD2B;
       transition: .4s ease;
       cursor: pointer;
     }
+  }
+
+  .favorite {
+    color: #FCDD2B;
   }
 
   .card-header-people {
@@ -64,10 +70,6 @@
   .card-header-planets {
     background-color: #974F72;
   }
-}
-
-.favorite {
-  color: #FCDD2B;
 }
 
 .card-header-people {
@@ -222,7 +224,7 @@ h1.population {
   }
   41%, 100% {
     opacity: 1;
-    z-index: 100
+    z-index: 50
   }
 }
 

@@ -28,7 +28,9 @@ export const getPeople = (people) => {
       main1: person.height,
       main2: person.mass,
       secInfoMain: homeData.name,
-      secInfoOther: convertPopulation(homeData.population)
+      secInfoOther: convertPopulation(homeData.population),
+      category: 'people',
+      favorite: false
     }
   })
   return Promise.all(unresolvedPromises)
@@ -43,7 +45,9 @@ export const getPlanets = (planets) => {
       main1: convertPopulation(planet.population),
       main2: planet.climate,
       secInfoMain: residents,
-      secInfoOther: ''
+      secInfoOther: '',
+      category: 'planets',
+      favorite: false
     }
   })
   return Promise.all(unresolvedPromises) 
@@ -66,7 +70,9 @@ export const getVehicles = (vehicles) => {
       main1: vehicle.model,
       main2: vehicle.vehicle_class,
       secInfoMain: vehicle.passengers,
-      secInfoOther: ''
+      secInfoOther: '',
+      category: 'vehicles',
+      favorite: false
     }
   })
 }

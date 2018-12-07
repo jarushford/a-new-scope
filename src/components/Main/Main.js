@@ -18,6 +18,11 @@ export default class Main extends Component {
 
   async componentDidMount() {
     const { category, handleStoreData } = this.props
+    if (category === 'favorites') {
+      const favorites = JSON.parse(localStorage.getItem('favorites'))
+      this.getFavorites(favorites)
+      return
+    }
     let categoryData
     const storage = JSON.parse(localStorage.getItem('storedData'))
     if (!storage || !storage[category]) {
@@ -38,6 +43,18 @@ export default class Main extends Component {
     }
   }
 
+  getFavorites(favorites) {
+    if (!favorites || favorites.length === 0) {
+      this.setState({
+        categoryData: 'none'
+      })
+    } else {
+      this.setState({
+        categoryData: favorites
+      })
+    }
+  }
+
   render() {
     const { category, changePage, handleStoreData } = this.props
     const { categoryData } = this.state
@@ -47,13 +64,17 @@ export default class Main extends Component {
       render = <div className="App">
       <Loading />
     </div>
+    } else if (categoryData === 'none' || categoryData === []) {
+      render = (
+        <div className='no-favorite-message'>You have no saved favorites</div>
+      )
     } else {
       render = categoryData.map(current => {
         return ( <Card 
           handleStoreData={handleStoreData}
           cardData={current} 
           key={uid(current)}
-          cardType={category}/>
+          cardType={current.category}/>
       )
     })
   }

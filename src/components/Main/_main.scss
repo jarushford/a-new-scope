@@ -70,6 +70,15 @@
   }
 }
 
+.no-favorite-message {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 10px;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
 @keyframes rotateToSide {
   100% {
     transform: rotate(190deg);
