@@ -1,0 +1,41 @@
+.residents-scroller {
+  position: absolute;
+  margin: 5px 15px;
+  width: 70%;
+  z-index: 2;
+  bottom: 25px;
+  
+  .fa-caret-left,
+  .fa-caret-right {
+    bottom: -14px;
+    color: white;
+    padding: 6px 10px;
+    position: absolute;
+    transition: all .3s;
+    z-index: 16;
+
+    &:hover {
+      cursor: pointer;
+    }
+  } 
+
+  .fa-caret-left {
+    left: -5px;
+  }
+
+  .fa-caret-right {
+    right: 0px;
+  }
+  
+  .resident {
+    bottom: -25px;
+    color: white;
+    text-align: center;
+    position: relative;
+  }  
+  
+  .none {
+    display: none;
+  }
+
+}

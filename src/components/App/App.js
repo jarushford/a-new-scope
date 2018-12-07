@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: 'landing',
+      currentPage: 'people',
       landingScroll: '',
     }
   }
