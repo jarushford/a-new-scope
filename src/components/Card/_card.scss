@@ -16,7 +16,7 @@
   width: 300px;
   height: 270px;
   margin: 0 auto;
-  transform: rotate3d(0, 0, 0, 0);
+  transform: rotate3d(0, 1, 0, 180deg);
   transition: 1.5s;
   position: relative;
   animation: fadeIn 1s ease;
@@ -52,16 +52,28 @@
       cursor: pointer;
     }
   }
+}
 
-  .favorite {
-    color: #FCDD2B;
-  }
+.favorite {
+  color: #FCDD2B;
+}
+
+.card-header-people {
+  background-color: #207D9B;
+}
+
+.card-header-vehicles {
+  background-color: #4F978A;
+}
+
+.card-header-planets {
+  background-color: #974F72;
 }
 
 .card-type {
   text-align: center;
   font-size: 1.2rem;
-  font-weight: 200
+  font-weight: 200;
 }
 
 .div-line {
@@ -87,7 +99,7 @@
 }
 
 .stats-container {
-  margin: 5px auto 0px auto;
+  margin: 10px auto 0px auto;
   display: flex;
   justify-content: space-around;
 }
@@ -116,36 +128,42 @@ h1.population {
   font-size: 1.2rem;
 }
 
-.card-icon {
+.card-front {
+  border-radius: 12px;
+  position: absolute;
+  z-index: 100;
+}
 
+.front-image {
+  border-radius: 12px;
 }
 
 .flipped {
-  animation: flipCard 1.5s ease;
-  animation-fill-mode: both;
-
-  .card-title {
-    animation: flipTitle 1.5s ease;
-    animation-fill-mode: both;
-  }
-
-  &::before {
-    animation: fadeIn 1.5s ease;
-    animation-fill-mode: both;
-  }
-}
-
-.unflipped {
   animation: unflipCard 1.5s ease;
   animation-fill-mode: both;
+
+  .card-front {
+    animation: fadeOutImage 1.0s ease;
+    animation-fill-mode: both;
+  }
 
   .card-title {
     animation: unflipTitle 1.5s ease;
     animation-fill-mode: both;
   }
+}
 
-  &::before {
-    animation: fadeOut 1.5s ease;
+.unflipped {
+  animation: flipCard 1.5s ease;
+  animation-fill-mode: both;
+
+  .card-front {
+    animation: fadeInImage 1.0s ease;
+    animation-fill-mode: both;
+  }
+
+  .card-title {
+    animation: flipTitle 1.5s ease;
     animation-fill-mode: both;
   }
 }
@@ -183,6 +201,26 @@ h1.population {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes fadeInImage {
+  0%, 40% {
+    opacity: 0;
+  }
+  41%, 100% {
+    opacity: 1;
+    z-index: 100
+  }
+}
+
+@keyframes fadeOutImage {
+  0%, 39% {
+    opacity: 1;
+  }
+  40%, 100% {
+    opacity: 0;
+    z-index: 1;
   }
 }
 
