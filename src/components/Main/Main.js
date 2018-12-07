@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Card from '../Card/Card'
 import { uid } from 'react-uid'
 import Loading from '../Loading/Loading'
-import * as API from '../../utils/api/apiCalls'
+import * as APIHelper from '../../utils/api/apiHelper'
 import propTypes from 'prop-types'
 
 
@@ -19,12 +19,15 @@ export default class Main extends Component {
     const { category } = this.props
     try {
       const categoryData = await Promise.race([
-        API.buildCategoryObj(category), 
+        APIHelper.buildCategoryObj(category), 
         new Promise(reject => {
           setTimeout(()=> reject(new Error()), 8000)
         })
       ])
-      this.setState({ categoryData })
+      this.setState({ 
+        categoryData,
+
+        })
     } catch {
       this.setState({ error: true })
     }

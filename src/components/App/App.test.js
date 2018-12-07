@@ -55,7 +55,6 @@ describe('App', () => {
 
       it('should update landingScroll in state if fetch is successful', async () => {
 
-
         const expectedState = {
           currentPage: 'landing',
           landingScroll: {

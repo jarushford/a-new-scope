@@ -16,28 +16,6 @@ export const getCategoryData = async (category) => {
   }
 }
 
-export const buildCategoryObj = async (category) => {
-  const data = await getCategoryData(category)
-
-  let categoryData = ''
-
-  switch(category) {
-    case 'people':
-      categoryData = await getPeople(data.results)
-      break;
-    case 'vehicles':
-      categoryData = await getVehicles(data.results)
-      break;
-    case 'planets':
-      categoryData = await getPlanets(data.results)
-      break;
-    default: 
-      break;
-  }
-
-  return categoryData
-}
-
 export const getPeople = (people) => {
   const unresolvedPromises = people.map(async person => {
     const homeworld = await fetch(person.homeworld)
