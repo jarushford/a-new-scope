@@ -10,31 +10,36 @@ export default class Main extends Component {
   constructor() {
     super()
     this.state = {
+      storedData: {},
       categoryData: [],
       error: false
     }
   }
 
   async componentDidMount() {
-    const { category } = this.props
-    try {
-      const categoryData = await Promise.race([
-        APIHelper.buildCategoryObj(category), 
-        new Promise(reject => {
-          setTimeout(()=> reject(new Error()), 8000)
-        })
-      ])
-      this.setState({ 
-        categoryData,
-
-        })
-    } catch {
-      this.setState({ error: true })
+    const { category, handleStoreData } = this.props
+    let categoryData
+    const storage = JSON.parse(localStorage.getItem('storedData'))
+    if (!storage || !storage[category]) {
+      try {
+        categoryData = await Promise.race([
+          APIHelper.buildCategoryObj(category), 
+          new Promise(reject => {
+            setTimeout(()=> reject(new Error()), 8000)
+          })
+        ])
+        this.setState({ categoryData })
+      } catch {
+        this.setState({ error: true }, this.props.changePage('error'))
+      }
+      handleStoreData(category, categoryData)
+    } else {
+      this.setState({ categoryData: storage[category] })
     }
   }
 
   render() {
-    const { category, changePage } = this.props
+    const { category, changePage, handleStoreData } = this.props
     const { categoryData } = this.state
     let render
 
@@ -45,6 +50,7 @@ export default class Main extends Component {
     } else {
       render = categoryData.map(current => {
         return ( <Card 
+          handleStoreData={handleStoreData}
           cardData={current} 
           key={uid(current)}
           cardType={category}/>
@@ -69,7 +75,7 @@ export default class Main extends Component {
           alt='Landing Btn' 
           src='./images/millenium_color.png'
           onClick={() => changePage('landing')}
-          ></img>
+        />
       </main>
     )
   }

@@ -33,11 +33,12 @@ ShallowWrapper {
         >
           Oops, something seems to have gone wrong.
         </h4>,
-        <h4
-          className="error-sub"
+        <button
+          className="error-sub error-button"
+          onClick={[Function]}
         >
-          Try going back to the previous page.
-        </h4>,
+          Click here to return to site.
+        </button>,
       ],
       "className": "error-box",
     },
@@ -85,12 +86,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Try going back to the previous page.",
-          "className": "error-sub",
+          "children": "Click here to return to site.",
+          "className": "error-sub error-button",
+          "onClick": [Function],
         },
         "ref": null,
-        "rendered": "Try going back to the previous page.",
-        "type": "h4",
+        "rendered": "Click here to return to site.",
+        "type": "button",
       },
     ],
     "type": "div",
@@ -117,11 +119,12 @@ ShallowWrapper {
           >
             Oops, something seems to have gone wrong.
           </h4>,
-          <h4
-            className="error-sub"
+          <button
+            className="error-sub error-button"
+            onClick={[Function]}
           >
-            Try going back to the previous page.
-          </h4>,
+            Click here to return to site.
+          </button>,
         ],
         "className": "error-box",
       },
@@ -169,12 +172,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Try going back to the previous page.",
-            "className": "error-sub",
+            "children": "Click here to return to site.",
+            "className": "error-sub error-button",
+            "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Try going back to the previous page.",
-          "type": "h4",
+          "rendered": "Click here to return to site.",
+          "type": "button",
         },
       ],
       "type": "div",

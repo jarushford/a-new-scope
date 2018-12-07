@@ -41,6 +41,42 @@ class App extends Component {
     }
   }
 
+  handleStoreData = (category, categoryData) => {
+    if (category === 'favorites') { 
+      this.storeFavorite(categoryData)
+    } else {
+      this.storeData(category, categoryData)
+    }
+  }
+
+  storeData = (category, categoryData) => {
+    const storage = JSON.parse(localStorage.getItem('storedData'))
+    let newStorage
+    if (storage) {
+      newStorage = Object.assign({[category]: categoryData, ...storage})
+    } else {
+      newStorage = { [category]: categoryData }
+    }
+    localStorage.setItem('storedData', JSON.stringify(newStorage))
+  }
+
+  storeFavorite = (data) => {
+    let favorites = JSON.parse(localStorage.getItem('favorites'))
+    if (favorites) {
+      const matches = favorites.find(favorite => favorite.name === data.name)
+      if (matches) {
+        favorites = favorites.filter(favorite => {
+          return favorite.name !== data.name
+        })
+      } else {
+        favorites.push(data)
+      }
+    } else {
+      favorites = [data]
+    }
+    localStorage.setItem('favorites', JSON.stringify(favorites))
+  }
+
   changePage = (page) => {
     this.setState({ currentPage: page })
   }
@@ -52,25 +88,29 @@ class App extends Component {
         changePage={this.changePage}
       />,
       people: <Main
+        handleStoreData={this.handleStoreData}
         category='people'
         changePage={this.changePage}
       />,
       planets: <Main
+        handleStoreData={this.handleStoreData}
         category='planets'
         changePage={this.changePage}
       />,
       vehicles: <Main
+        handleStoreData={this.handleStoreData}
         category='vehicles'
         changePage={this.changePage}
       />,
       favorites: <Main
+        handleStoreData={this.handleStoreData}
         category='favorites'
         changePage={this.changePage}
       />,
       landing: <Landing 
         continueToSite={this.changePage} 
         episode={landingScroll}/>,
-      error: <Error />
+      error: <Error changePage={this.changePage}/>
     }
 
     if (!landingScroll && currentPage !== 'error') {
