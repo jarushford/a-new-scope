@@ -23,7 +23,7 @@ export default class Main extends Component {
     if (!storage || !storage[category]) {
       try {
         categoryData = await Promise.race([
-          API.buildCategoryObj(category), 
+          APIHelper.buildCategoryObj(category), 
           new Promise(reject => {
             setTimeout(()=> reject(new Error()), 8000)
           })
