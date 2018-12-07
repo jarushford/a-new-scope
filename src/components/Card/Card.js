@@ -8,7 +8,8 @@ export default class Card extends Component {
     this.state = {
       flipped: false,
       unflipped: false,
-      cardObj: null
+      cardObj: null,
+      favorite: false
     }
   }
 
@@ -66,8 +67,13 @@ export default class Card extends Component {
     }
   }
 
+  toggleFavorite = (cardObj) => {
+    this.setState({ favorite: !this.state.favorite })
+    this.props.handleStoreData('favorites', cardObj)
+  }
+
   render() {
-    const { flipped, unflipped, cardObj } = this.state 
+    const { flipped, unflipped, cardObj, favorite } = this.state 
     if (cardObj === null) {
       return (<div></div>)
     } else {
@@ -78,7 +84,11 @@ export default class Card extends Component {
         >
           <div className='card-title'>
             <h1>{cardObj.name}</h1>
-            <i className="fas fa-star"></i>
+            <i
+              className={`fas fa-star ${favorite && 'favorite'}`}
+              onClick={() => this.toggleFavorite(cardObj)}
+            >
+            </i>
           </div>
           <h1 className='card-type'>{cardObj.type}</h1>
           <div className='stats-container'>

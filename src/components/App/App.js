@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: 'landing',
+      currentPage: 'menu',
       landingScroll: '',
     }
   }
@@ -41,20 +41,40 @@ class App extends Component {
     }
   }
 
+  handleStoreData = (category, categoryData) => {
+    if (category === 'favorites') { 
+      this.storeFavorite(categoryData)
+    } else {
+      this.storeData(category, categoryData)
+    }
+  }
+
   storeData = (category, categoryData) => {
     const storage = JSON.parse(localStorage.getItem('storedData'))
-    let storageKeys
-
+    let newStorage
     if (storage) {
-      storageKeys = Object.keys(storage)
-      if (!storageKeys.includes(category)) {
-        const newStorage = Object.assign({[category]: categoryData, ...storage})
-        localStorage.setItem('storedData', JSON.stringify(newStorage))
+      newStorage = Object.assign({[category]: categoryData, ...storage})
+    } else {
+      newStorage = { [category]: categoryData }
+    }
+    localStorage.setItem('storedData', JSON.stringify(newStorage))
+  }
+
+  storeFavorite = (data) => {
+    let favorites = JSON.parse(localStorage.getItem('favorites'))
+    if (favorites) {
+      const matches = favorites.find(favorite => favorite.name === data.name)
+      if (matches) {
+        favorites = favorites.filter(favorite => {
+          return favorite.name !== data.name
+        })
+      } else {
+        favorites.push(data)
       }
     } else {
-      const newStorage = { [category]: categoryData }
-      localStorage.setItem('storedData', JSON.stringify(newStorage))
+      favorites = [data]
     }
+    localStorage.setItem('favorites', JSON.stringify(favorites))
   }
 
   changePage = (page) => {
@@ -68,22 +88,22 @@ class App extends Component {
         changePage={this.changePage}
       />,
       people: <Main
-        storeData={this.storeData}
+        handleStoreData={this.handleStoreData}
         category='people'
         changePage={this.changePage}
       />,
       planets: <Main
-        storeData={this.storeData}
+        handleStoreData={this.handleStoreData}
         category='planets'
         changePage={this.changePage}
       />,
       vehicles: <Main
-        storeData={this.storeData}
+        handleStoreData={this.handleStoreData}
         category='vehicles'
         changePage={this.changePage}
       />,
       favorites: <Main
-        storeData={this.storeData}
+        handleStoreData={this.handleStoreData}
         category='favorites'
         changePage={this.changePage}
       />,

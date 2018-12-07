@@ -17,10 +17,10 @@ export default class Main extends Component {
   }
 
   async componentDidMount() {
-    const { category, storeData } = this.props
+    const { category, handleStoreData } = this.props
     let categoryData
     const storage = JSON.parse(localStorage.getItem('storedData'))
-    if (!storage[category]) {
+    if (!storage || !storage[category]) {
       try {
         categoryData = await Promise.race([
           API.buildCategoryObj(category), 
@@ -32,14 +32,14 @@ export default class Main extends Component {
       } catch {
         this.setState({ error: true }, this.props.changePage('error'))
       }
-      storeData(category, categoryData)
+      handleStoreData(category, categoryData)
     } else {
       this.setState({ categoryData: storage[category] })
     }
   }
 
   render() {
-    const { category, changePage } = this.props
+    const { category, changePage, handleStoreData } = this.props
     const { categoryData } = this.state
     let render
 
@@ -50,6 +50,7 @@ export default class Main extends Component {
     } else {
       render = categoryData.map(current => {
         return ( <Card 
+          handleStoreData={handleStoreData}
           cardData={current} 
           key={uid(current)}
           cardType={category}/>
