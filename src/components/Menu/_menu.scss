@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
 
 .menu {
-  width: 650px;
+  width: 100%;
   height: 655px;
   margin: 30px auto;
   animation: fade 2s ease;
@@ -54,9 +54,15 @@
   left: $left;
   transition: .5s ease;
   z-index: 4;
+
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem #00D1FF);
+    transition: .5s ease;
+    cursor: pointer;
+  }
 }
 
-h3 {
+.planet-label {
   font-family: 'Pathway Gothic One';
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -77,6 +83,7 @@ h3 {
 
 .favorites-path {
   @include path(620px, 620px, 0, 10px);
+  margin: 20px auto;
 }
 
 .vehicles-path {
@@ -94,45 +101,25 @@ h3 {
 .favorites-planet {
   @include planet(287px, 289px);
   animation: slideIn 150s linear infinite;
-
-  &:hover {
-    filter: drop-shadow(0 0 0.75rem #00D1FF);
-    transition: .5s ease;
-    cursor: pointer;
-  }
 }
 
 .vehicles-planet {
   @include planet(226px, 228px);
   animation: slideIn2 140s linear infinite;
-
-  &:hover {
-    filter: drop-shadow(0 0 0.75rem #00D1FF);
-    transition: .5s ease;
-    cursor: pointer;
-  }
 }
 
 .planets-planet {
   @include planet(150px, 150px);
   animation: slideIn3 130s linear infinite;
-
-  &:hover {
-    filter: drop-shadow(0 0 0.75rem #00D1FF);
-    transition: .5s ease;
-    cursor: pointer;
-  }
 }
 
 .people-planet {
   @include planet(77px, 78px);
   animation: slideIn4 120s linear infinite;
+}
 
-  &:hover {
-    filter: drop-shadow(0 0 0.75rem #00D1FF);
-    transition: .5s ease;
-    cursor: pointer;
-  }
+.alt-menu h3 {
+  display: none;
 }
 
 @keyframes slideIn {
@@ -178,4 +165,62 @@ h3 {
   100% {
     opacity: 1;
   }
+}
+
+@media screen and (max-width: 890px) {
+  .favorites-path {
+    transform: scale(.9);
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .favorites-path {
+    transform: scale(.75);
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+    text-align: end;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .favorites-path {
+    display: none;
+  }
+
+  .alt-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
+  }
+
+  .alt-menu {
+    width: 170px;
+
+    h3 {
+      display: block;
+      width: 166px;
+      text-align: center;
+      padding: 5px;
+      border-radius: 15px;
+      background: rgba(0, 208, 255, 0.894);
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+      font-family: 'Pathway Gothic One';
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.4rem;
+      color: black;
+      z-index: 5;
+
+      &:hover {
+        filter: drop-shadow(0 0 0.75rem #00D1FF);
+        transition: .5s ease;
+        cursor: pointer;
+      }
+    }
+  }
+
 }

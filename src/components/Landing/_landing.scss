@@ -269,3 +269,23 @@ body {
     transform: rotateX(25deg) translateZ(-2500px);
   }
 }
+
+@media screen and (max-width: 800px) {
+  .continue-to-site-btn {
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .main-title2 {
+    font-size: 1.8rem;
+    text-align: end;
+  }
+
+  .scroll-text {
+    font-size: 300%;
+  }
+
+
+}

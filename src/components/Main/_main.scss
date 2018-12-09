@@ -44,7 +44,7 @@
 }
 
 .card-section {
-  cursor: url('../../images/crosshair.svg'), auto;
+  cursor: url('../../images/crosshair.svg') 20 20, auto;
   width: 80%;
   margin: 40px auto 50px;
   display: grid;
@@ -55,6 +55,7 @@
     cursor: url("../../images/crosshair_clicked.svg"), auto;
   }
 }
+
 .return-to-landing-btn {
   bottom: 10px;
   left: 10px;
@@ -93,3 +94,32 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .continue-to-site-btn.back-rings {
+    position: fixed;
+    top: -112px;
+    left: 25px;
+    right: unset;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .header-container h1 {
+    font-size: 3.2rem;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card-section {
+    margin: 32px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .card-section {
+    margin: 5px;
+  }
+}
+
