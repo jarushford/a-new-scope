@@ -52,7 +52,7 @@
   grid-gap: 45px 35px;
 
   &:active {
-    cursor: url("../../images/crosshair_clicked.svg"), auto;
+    cursor: url("../../images/crosshair_clicked.svg") 20 20, auto;
   }
 }
 
