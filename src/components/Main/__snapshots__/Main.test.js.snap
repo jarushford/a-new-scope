@@ -61,7 +61,6 @@ ShallowWrapper {
                 "species": "Human",
               }
             }
-            cardType="vehicles"
           />
           <Card
             cardData={
@@ -71,7 +70,6 @@ ShallowWrapper {
                 "species": "droid",
               }
             }
-            cardType="vehicles"
           />
         </section>,
         <img
@@ -219,7 +217,6 @@ ShallowWrapper {
                   "species": "Human",
                 }
               }
-              cardType="vehicles"
             />,
             <Card
               cardData={
@@ -229,7 +226,6 @@ ShallowWrapper {
                   "species": "droid",
                 }
               }
-              cardType="vehicles"
             />,
           ],
           "className": "card-section",
@@ -246,7 +242,8 @@ ShallowWrapper {
                 "name": "Luke",
                 "species": "Human",
               },
-              "cardType": "vehicles",
+              "cardType": undefined,
+              "handleStoreData": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -262,7 +259,8 @@ ShallowWrapper {
                 "name": "R2-D2",
                 "species": "droid",
               },
-              "cardType": "vehicles",
+              "cardType": undefined,
+              "handleStoreData": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -335,7 +333,6 @@ ShallowWrapper {
                   "species": "Human",
                 }
               }
-              cardType="vehicles"
             />
             <Card
               cardData={
@@ -345,7 +342,6 @@ ShallowWrapper {
                   "species": "droid",
                 }
               }
-              cardType="vehicles"
             />
           </section>,
           <img
@@ -493,7 +489,6 @@ ShallowWrapper {
                     "species": "Human",
                   }
                 }
-                cardType="vehicles"
               />,
               <Card
                 cardData={
@@ -503,7 +498,6 @@ ShallowWrapper {
                     "species": "droid",
                   }
                 }
-                cardType="vehicles"
               />,
             ],
             "className": "card-section",
@@ -520,7 +514,8 @@ ShallowWrapper {
                   "name": "Luke",
                   "species": "Human",
                 },
-                "cardType": "vehicles",
+                "cardType": undefined,
+                "handleStoreData": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -536,7 +531,8 @@ ShallowWrapper {
                   "name": "R2-D2",
                   "species": "droid",
                 },
-                "cardType": "vehicles",
+                "cardType": undefined,
+                "handleStoreData": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -644,7 +640,6 @@ ShallowWrapper {
                 "species": "Human",
               }
             }
-            cardType="vehicles"
           />
           <Card
             cardData={
@@ -654,7 +649,6 @@ ShallowWrapper {
                 "species": "droid",
               }
             }
-            cardType="vehicles"
           />
         </section>,
         <img
@@ -802,7 +796,6 @@ ShallowWrapper {
                   "species": "Human",
                 }
               }
-              cardType="vehicles"
             />,
             <Card
               cardData={
@@ -812,7 +805,6 @@ ShallowWrapper {
                   "species": "droid",
                 }
               }
-              cardType="vehicles"
             />,
           ],
           "className": "card-section",
@@ -829,7 +821,8 @@ ShallowWrapper {
                 "name": "Luke",
                 "species": "Human",
               },
-              "cardType": "vehicles",
+              "cardType": undefined,
+              "handleStoreData": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -845,7 +838,8 @@ ShallowWrapper {
                 "name": "R2-D2",
                 "species": "droid",
               },
-              "cardType": "vehicles",
+              "cardType": undefined,
+              "handleStoreData": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -918,7 +912,6 @@ ShallowWrapper {
                   "species": "Human",
                 }
               }
-              cardType="vehicles"
             />
             <Card
               cardData={
@@ -928,7 +921,6 @@ ShallowWrapper {
                   "species": "droid",
                 }
               }
-              cardType="vehicles"
             />
           </section>,
           <img
@@ -1076,7 +1068,6 @@ ShallowWrapper {
                     "species": "Human",
                   }
                 }
-                cardType="vehicles"
               />,
               <Card
                 cardData={
@@ -1086,7 +1077,6 @@ ShallowWrapper {
                     "species": "droid",
                   }
                 }
-                cardType="vehicles"
               />,
             ],
             "className": "card-section",
@@ -1103,7 +1093,8 @@ ShallowWrapper {
                   "name": "Luke",
                   "species": "Human",
                 },
-                "cardType": "vehicles",
+                "cardType": undefined,
+                "handleStoreData": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -1119,7 +1110,8 @@ ShallowWrapper {
                   "name": "R2-D2",
                   "species": "droid",
                 },
-                "cardType": "vehicles",
+                "cardType": undefined,
+                "handleStoreData": undefined,
               },
               "ref": null,
               "rendered": null,
