@@ -17,7 +17,7 @@ class App extends Component {
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.handleTitleScroll()
   }
 

@@ -49,8 +49,13 @@ describe('App', () => {
   })
 
   describe('ComponentDidMount', () => {
-    it('Should call handleTitleScroll', () => {
 
+    it('Should call handleTitleScroll', () => {
+      wrapper = shallow(<App />, { disableLifecycleMethods: true})
+      const spy = jest.spyOn(wrapper.instance(), 'handleTitleScroll')
+
+      wrapper.instance().componentDidMount()
+      expect(spy).toHaveBeenCalled()
     })
   })
 
@@ -91,13 +96,27 @@ describe('App', () => {
   })
 
   describe('handleStoreData', () => {
+    let storeDataSpy
+    let storeFavoriteSpy 
+    let updateStoredDataSpy
+
+    beforeEach(() => {
+      storeDataSpy = jest.spyOn(wrapper.instance(), 'storeData')
+      updateStoredDataSpy = jest.spyOn(wrapper.instance(), 'updateStoredData')
+      storeFavoriteSpy = jest.spyOn(wrapper.instance(), 'storeFavorite')
+    })
 
     it('Should call storeFavorite and updateStoredData functions if category is favorites', () => {
+      wrapper.instance().handleStoreData('favorites', [{name: 'data'}])
 
+      expect(storeFavoriteSpy).toHaveBeenCalled()
+      expect(updateStoredDataSpy).toHaveBeenCalled()
     })
 
     it('Should call storeData if category isnt favorites', () => {
+      wrapper.instance().handleStoreData('vehicles', [{name: 'data'}])
 
+      expect(storeDataSpy).toHaveBeenCalled()
     })
   })
 

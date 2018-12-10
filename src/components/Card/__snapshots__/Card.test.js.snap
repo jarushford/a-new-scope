@@ -6,6 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Card
     cardData={
       Object {
+        "category": "planets",
+        "favorite": false,
         "main1": "200K",
         "main2": "Warm",
         "name": "Test Planet",
@@ -18,6 +20,7 @@ ShallowWrapper {
       }
     }
     cardType="planets"
+    handleStoreData={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -43,7 +46,7 @@ ShallowWrapper {
               Test Planet
             </h1>
             <i
-              className="fas fa-star undefined favorite-btn"
+              className="fas fa-star false favorite-btn"
               onClick={[Function]}
             />
           </div>
@@ -60,7 +63,7 @@ ShallowWrapper {
             Test Planet
           </h1>
           <i
-            className="fas fa-star undefined favorite-btn"
+            className="fas fa-star false favorite-btn"
             onClick={[Function]}
           />
         </div>,
@@ -140,7 +143,7 @@ ShallowWrapper {
                 Test Planet
               </h1>
               <i
-                className="fas fa-star undefined favorite-btn"
+                className="fas fa-star false favorite-btn"
                 onClick={[Function]}
               />
             </div>,
@@ -164,7 +167,7 @@ ShallowWrapper {
                   Test Planet
                 </h1>,
                 <i
-                  className="fas fa-star undefined favorite-btn"
+                  className="fas fa-star false favorite-btn"
                   onClick={[Function]}
                 />,
               ],
@@ -188,7 +191,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "fas fa-star undefined favorite-btn",
+                  "className": "fas fa-star false favorite-btn",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -224,7 +227,7 @@ ShallowWrapper {
               Test Planet
             </h1>,
             <i
-              className="fas fa-star undefined favorite-btn"
+              className="fas fa-star false favorite-btn"
               onClick={[Function]}
             />,
           ],
@@ -248,7 +251,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "fas fa-star undefined favorite-btn",
+              "className": "fas fa-star false favorite-btn",
               "onClick": [Function],
             },
             "ref": null,
@@ -508,7 +511,7 @@ ShallowWrapper {
                 Test Planet
               </h1>
               <i
-                className="fas fa-star undefined favorite-btn"
+                className="fas fa-star false favorite-btn"
                 onClick={[Function]}
               />
             </div>
@@ -525,7 +528,7 @@ ShallowWrapper {
               Test Planet
             </h1>
             <i
-              className="fas fa-star undefined favorite-btn"
+              className="fas fa-star false favorite-btn"
               onClick={[Function]}
             />
           </div>,
@@ -605,7 +608,7 @@ ShallowWrapper {
                   Test Planet
                 </h1>
                 <i
-                  className="fas fa-star undefined favorite-btn"
+                  className="fas fa-star false favorite-btn"
                   onClick={[Function]}
                 />
               </div>,
@@ -629,7 +632,7 @@ ShallowWrapper {
                     Test Planet
                   </h1>,
                   <i
-                    className="fas fa-star undefined favorite-btn"
+                    className="fas fa-star false favorite-btn"
                     onClick={[Function]}
                   />,
                 ],
@@ -653,7 +656,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "fas fa-star undefined favorite-btn",
+                    "className": "fas fa-star false favorite-btn",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -689,7 +692,7 @@ ShallowWrapper {
                 Test Planet
               </h1>,
               <i
-                className="fas fa-star undefined favorite-btn"
+                className="fas fa-star false favorite-btn"
                 onClick={[Function]}
               />,
             ],
@@ -713,7 +716,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "fas fa-star undefined favorite-btn",
+                "className": "fas fa-star false favorite-btn",
                 "onClick": [Function],
               },
               "ref": null,
@@ -983,6 +986,8 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Card
     cardData={
       Object {
+        "category": "planets",
+        "favorite": false,
         "main1": "200K",
         "main2": "Warm",
         "name": "Test Planet",

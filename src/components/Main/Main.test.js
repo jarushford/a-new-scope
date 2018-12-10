@@ -113,12 +113,17 @@ describe('Main', () => {
   describe('getFavorites', () => {
 
     it('Should set category data to none if there are no current favorites', () => {
+      const expectedCategoryData = 'none'
+      wrapper.instance().getFavorites([])
 
+      expect(wrapper.state().categoryData).toEqual(expectedCategoryData)
     })
 
     it('Should set category data an array of favorites if there are favorites', () => {
+      const favorites = [{name: 'fav1'}, {name: 'fav2'}]
+      wrapper.instance().getFavorites(favorites)
       
+      expect(wrapper.state().categoryData).toEqual(favorites)
     })
   })
-
 })
