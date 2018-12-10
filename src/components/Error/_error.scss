@@ -57,3 +57,13 @@
     transform: scale(1.1)
   }
 }
+
+@media screen and (max-width: 500px) {
+  .sith-happens {
+    font-size: 3rem;
+  }
+
+  .error-darth {
+    width: 300px
+  }
+}

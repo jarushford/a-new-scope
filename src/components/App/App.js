@@ -18,6 +18,10 @@ class App extends Component {
   }
 
   async componentDidMount() {
+    this.handleTitleScroll()
+  }
+
+  handleTitleScroll = async () => {
     try {
       const films = await Promise.race([
         API.fetchTitleScroll(), 
@@ -86,7 +90,9 @@ class App extends Component {
   }
 
   changePage = (page) => {
-    this.setState({ currentPage: page })
+    page === 'landing' ?
+    this.setState({ currentPage: page }, this.handleTitleScroll)
+    : this.setState({ currentPage: page })
   }
 
   render() {

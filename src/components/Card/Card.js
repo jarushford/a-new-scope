@@ -89,6 +89,14 @@ export default class Card extends Component {
           onClick={(e) => this.flipCard(e)}
         >
           <div className='card-front'>
+            <div className={`image-side-title card-title card-header-${cardType}`}>
+              <h1>{cardObj.name}</h1>
+              <i
+                className={`fas fa-star ${cardObj.favorite && 'favorite'} favorite-btn`}
+                onClick={() => this.toggleFavorite(cardObj)}
+              >
+              </i>
+            </div>
             <img className='front-image' src={`./images/${cardObj.name.replace('\/', '-')}.jpg`} alt='card-image'></img>
           </div>
           <div className={` card-title card-header-${cardType}`}>
