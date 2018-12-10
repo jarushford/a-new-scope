@@ -128,11 +128,11 @@ describe('Card', () => {
       expect(wrapper.instance().state.cardObj).toEqual(expected)
     })
 
-    it('Should fire the toggleFavorite function when the front favorite button is clicked', () => {
+    it.skip('Should fire the toggleFavorite function when the front favorite button is clicked', () => {
       // wrapper.find('.favorite-btn')[0].simulate('click')
     })
 
-    it('Should fire the toggleFavorite function when the back favorite button is clicked', () => {
+    it.skip('Should fire the toggleFavorite function when the back favorite button is clicked', () => {
 
     })
   })
