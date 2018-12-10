@@ -122,25 +122,25 @@ describe('App', () => {
 
   describe('storeData', () => {
     
-    it('Should set reassign storedData in local storage to a new object with the new category data included', () => {
+    it.skip('Should set reassign storedData in local storage to a new object with the new category data included', () => {
 
     })
   })
 
   describe('updateStoreData', () => {
     
-    it('Should find the card to be updated in localstorage and replace it with the changed card', () => {
+    it.skip('Should find the card to be updated in localstorage and replace it with the changed card', () => {
 
     })
   })
 
   describe('storeFavorite', () => {
     
-    it('Should push in the new favorited card to local storage if it is a new favorite', () => {
+    it.skip('Should push in the new favorited card to local storage if it is a new favorite', () => {
 
     })
 
-    it('Should remove the favorite from local storage if the favorite was removed', () => {
+    it.skip('Should remove the favorite from local storage if the favorite was removed', () => {
 
     })
   })
