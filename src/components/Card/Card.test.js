@@ -111,10 +111,41 @@ describe('Card', () => {
       }
       expect(wrapper.instance().state.cardObj).toEqual(expected)
     })
+
+    it('Should fire the toggleFavorite function when the front favorite button is clicked', () => {
+      
+    })
+
+    it('Should fire the toggleFavorite function when the back favorite button is clicked', () => {
+
+    })
   })
 
   describe('flipCard', () => {
 
+    it('should not setState if the click occured on the favorite button', () => {
+      const expected = {
+        flipped: false,
+        unflipped: false,
+        cardObj: formattedData
+      }
+
+      wrapper.find('.card').simulate('click',  {target: {classList: {contains: () => true}}})
+
+      expect(wrapper.state()).toEqual(expected)
+    })
+
+    it('should not setState if the click occured on a scroll button', () => {
+      const expected = {
+        flipped: false,
+        unflipped: false,
+        cardObj: formattedData
+      }
+
+      wrapper.find('.card').simulate('click',  {target: {classList: {contains: () => true}}})
+
+      expect(wrapper.state()).toEqual(expected)
+    })
     
     it('should set flipped to true when unflipped', () => {
       const expected = {
@@ -123,7 +154,7 @@ describe('Card', () => {
         cardObj: formattedData
       }
       
-      wrapper.find('.card').simulate('click')
+      wrapper.find('.card').simulate('click',  {target: {classList: {contains: () => false}}})
 
       expect(wrapper.state()).toEqual(expected)
     })
@@ -135,10 +166,21 @@ describe('Card', () => {
         cardObj: formattedData
       }
       
-      wrapper.find('.card').simulate('click')
-      wrapper.find('.card').simulate('click')
+      wrapper.find('.card').simulate('click', {target: {classList: {contains: () => false}}})
+      wrapper.find('.card').simulate('click',  {target: {classList: {contains: () => false}}})
 
       expect(wrapper.state()).toEqual(expected)
+    })
+  })
+
+  describe('ToggleFavorite', () => {
+    
+    it('Should toggle the favorite property on the card object in state', () => {
+
+    })
+
+    it('Should store the updated card in local storage', () => {
+      
     })
   })
 })

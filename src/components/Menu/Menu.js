@@ -39,25 +39,25 @@ export default function Menu({ changePage }) {
       <div className='alt-menu-container'>
         <div 
           onClick={() => changePage('favorites')}
-          className='alt-menu'
+          className='alt-menu alt-menu-favorites'
         >
           <h3>Favorites</h3>
         </div>
         <div
           onClick={() => changePage('vehicles')}
-          className='alt-menu'
+          className='alt-menu alt-menu-vehicles'
         >
           <h3>Vehicles</h3>
         </div>
         <div
             onClick={() => changePage('planets')}
-            className='alt-menu'
+            className='alt-menu alt-menu-planets'
           >
           <h3>Planets</h3>
         </div>
         <div
           onClick={() => changePage('people')}
-          className='alt-menu'
+          className='alt-menu alt-menu-people'
         >
           <h3>People</h3>
         </div>

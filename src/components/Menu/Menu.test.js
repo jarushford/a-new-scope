@@ -24,6 +24,24 @@ describe('Menu', () => {
     expect(mockChange).toBeCalledWith('planets')
   })
 
+  it('Should run change page when a mobile menu option is clicked', () => {
+    wrapper.find('.alt-menu-vehicles').simulate('click')
+    expect(mockChange).toBeCalled()
+    expect(mockChange).toBeCalledWith('vehicles')
+
+    wrapper.find('.alt-menu-favorites').simulate('click')
+    expect(mockChange).toBeCalled()
+    expect(mockChange).toBeCalledWith('favorites')
+
+    wrapper.find('.alt-menu-people').simulate('click')
+    expect(mockChange).toBeCalled()
+    expect(mockChange).toBeCalledWith('people')
+
+    wrapper.find('.alt-menu-planets').simulate('click')
+    expect(mockChange).toBeCalled()
+    expect(mockChange).toBeCalledWith('planets')
+  })
+
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })

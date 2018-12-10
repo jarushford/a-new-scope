@@ -75,8 +75,8 @@ export default class ResidentsScroller extends Component {
 
     return (
       <div className='residents-scroller'>
-        <i className="fas fa-caret-left resident-arrow" onClick={() => this.clickArrow(1)}></i>
-        <i className="fas fa-caret-right resident-arrow" onClick={() => this.clickArrow(-1)}></i>
+        <i className="fas fa-caret-left resident-arrow" onClick={() => this.clickArrow(-1)}></i>
+        <i className="fas fa-caret-right resident-arrow" onClick={() => this.clickArrow(1)}></i>
         {
           residents.map( resident => {
             return (

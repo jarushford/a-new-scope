@@ -19,8 +19,36 @@ ShallowWrapper {
           Array [
             "planets",
           ],
+          Array [
+            "vehicles",
+          ],
+          Array [
+            "favorites",
+          ],
+          Array [
+            "people",
+          ],
+          Array [
+            "planets",
+          ],
         ],
         "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
           Object {
             "isThrow": false,
             "value": undefined,
@@ -67,7 +95,9 @@ ShallowWrapper {
             className="favorites-planet"
             onClick={[Function]}
           >
-            <h3>
+            <h3
+              className="planet-label"
+            >
               Favorites
             </h3>
           </div>
@@ -78,7 +108,9 @@ ShallowWrapper {
               className="vehicles-planet"
               onClick={[Function]}
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Vehicles
               </h3>
             </div>
@@ -89,7 +121,9 @@ ShallowWrapper {
                 className="planets-planet"
                 onClick={[Function]}
               >
-                <h3>
+                <h3
+                  className="planet-label"
+                >
                   Planets
                 </h3>
               </div>
@@ -100,12 +134,50 @@ ShallowWrapper {
                   className="people-planet"
                   onClick={[Function]}
                 >
-                  <h3>
+                  <h3
+                    className="planet-label"
+                  >
                     People
                   </h3>
                 </div>
               </div>
             </div>
+          </div>
+        </div>,
+        <div
+          className="alt-menu-container"
+        >
+          <div
+            className="alt-menu alt-menu-favorites"
+            onClick={[Function]}
+          >
+            <h3>
+              Favorites
+            </h3>
+          </div>
+          <div
+            className="alt-menu alt-menu-vehicles"
+            onClick={[Function]}
+          >
+            <h3>
+              Vehicles
+            </h3>
+          </div>
+          <div
+            className="alt-menu alt-menu-planets"
+            onClick={[Function]}
+          >
+            <h3>
+              Planets
+            </h3>
+          </div>
+          <div
+            className="alt-menu alt-menu-people"
+            onClick={[Function]}
+          >
+            <h3>
+              People
+            </h3>
           </div>
         </div>,
       ],
@@ -135,7 +207,9 @@ ShallowWrapper {
               className="favorites-planet"
               onClick={[Function]}
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Favorites
               </h3>
             </div>,
@@ -146,7 +220,9 @@ ShallowWrapper {
                 className="vehicles-planet"
                 onClick={[Function]}
               >
-                <h3>
+                <h3
+                  className="planet-label"
+                >
                   Vehicles
                 </h3>
               </div>
@@ -157,7 +233,9 @@ ShallowWrapper {
                   className="planets-planet"
                   onClick={[Function]}
                 >
-                  <h3>
+                  <h3
+                    className="planet-label"
+                  >
                     Planets
                   </h3>
                 </div>
@@ -168,7 +246,9 @@ ShallowWrapper {
                     className="people-planet"
                     onClick={[Function]}
                   >
-                    <h3>
+                    <h3
+                      className="planet-label"
+                    >
                       People
                     </h3>
                   </div>
@@ -185,10 +265,278 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <h3>
+              "children": <h3
+                className="planet-label"
+              >
                 Favorites
               </h3>,
               "className": "favorites-planet",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Favorites",
+                "className": "planet-label",
+              },
+              "ref": null,
+              "rendered": "Favorites",
+              "type": "h3",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="vehicles-planet"
+                  onClick={[Function]}
+                >
+                  <h3
+                    className="planet-label"
+                  >
+                    Vehicles
+                  </h3>
+                </div>,
+                <div
+                  className="planets-path"
+                >
+                  <div
+                    className="planets-planet"
+                    onClick={[Function]}
+                  >
+                    <h3
+                      className="planet-label"
+                    >
+                      Planets
+                    </h3>
+                  </div>
+                  <div
+                    className="people-path"
+                  >
+                    <div
+                      className="people-planet"
+                      onClick={[Function]}
+                    >
+                      <h3
+                        className="planet-label"
+                      >
+                        People
+                      </h3>
+                    </div>
+                  </div>
+                </div>,
+              ],
+              "className": "vehicles-path",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <h3
+                    className="planet-label"
+                  >
+                    Vehicles
+                  </h3>,
+                  "className": "vehicles-planet",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Vehicles",
+                    "className": "planet-label",
+                  },
+                  "ref": null,
+                  "rendered": "Vehicles",
+                  "type": "h3",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="planets-planet"
+                      onClick={[Function]}
+                    >
+                      <h3
+                        className="planet-label"
+                      >
+                        Planets
+                      </h3>
+                    </div>,
+                    <div
+                      className="people-path"
+                    >
+                      <div
+                        className="people-planet"
+                        onClick={[Function]}
+                      >
+                        <h3
+                          className="planet-label"
+                        >
+                          People
+                        </h3>
+                      </div>
+                    </div>,
+                  ],
+                  "className": "planets-path",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <h3
+                        className="planet-label"
+                      >
+                        Planets
+                      </h3>,
+                      "className": "planets-planet",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Planets",
+                        "className": "planet-label",
+                      },
+                      "ref": null,
+                      "rendered": "Planets",
+                      "type": "h3",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <div
+                        className="people-planet"
+                        onClick={[Function]}
+                      >
+                        <h3
+                          className="planet-label"
+                        >
+                          People
+                        </h3>
+                      </div>,
+                      "className": "people-path",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <h3
+                          className="planet-label"
+                        >
+                          People
+                        </h3>,
+                        "className": "people-planet",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "People",
+                          "className": "planet-label",
+                        },
+                        "ref": null,
+                        "rendered": "People",
+                        "type": "h3",
+                      },
+                      "type": "div",
+                    },
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="alt-menu alt-menu-favorites"
+              onClick={[Function]}
+            >
+              <h3>
+                Favorites
+              </h3>
+            </div>,
+            <div
+              className="alt-menu alt-menu-vehicles"
+              onClick={[Function]}
+            >
+              <h3>
+                Vehicles
+              </h3>
+            </div>,
+            <div
+              className="alt-menu alt-menu-planets"
+              onClick={[Function]}
+            >
+              <h3>
+                Planets
+              </h3>
+            </div>,
+            <div
+              className="alt-menu alt-menu-people"
+              onClick={[Function]}
+            >
+              <h3>
+                People
+              </h3>
+            </div>,
+          ],
+          "className": "alt-menu-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h3>
+                Favorites
+              </h3>,
+              "className": "alt-menu alt-menu-favorites",
               "onClick": [Function],
             },
             "ref": null,
@@ -210,172 +558,74 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <div
-                  className="vehicles-planet"
-                  onClick={[Function]}
-                >
-                  <h3>
-                    Vehicles
-                  </h3>
-                </div>,
-                <div
-                  className="planets-path"
-                >
-                  <div
-                    className="planets-planet"
-                    onClick={[Function]}
-                  >
-                    <h3>
-                      Planets
-                    </h3>
-                  </div>
-                  <div
-                    className="people-path"
-                  >
-                    <div
-                      className="people-planet"
-                      onClick={[Function]}
-                    >
-                      <h3>
-                        People
-                      </h3>
-                    </div>
-                  </div>
-                </div>,
-              ],
-              "className": "vehicles-path",
+              "children": <h3>
+                Vehicles
+              </h3>,
+              "className": "alt-menu alt-menu-vehicles",
+              "onClick": [Function],
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <h3>
-                    Vehicles
-                  </h3>,
-                  "className": "vehicles-planet",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Vehicles",
-                  },
-                  "ref": null,
-                  "rendered": "Vehicles",
-                  "type": "h3",
-                },
-                "type": "div",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Vehicles",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <div
-                      className="planets-planet"
-                      onClick={[Function]}
-                    >
-                      <h3>
-                        Planets
-                      </h3>
-                    </div>,
-                    <div
-                      className="people-path"
-                    >
-                      <div
-                        className="people-planet"
-                        onClick={[Function]}
-                      >
-                        <h3>
-                          People
-                        </h3>
-                      </div>
-                    </div>,
-                  ],
-                  "className": "planets-path",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <h3>
-                        Planets
-                      </h3>,
-                      "className": "planets-planet",
-                      "onClick": [Function],
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Planets",
-                      },
-                      "ref": null,
-                      "rendered": "Planets",
-                      "type": "h3",
-                    },
-                    "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <div
-                        className="people-planet"
-                        onClick={[Function]}
-                      >
-                        <h3>
-                          People
-                        </h3>
-                      </div>,
-                      "className": "people-path",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <h3>
-                          People
-                        </h3>,
-                        "className": "people-planet",
-                        "onClick": [Function],
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "People",
-                        },
-                        "ref": null,
-                        "rendered": "People",
-                        "type": "h3",
-                      },
-                      "type": "div",
-                    },
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
+              "ref": null,
+              "rendered": "Vehicles",
+              "type": "h3",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h3>
+                Planets
+              </h3>,
+              "className": "alt-menu alt-menu-planets",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Planets",
               },
-            ],
+              "ref": null,
+              "rendered": "Planets",
+              "type": "h3",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h3>
+                People
+              </h3>,
+              "className": "alt-menu alt-menu-people",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "People",
+              },
+              "ref": null,
+              "rendered": "People",
+              "type": "h3",
+            },
             "type": "div",
           },
         ],
@@ -403,7 +653,9 @@ ShallowWrapper {
               className="favorites-planet"
               onClick={[Function]}
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Favorites
               </h3>
             </div>
@@ -414,7 +666,9 @@ ShallowWrapper {
                 className="vehicles-planet"
                 onClick={[Function]}
               >
-                <h3>
+                <h3
+                  className="planet-label"
+                >
                   Vehicles
                 </h3>
               </div>
@@ -425,7 +679,9 @@ ShallowWrapper {
                   className="planets-planet"
                   onClick={[Function]}
                 >
-                  <h3>
+                  <h3
+                    className="planet-label"
+                  >
                     Planets
                   </h3>
                 </div>
@@ -436,12 +692,50 @@ ShallowWrapper {
                     className="people-planet"
                     onClick={[Function]}
                   >
-                    <h3>
+                    <h3
+                      className="planet-label"
+                    >
                       People
                     </h3>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>,
+          <div
+            className="alt-menu-container"
+          >
+            <div
+              className="alt-menu alt-menu-favorites"
+              onClick={[Function]}
+            >
+              <h3>
+                Favorites
+              </h3>
+            </div>
+            <div
+              className="alt-menu alt-menu-vehicles"
+              onClick={[Function]}
+            >
+              <h3>
+                Vehicles
+              </h3>
+            </div>
+            <div
+              className="alt-menu alt-menu-planets"
+              onClick={[Function]}
+            >
+              <h3>
+                Planets
+              </h3>
+            </div>
+            <div
+              className="alt-menu alt-menu-people"
+              onClick={[Function]}
+            >
+              <h3>
+                People
+              </h3>
             </div>
           </div>,
         ],
@@ -471,7 +765,9 @@ ShallowWrapper {
                 className="favorites-planet"
                 onClick={[Function]}
               >
-                <h3>
+                <h3
+                  className="planet-label"
+                >
                   Favorites
                 </h3>
               </div>,
@@ -482,7 +778,9 @@ ShallowWrapper {
                   className="vehicles-planet"
                   onClick={[Function]}
                 >
-                  <h3>
+                  <h3
+                    className="planet-label"
+                  >
                     Vehicles
                   </h3>
                 </div>
@@ -493,7 +791,9 @@ ShallowWrapper {
                     className="planets-planet"
                     onClick={[Function]}
                   >
-                    <h3>
+                    <h3
+                      className="planet-label"
+                    >
                       Planets
                     </h3>
                   </div>
@@ -504,7 +804,9 @@ ShallowWrapper {
                       className="people-planet"
                       onClick={[Function]}
                     >
-                      <h3>
+                      <h3
+                        className="planet-label"
+                      >
                         People
                       </h3>
                     </div>
@@ -521,10 +823,278 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3>
+                "children": <h3
+                  className="planet-label"
+                >
                   Favorites
                 </h3>,
                 "className": "favorites-planet",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Favorites",
+                  "className": "planet-label",
+                },
+                "ref": null,
+                "rendered": "Favorites",
+                "type": "h3",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="vehicles-planet"
+                    onClick={[Function]}
+                  >
+                    <h3
+                      className="planet-label"
+                    >
+                      Vehicles
+                    </h3>
+                  </div>,
+                  <div
+                    className="planets-path"
+                  >
+                    <div
+                      className="planets-planet"
+                      onClick={[Function]}
+                    >
+                      <h3
+                        className="planet-label"
+                      >
+                        Planets
+                      </h3>
+                    </div>
+                    <div
+                      className="people-path"
+                    >
+                      <div
+                        className="people-planet"
+                        onClick={[Function]}
+                      >
+                        <h3
+                          className="planet-label"
+                        >
+                          People
+                        </h3>
+                      </div>
+                    </div>
+                  </div>,
+                ],
+                "className": "vehicles-path",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h3
+                      className="planet-label"
+                    >
+                      Vehicles
+                    </h3>,
+                    "className": "vehicles-planet",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Vehicles",
+                      "className": "planet-label",
+                    },
+                    "ref": null,
+                    "rendered": "Vehicles",
+                    "type": "h3",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="planets-planet"
+                        onClick={[Function]}
+                      >
+                        <h3
+                          className="planet-label"
+                        >
+                          Planets
+                        </h3>
+                      </div>,
+                      <div
+                        className="people-path"
+                      >
+                        <div
+                          className="people-planet"
+                          onClick={[Function]}
+                        >
+                          <h3
+                            className="planet-label"
+                          >
+                            People
+                          </h3>
+                        </div>
+                      </div>,
+                    ],
+                    "className": "planets-path",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <h3
+                          className="planet-label"
+                        >
+                          Planets
+                        </h3>,
+                        "className": "planets-planet",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Planets",
+                          "className": "planet-label",
+                        },
+                        "ref": null,
+                        "rendered": "Planets",
+                        "type": "h3",
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <div
+                          className="people-planet"
+                          onClick={[Function]}
+                        >
+                          <h3
+                            className="planet-label"
+                          >
+                            People
+                          </h3>
+                        </div>,
+                        "className": "people-path",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <h3
+                            className="planet-label"
+                          >
+                            People
+                          </h3>,
+                          "className": "people-planet",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "People",
+                            "className": "planet-label",
+                          },
+                          "ref": null,
+                          "rendered": "People",
+                          "type": "h3",
+                        },
+                        "type": "div",
+                      },
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="alt-menu alt-menu-favorites"
+                onClick={[Function]}
+              >
+                <h3>
+                  Favorites
+                </h3>
+              </div>,
+              <div
+                className="alt-menu alt-menu-vehicles"
+                onClick={[Function]}
+              >
+                <h3>
+                  Vehicles
+                </h3>
+              </div>,
+              <div
+                className="alt-menu alt-menu-planets"
+                onClick={[Function]}
+              >
+                <h3>
+                  Planets
+                </h3>
+              </div>,
+              <div
+                className="alt-menu alt-menu-people"
+                onClick={[Function]}
+              >
+                <h3>
+                  People
+                </h3>
+              </div>,
+            ],
+            "className": "alt-menu-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h3>
+                  Favorites
+                </h3>,
+                "className": "alt-menu alt-menu-favorites",
                 "onClick": [Function],
               },
               "ref": null,
@@ -546,172 +1116,74 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <div
-                    className="vehicles-planet"
-                    onClick={[Function]}
-                  >
-                    <h3>
-                      Vehicles
-                    </h3>
-                  </div>,
-                  <div
-                    className="planets-path"
-                  >
-                    <div
-                      className="planets-planet"
-                      onClick={[Function]}
-                    >
-                      <h3>
-                        Planets
-                      </h3>
-                    </div>
-                    <div
-                      className="people-path"
-                    >
-                      <div
-                        className="people-planet"
-                        onClick={[Function]}
-                      >
-                        <h3>
-                          People
-                        </h3>
-                      </div>
-                    </div>
-                  </div>,
-                ],
-                "className": "vehicles-path",
+                "children": <h3>
+                  Vehicles
+                </h3>,
+                "className": "alt-menu alt-menu-vehicles",
+                "onClick": [Function],
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <h3>
-                      Vehicles
-                    </h3>,
-                    "className": "vehicles-planet",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Vehicles",
-                    },
-                    "ref": null,
-                    "rendered": "Vehicles",
-                    "type": "h3",
-                  },
-                  "type": "div",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Vehicles",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <div
-                        className="planets-planet"
-                        onClick={[Function]}
-                      >
-                        <h3>
-                          Planets
-                        </h3>
-                      </div>,
-                      <div
-                        className="people-path"
-                      >
-                        <div
-                          className="people-planet"
-                          onClick={[Function]}
-                        >
-                          <h3>
-                            People
-                          </h3>
-                        </div>
-                      </div>,
-                    ],
-                    "className": "planets-path",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <h3>
-                          Planets
-                        </h3>,
-                        "className": "planets-planet",
-                        "onClick": [Function],
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Planets",
-                        },
-                        "ref": null,
-                        "rendered": "Planets",
-                        "type": "h3",
-                      },
-                      "type": "div",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <div
-                          className="people-planet"
-                          onClick={[Function]}
-                        >
-                          <h3>
-                            People
-                          </h3>
-                        </div>,
-                        "className": "people-path",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": <h3>
-                            People
-                          </h3>,
-                          "className": "people-planet",
-                          "onClick": [Function],
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": "People",
-                          },
-                          "ref": null,
-                          "rendered": "People",
-                          "type": "h3",
-                        },
-                        "type": "div",
-                      },
-                      "type": "div",
-                    },
-                  ],
-                  "type": "div",
+                "ref": null,
+                "rendered": "Vehicles",
+                "type": "h3",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h3>
+                  Planets
+                </h3>,
+                "className": "alt-menu alt-menu-planets",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Planets",
                 },
-              ],
+                "ref": null,
+                "rendered": "Planets",
+                "type": "h3",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h3>
+                  People
+                </h3>,
+                "className": "alt-menu alt-menu-people",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "People",
+                },
+                "ref": null,
+                "rendered": "People",
+                "type": "h3",
+              },
               "type": "div",
             },
           ],

@@ -48,24 +48,25 @@ describe('App', () => {
     })
   })
 
-
   describe('ComponentDidMount', () => {
+    it('Should call handleTitleScroll', () => {
 
+    })
+  })
+
+  describe('HandleTitleScroll', () => {
     describe('Success', () => {
 
       it('should update landingScroll in state if fetch is successful', async () => {
 
         const expectedState = {
-          currentPage: 'landing',
-          landingScroll: {
             title: 'ep1', 
             year: '1995', 
             text: 'starwars'
-          }
         }
 
-        await wrapper.instance().componentDidMount()
-        expect(wrapper.state()).toEqual(expectedState)
+        await wrapper.instance().handleTitleScroll()
+        expect(wrapper.state().landingScroll).toEqual(expectedState)
       })
     })
     
@@ -79,9 +80,50 @@ describe('App', () => {
 
         const expectedState = 'error'
 
-        await wrapper.instance().componentDidMount()
+        await wrapper.instance().handleTitleScroll()
         expect(wrapper.state().currentPage).toEqual(expectedState)
+      })
+
+      it('should update current page to error if the fetch takes longer than 8 seconds', () => {
+
       })
     })
   })
+
+  describe('handleStoreData', () => {
+
+    it('Should call storeFavorite and updateStoredData functions if category is favorites', () => {
+
+    })
+
+    it('Should call storeData if category isnt favorites', () => {
+
+    })
+  })
+
+  describe('storeData', () => {
+    
+    it('Should set reassign storedData in local storage to a new object with the new category data included', () => {
+
+    })
+  })
+
+  describe('updateStoreData', () => {
+    
+    it('Should find the card to be updated in localstorage and replace it with the changed card', () => {
+
+    })
+  })
+
+  describe('storeFavorite', () => {
+    
+    it('Should push in the new favorited card to local storage if it is a new favorite', () => {
+
+    })
+
+    it('Should remove the favorite from local storage if the favorite was removed', () => {
+
+    })
+  })
+
 })
