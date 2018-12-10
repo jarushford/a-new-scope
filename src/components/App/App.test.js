@@ -48,24 +48,30 @@ describe('App', () => {
     })
   })
 
-
   describe('ComponentDidMount', () => {
 
+    it('Should call handleTitleScroll', () => {
+      wrapper = shallow(<App />, { disableLifecycleMethods: true})
+      const spy = jest.spyOn(wrapper.instance(), 'handleTitleScroll')
+
+      wrapper.instance().componentDidMount()
+      expect(spy).toHaveBeenCalled()
+    })
+  })
+
+  describe('HandleTitleScroll', () => {
     describe('Success', () => {
 
       it('should update landingScroll in state if fetch is successful', async () => {
 
         const expectedState = {
-          currentPage: 'landing',
-          landingScroll: {
             title: 'ep1', 
             year: '1995', 
             text: 'starwars'
-          }
         }
 
-        await wrapper.instance().componentDidMount()
-        expect(wrapper.state()).toEqual(expectedState)
+        await wrapper.instance().handleTitleScroll()
+        expect(wrapper.state().landingScroll).toEqual(expectedState)
       })
     })
     
@@ -79,9 +85,64 @@ describe('App', () => {
 
         const expectedState = 'error'
 
-        await wrapper.instance().componentDidMount()
+        await wrapper.instance().handleTitleScroll()
         expect(wrapper.state().currentPage).toEqual(expectedState)
+      })
+
+      it('should update current page to error if the fetch takes longer than 8 seconds', () => {
+
       })
     })
   })
+
+  describe('handleStoreData', () => {
+    let storeDataSpy
+    let storeFavoriteSpy 
+    let updateStoredDataSpy
+
+    beforeEach(() => {
+      storeDataSpy = jest.spyOn(wrapper.instance(), 'storeData')
+      updateStoredDataSpy = jest.spyOn(wrapper.instance(), 'updateStoredData')
+      storeFavoriteSpy = jest.spyOn(wrapper.instance(), 'storeFavorite')
+    })
+
+    it('Should call storeFavorite and updateStoredData functions if category is favorites', () => {
+      wrapper.instance().handleStoreData('favorites', [{name: 'data'}])
+
+      expect(storeFavoriteSpy).toHaveBeenCalled()
+      expect(updateStoredDataSpy).toHaveBeenCalled()
+    })
+
+    it('Should call storeData if category isnt favorites', () => {
+      wrapper.instance().handleStoreData('vehicles', [{name: 'data'}])
+
+      expect(storeDataSpy).toHaveBeenCalled()
+    })
+  })
+
+  describe('storeData', () => {
+    
+    it.skip('Should set reassign storedData in local storage to a new object with the new category data included', () => {
+
+    })
+  })
+
+  describe('updateStoreData', () => {
+    
+    it.skip('Should find the card to be updated in localstorage and replace it with the changed card', () => {
+
+    })
+  })
+
+  describe('storeFavorite', () => {
+    
+    it.skip('Should push in the new favorited card to local storage if it is a new favorite', () => {
+
+    })
+
+    it.skip('Should remove the favorite from local storage if the favorite was removed', () => {
+
+    })
+  })
+
 })

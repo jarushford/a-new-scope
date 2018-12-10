@@ -17,7 +17,7 @@ class App extends Component {
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.handleTitleScroll()
   }
 
@@ -56,12 +56,7 @@ class App extends Component {
 
   storeData = (category, categoryData) => {
     const storage = JSON.parse(localStorage.getItem('storedData'))
-    let newStorage
-    if (storage) {
-      newStorage = Object.assign({[category]: categoryData, ...storage})
-    } else {
-      newStorage = { [category]: categoryData }
-    }
+    let newStorage = Object.assign({[category]: categoryData, ...storage})
     localStorage.setItem('storedData', JSON.stringify(newStorage))
   }
 

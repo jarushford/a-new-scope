@@ -25,10 +25,16 @@ beforeAll(() => {
 describe('Main', () => {
   let wrapper
   let mockChangePage
+  let handleStoreData
 
   beforeEach(() => {
     mockChangePage = jest.fn()
-    wrapper = shallow(<Main changePage={mockChangePage} category={'vehicles'}/>)
+    handleStoreData = jest.fn()
+    wrapper = shallow(
+      <Main 
+        changePage={mockChangePage} 
+        category={'vehicles'} 
+        handleStoreData={handleStoreData}/>)
   })
 
   it('should default state to no error', () => {
@@ -90,6 +96,34 @@ describe('Main', () => {
       await wrapper.instance().componentDidMount()
       expect(wrapper.state().error).toEqual(expected)
     })
+
+    it('Should load favorites from local storage if the category is favorites', () => {
+
+    })
+
+    it('Should load category data from local storage if it exists', () => {
+
+    })
+
+    it('Should store category data in local storage if was not set already', () => {
+
+    })
   })
 
+  describe('getFavorites', () => {
+
+    it('Should set category data to none if there are no current favorites', () => {
+      const expectedCategoryData = 'none'
+      wrapper.instance().getFavorites([])
+
+      expect(wrapper.state().categoryData).toEqual(expectedCategoryData)
+    })
+
+    it('Should set category data an array of favorites if there are favorites', () => {
+      const favorites = [{name: 'fav1'}, {name: 'fav2'}]
+      wrapper.instance().getFavorites(favorites)
+      
+      expect(wrapper.state().categoryData).toEqual(favorites)
+    })
+  })
 })
