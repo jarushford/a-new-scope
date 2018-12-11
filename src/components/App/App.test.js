@@ -1,7 +1,10 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import App from './App'
+import Landing from '../Landing/Landing'
+import Main from '../Main/Main'
 import { fetchTitleScroll } from '../../utils/api/apiCalls'
+import { MemoryRouter } from 'react-router'
 
 const mockFilm = {
   title: 'ep1',
@@ -14,6 +17,7 @@ const mockFilms = {
 }
 
 jest.mock('../../utils/api/apiCalls')
+jest.mock('../Stars/Stars')
 
 beforeAll(() => {
   fetchTitleScroll.mockImplementation(() => mockFilms)
@@ -26,9 +30,9 @@ describe('App', () => {
     wrapper = shallow(<App />)
   })
 
-  it('on page load the current page should be landing', () => {
+  it('on page load error state should be false', () => {
     wrapper = shallow(<App />, { disableLifecycleMethods: true })
-    expect(wrapper.state().currentPage).toEqual('landing')
+    expect(wrapper.state().error).toEqual(false)
   })
 
   it('should match the snapshot when loading', () => {
@@ -40,21 +44,6 @@ describe('App', () => {
 
   it('should match the snapshot when page is loaded', () => {
     expect(wrapper).toMatchSnapshot()
-  })
-
-  describe('Changepage', () => {
-    it('should change current page to the value passed into changePage', () => {
-      wrapper.instance().changePage('menu')
-      expect(wrapper.instance().state.currentPage).toEqual('menu')
-    })
-
-    it('should run handleTitleScroll if page is landing', () => {
-      wrapper = shallow(<App />, { disableLifecycleMethods: true })
-      const spy = jest.spyOn(wrapper.instance(), 'handleTitleScroll')
-
-      wrapper.instance().changePage('landing')
-      expect(spy).toHaveBeenCalled()
-    })
   })
 
   describe('ComponentDidMount', () => {
@@ -87,14 +76,10 @@ describe('App', () => {
           throw new Error('Could not fetch')
         })
 
-        const expectedState = 'error'
+        const expectedState = true
 
         await wrapper.instance().handleTitleScroll()
-        expect(wrapper.state().currentPage).toEqual(expectedState)
-      })
-
-      it('should update current page to error if the fetch takes longer than 8 seconds', () => {
-
+        expect(wrapper.state().error).toEqual(expectedState)
       })
     })
   })

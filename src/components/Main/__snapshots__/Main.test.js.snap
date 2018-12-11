@@ -5,7 +5,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Main
     category="vehicles"
-    changePage={[MockFunction]}
     handleStoreData={
       [MockFunction] {
         "calls": Array [
@@ -33,6 +32,8 @@ ShallowWrapper {
         ],
       }
     }
+    returnToLanding={[MockFunction]}
+    setError={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -74,6 +75,11 @@ ShallowWrapper {
                 className="innerring ring"
                 src="./images/outerring.svg"
               />
+              <h3
+                className="planet-label back-to-menu"
+              >
+                Menu
+              </h3>
             </div>
           </Link>
           <h1
@@ -206,6 +212,11 @@ ShallowWrapper {
                   className="innerring ring"
                   src="./images/outerring.svg"
                 />
+                <h3
+                  className="planet-label back-to-menu"
+                >
+                  Menu
+                </h3>
               </div>
             </Link>,
             <h1
@@ -242,6 +253,11 @@ ShallowWrapper {
                   className="innerring ring"
                   src="./images/outerring.svg"
                 />
+                <h3
+                  className="planet-label back-to-menu"
+                >
+                  Menu
+                </h3>
               </div>,
               "replace": false,
               "to": "/menu",
@@ -268,6 +284,11 @@ ShallowWrapper {
                     className="innerring ring"
                     src="./images/outerring.svg"
                   />,
+                  <h3
+                    className="planet-label back-to-menu"
+                  >
+                    Menu
+                  </h3>,
                 ],
                 "className": "continue-to-site-btn back-rings",
                 "role": "presentation",
@@ -312,6 +333,18 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": null,
                   "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Menu",
+                    "className": "planet-label back-to-menu",
+                  },
+                  "ref": null,
+                  "rendered": "Menu",
+                  "type": "h3",
                 },
               ],
               "type": "div",
@@ -572,6 +605,11 @@ ShallowWrapper {
                   className="innerring ring"
                   src="./images/outerring.svg"
                 />
+                <h3
+                  className="planet-label back-to-menu"
+                >
+                  Menu
+                </h3>
               </div>
             </Link>
             <h1
@@ -704,6 +742,11 @@ ShallowWrapper {
                     className="innerring ring"
                     src="./images/outerring.svg"
                   />
+                  <h3
+                    className="planet-label back-to-menu"
+                  >
+                    Menu
+                  </h3>
                 </div>
               </Link>,
               <h1
@@ -740,6 +783,11 @@ ShallowWrapper {
                     className="innerring ring"
                     src="./images/outerring.svg"
                   />
+                  <h3
+                    className="planet-label back-to-menu"
+                  >
+                    Menu
+                  </h3>
                 </div>,
                 "replace": false,
                 "to": "/menu",
@@ -766,6 +814,11 @@ ShallowWrapper {
                       className="innerring ring"
                       src="./images/outerring.svg"
                     />,
+                    <h3
+                      className="planet-label back-to-menu"
+                    >
+                      Menu
+                    </h3>,
                   ],
                   "className": "continue-to-site-btn back-rings",
                   "role": "presentation",
@@ -810,6 +863,18 @@ ShallowWrapper {
                     "ref": null,
                     "rendered": null,
                     "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Menu",
+                      "className": "planet-label back-to-menu",
+                    },
+                    "ref": null,
+                    "rendered": "Menu",
+                    "type": "h3",
                   },
                 ],
                 "type": "div",
@@ -1063,7 +1128,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Main
     category="vehicles"
-    changePage={[MockFunction]}
     handleStoreData={
       [MockFunction] {
         "calls": Array [
@@ -1091,6 +1155,8 @@ ShallowWrapper {
         ],
       }
     }
+    returnToLanding={[MockFunction]}
+    setError={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -1132,6 +1198,11 @@ ShallowWrapper {
                 className="innerring ring"
                 src="./images/outerring.svg"
               />
+              <h3
+                className="planet-label back-to-menu"
+              >
+                Menu
+              </h3>
             </div>
           </Link>
           <h1
@@ -1264,6 +1335,11 @@ ShallowWrapper {
                   className="innerring ring"
                   src="./images/outerring.svg"
                 />
+                <h3
+                  className="planet-label back-to-menu"
+                >
+                  Menu
+                </h3>
               </div>
             </Link>,
             <h1
@@ -1300,6 +1376,11 @@ ShallowWrapper {
                   className="innerring ring"
                   src="./images/outerring.svg"
                 />
+                <h3
+                  className="planet-label back-to-menu"
+                >
+                  Menu
+                </h3>
               </div>,
               "replace": false,
               "to": "/menu",
@@ -1326,6 +1407,11 @@ ShallowWrapper {
                     className="innerring ring"
                     src="./images/outerring.svg"
                   />,
+                  <h3
+                    className="planet-label back-to-menu"
+                  >
+                    Menu
+                  </h3>,
                 ],
                 "className": "continue-to-site-btn back-rings",
                 "role": "presentation",
@@ -1370,6 +1456,18 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": null,
                   "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Menu",
+                    "className": "planet-label back-to-menu",
+                  },
+                  "ref": null,
+                  "rendered": "Menu",
+                  "type": "h3",
                 },
               ],
               "type": "div",
@@ -1630,6 +1728,11 @@ ShallowWrapper {
                   className="innerring ring"
                   src="./images/outerring.svg"
                 />
+                <h3
+                  className="planet-label back-to-menu"
+                >
+                  Menu
+                </h3>
               </div>
             </Link>
             <h1
@@ -1762,6 +1865,11 @@ ShallowWrapper {
                     className="innerring ring"
                     src="./images/outerring.svg"
                   />
+                  <h3
+                    className="planet-label back-to-menu"
+                  >
+                    Menu
+                  </h3>
                 </div>
               </Link>,
               <h1
@@ -1798,6 +1906,11 @@ ShallowWrapper {
                     className="innerring ring"
                     src="./images/outerring.svg"
                   />
+                  <h3
+                    className="planet-label back-to-menu"
+                  >
+                    Menu
+                  </h3>
                 </div>,
                 "replace": false,
                 "to": "/menu",
@@ -1824,6 +1937,11 @@ ShallowWrapper {
                       className="innerring ring"
                       src="./images/outerring.svg"
                     />,
+                    <h3
+                      className="planet-label back-to-menu"
+                    >
+                      Menu
+                    </h3>,
                   ],
                   "className": "continue-to-site-btn back-rings",
                   "role": "presentation",
@@ -1868,6 +1986,18 @@ ShallowWrapper {
                     "ref": null,
                     "rendered": null,
                     "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Menu",
+                      "className": "planet-label back-to-menu",
+                    },
+                    "ref": null,
+                    "rendered": "Menu",
+                    "type": "h3",
                   },
                 ],
                 "type": "div",

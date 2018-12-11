@@ -24,15 +24,18 @@ beforeAll(() => {
 
 describe('Main', () => {
   let wrapper
-  let mockChangePage
+  let mockReturnToLanding
   let handleStoreData
+  let mockSetError
 
   beforeEach(() => {
-    mockChangePage = jest.fn()
+    mockReturnToLanding = jest.fn()
+    mockSetError = jest.fn()
     handleStoreData = jest.fn()
     wrapper = shallow(
       <Main
-        changePage={mockChangePage}
+        setError={mockSetError}
+        returnToLanding={mockReturnToLanding}
         category="vehicles"
         handleStoreData={handleStoreData}
       />
@@ -41,12 +44,7 @@ describe('Main', () => {
 
   it('should redirect to Landing when the millenium falcon btn is clicked', () => {
     wrapper.find('.return-to-landing-btn').simulate('click')
-    expect(mockChangePage).toBeCalledWith('landing')
-  })
-
-  it('should redirect to the menu page when the menu btn is clicked', () => {
-    wrapper.find('.continue-to-site-btn').simulate('click')
-    expect(mockChangePage).toBeCalledWith('menu')
+    expect(mockReturnToLanding).toBeCalled()
   })
 
   it('Should match the snapshot when loading', () => {
@@ -79,6 +77,15 @@ describe('Main', () => {
       expect(wrapper.state().categoryData).toEqual(expected)
     })
 
+    it('should run setError when there is an error', async () => {
+      buildCategoryObj.mockImplementation(() => {
+        throw new Error()
+      })
+
+      await wrapper.instance().componentDidMount()
+      expect(mockSetError).toBeCalledWith(true)
+    })
+
     it('Should load favorites from local storage if the category is favorites', () => {
       const expected = [{
         name: 'Luke',
@@ -89,7 +96,8 @@ describe('Main', () => {
       localStorage.setItem('favorites', JSON.stringify(expected))
 
       wrapper = shallow(<Main
-        changePage={mockChangePage}
+        returnToLanding={mockReturnToLanding}
+        setError={() => {}}
         category="favorites"
         handleStoreData={handleStoreData}
       />)
@@ -103,7 +111,8 @@ describe('Main', () => {
       localStorage.setItem('storedData', JSON.stringify({ people: mockCategoryData }))
 
       wrapper = shallow(<Main
-        changePage={mockChangePage}
+        returnToLanding={mockReturnToLanding}
+        setError={() => {}}
         category="people"
         handleStoreData={handleStoreData}
       />)

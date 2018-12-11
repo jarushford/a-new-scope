@@ -3,9 +3,7 @@
 exports[`Menu should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Menu
-    changePage={[MockFunction]}
-  />,
+  Symbol(enzyme.__unrendered__): <Menu />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -108,7 +106,9 @@ ShallowWrapper {
             className="alt-menu alt-menu-favorites"
             role="presentation"
           >
-            <h3>
+            <h3
+              className="planet-label"
+            >
               Favorites
             </h3>
           </div>
@@ -116,7 +116,9 @@ ShallowWrapper {
             className="alt-menu alt-menu-vehicles"
             role="presentation"
           >
-            <h3>
+            <h3
+              className="planet-label"
+            >
               Vehicles
             </h3>
           </div>
@@ -124,7 +126,9 @@ ShallowWrapper {
             className="alt-menu alt-menu-planets"
             role="presentation"
           >
-            <h3>
+            <h3
+              className="planet-label"
+            >
               Planets
             </h3>
           </div>
@@ -132,7 +136,9 @@ ShallowWrapper {
             className="alt-menu alt-menu-people"
             role="presentation"
           >
-            <h3>
+            <h3
+              className="planet-label"
+            >
               People
             </h3>
           </div>
@@ -586,7 +592,9 @@ ShallowWrapper {
               className="alt-menu alt-menu-favorites"
               role="presentation"
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Favorites
               </h3>
             </div>,
@@ -594,7 +602,9 @@ ShallowWrapper {
               className="alt-menu alt-menu-vehicles"
               role="presentation"
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Vehicles
               </h3>
             </div>,
@@ -602,7 +612,9 @@ ShallowWrapper {
               className="alt-menu alt-menu-planets"
               role="presentation"
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Planets
               </h3>
             </div>,
@@ -610,7 +622,9 @@ ShallowWrapper {
               className="alt-menu alt-menu-people"
               role="presentation"
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 People
               </h3>
             </div>,
@@ -624,7 +638,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <h3>
+              "children": <h3
+                className="planet-label"
+              >
                 Favorites
               </h3>,
               "className": "alt-menu alt-menu-favorites",
@@ -637,6 +653,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Favorites",
+                "className": "planet-label",
               },
               "ref": null,
               "rendered": "Favorites",
@@ -649,7 +666,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <h3>
+              "children": <h3
+                className="planet-label"
+              >
                 Vehicles
               </h3>,
               "className": "alt-menu alt-menu-vehicles",
@@ -662,6 +681,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Vehicles",
+                "className": "planet-label",
               },
               "ref": null,
               "rendered": "Vehicles",
@@ -674,7 +694,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <h3>
+              "children": <h3
+                className="planet-label"
+              >
                 Planets
               </h3>,
               "className": "alt-menu alt-menu-planets",
@@ -687,6 +709,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Planets",
+                "className": "planet-label",
               },
               "ref": null,
               "rendered": "Planets",
@@ -699,7 +722,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <h3>
+              "children": <h3
+                className="planet-label"
+              >
                 People
               </h3>,
               "className": "alt-menu alt-menu-people",
@@ -712,6 +737,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "People",
+                "className": "planet-label",
               },
               "ref": null,
               "rendered": "People",
@@ -820,7 +846,9 @@ ShallowWrapper {
               className="alt-menu alt-menu-favorites"
               role="presentation"
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Favorites
               </h3>
             </div>
@@ -828,7 +856,9 @@ ShallowWrapper {
               className="alt-menu alt-menu-vehicles"
               role="presentation"
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Vehicles
               </h3>
             </div>
@@ -836,7 +866,9 @@ ShallowWrapper {
               className="alt-menu alt-menu-planets"
               role="presentation"
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 Planets
               </h3>
             </div>
@@ -844,7 +876,9 @@ ShallowWrapper {
               className="alt-menu alt-menu-people"
               role="presentation"
             >
-              <h3>
+              <h3
+                className="planet-label"
+              >
                 People
               </h3>
             </div>
@@ -1298,7 +1332,9 @@ ShallowWrapper {
                 className="alt-menu alt-menu-favorites"
                 role="presentation"
               >
-                <h3>
+                <h3
+                  className="planet-label"
+                >
                   Favorites
                 </h3>
               </div>,
@@ -1306,7 +1342,9 @@ ShallowWrapper {
                 className="alt-menu alt-menu-vehicles"
                 role="presentation"
               >
-                <h3>
+                <h3
+                  className="planet-label"
+                >
                   Vehicles
                 </h3>
               </div>,
@@ -1314,7 +1352,9 @@ ShallowWrapper {
                 className="alt-menu alt-menu-planets"
                 role="presentation"
               >
-                <h3>
+                <h3
+                  className="planet-label"
+                >
                   Planets
                 </h3>
               </div>,
@@ -1322,7 +1362,9 @@ ShallowWrapper {
                 className="alt-menu alt-menu-people"
                 role="presentation"
               >
-                <h3>
+                <h3
+                  className="planet-label"
+                >
                   People
                 </h3>
               </div>,
@@ -1336,7 +1378,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3>
+                "children": <h3
+                  className="planet-label"
+                >
                   Favorites
                 </h3>,
                 "className": "alt-menu alt-menu-favorites",
@@ -1349,6 +1393,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Favorites",
+                  "className": "planet-label",
                 },
                 "ref": null,
                 "rendered": "Favorites",
@@ -1361,7 +1406,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3>
+                "children": <h3
+                  className="planet-label"
+                >
                   Vehicles
                 </h3>,
                 "className": "alt-menu alt-menu-vehicles",
@@ -1374,6 +1421,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Vehicles",
+                  "className": "planet-label",
                 },
                 "ref": null,
                 "rendered": "Vehicles",
@@ -1386,7 +1434,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3>
+                "children": <h3
+                  className="planet-label"
+                >
                   Planets
                 </h3>,
                 "className": "alt-menu alt-menu-planets",
@@ -1399,6 +1449,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Planets",
+                  "className": "planet-label",
                 },
                 "ref": null,
                 "rendered": "Planets",
@@ -1411,7 +1462,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3>
+                "children": <h3
+                  className="planet-label"
+                >
                   People
                 </h3>,
                 "className": "alt-menu alt-menu-people",
@@ -1424,6 +1477,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "People",
+                  "className": "planet-label",
                 },
                 "ref": null,
                 "rendered": "People",
