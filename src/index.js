@@ -6,7 +6,7 @@ import App from './components/App/App'
 import * as serviceWorker from './serviceWorker'
 
 const router = (
-  <BrowserRouter>
+  <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
     <App/>
   </BrowserRouter>
 )

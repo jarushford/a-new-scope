@@ -115,52 +115,53 @@ export default class App extends Component {
     return (
       <div className="App">
         <StarHousingComponent />
-        <Switch>
-          <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => {
-            return <Landing episode={landingScroll} />}
-          } />
-          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/menu`} component={Menu}/>
-          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/people`} render={() => {
-            return (
-              <Main
+          <Switch>
+            <Route path='/menu' component={Menu}/>
+            <Route exact path='/' render={() => {
+              return <Landing
+              episode={landingScroll}
+            /> }} />
+            <Route path='/people' render={() => {
+              return (
+                <Main
                 handleStoreData={this.handleStoreData}
                 category='people'
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-              />
-            )
-          }} />
-          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/vehicles`} render={() => {
-            return (
-              <Main
+                />
+              )
+            }} />
+            <Route path='/vehicles' render={() => {
+              return (
+                <Main
                 handleStoreData={this.handleStoreData}
                 category='vehicles'
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-              />
-            )
-          }} />
-          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/planets`} render={() => {
-            return (
-              <Main
+                />
+              )
+            }} />
+            <Route path='/planets' render={() => {
+              return (
+                <Main
                 handleStoreData={this.handleStoreData}
                 category='planets'
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-              />
-            )
-          }} />
-          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/favorites`} render={() => {
-            return (
-              <Main
+                />
+              )
+            }} />
+            <Route path='/favorites' render={() => {
+              return (
+                <Main
                 handleStoreData={this.handleStoreData}
                 category='favorites'
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-              />
-            )
-          }} />
-        </Switch> 
+                />
+              )
+            }} />
+          </Switch> 
       </div>
     )
   }
