@@ -1,10 +1,10 @@
 import React from 'react'
-import Menu from './Menu'
 import { shallow } from 'enzyme'
+import Menu from './Menu'
 
 describe('Menu', () => {
   const mockChange = jest.fn()
-  const wrapper = shallow(<Menu changePage={mockChange}/>)
+  const wrapper = shallow(<Menu changePage={mockChange} />)
 
   it('should run change page when a planet is clicked', () => {
     wrapper.find('.vehicles-planet').simulate('click')
