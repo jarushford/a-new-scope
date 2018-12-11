@@ -84,6 +84,7 @@ export default class Main extends Component {
             <img src="./images/outerring.svg" alt="ring" className="outerring ring" />
             <img src="./images/outerring.svg" alt="ring" className="middlering ring" />
             <img src="./images/outerring.svg" alt="ring" className="innerring ring" />
+            <h3 className="planet-label back-to-menu">Menu</h3>
           </div>
         </Link>
           <h1 className="main-header">{category}</h1>

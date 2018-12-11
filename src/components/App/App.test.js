@@ -1,7 +1,10 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import App from './App'
+import Landing from '../Landing/Landing'
+import Main from '../Main/Main'
 import { fetchTitleScroll } from '../../utils/api/apiCalls'
+import { MemoryRouter } from 'react-router'
 
 const mockFilm = {
   title: 'ep1',
@@ -14,6 +17,7 @@ const mockFilms = {
 }
 
 jest.mock('../../utils/api/apiCalls')
+jest.mock('../Stars/Stars')
 
 beforeAll(() => {
   fetchTitleScroll.mockImplementation(() => mockFilms)

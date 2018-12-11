@@ -50,25 +50,25 @@ export default function Menu() {
           role="presentation"
           className="alt-menu alt-menu-favorites"
         >
-          <h3>Favorites</h3>
+          <h3 className="planet-label">Favorites</h3>
         </div>
         <div
           role="presentation"
           className="alt-menu alt-menu-vehicles"
         >
-          <h3>Vehicles</h3>
+          <h3 className="planet-label">Vehicles</h3>
         </div>
         <div
           role="presentation"
           className="alt-menu alt-menu-planets"
         >
-          <h3>Planets</h3>
+          <h3 className="planet-label">Planets</h3>
         </div>
         <div
           role="presentation"
           className="alt-menu alt-menu-people"
         >
-          <h3>People</h3>
+          <h3 className="planet-label">People</h3>
         </div>
       </div>
     </div>
