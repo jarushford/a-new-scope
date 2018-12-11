@@ -25,8 +25,8 @@ export default class App extends Component {
     try {
       const films = await Promise.race([
         API.fetchTitleScroll(),
-        new Promise((reject) => {
-          setTimeout(() => reject(new Error()), 8000)
+        new Promise((resolve, reject) => {
+          setTimeout(() => reject(new Error()), 5000)
         })
       ])
       const randomNumber = Math.round(Math.random() * 8)
@@ -68,7 +68,6 @@ export default class App extends Component {
         if (card.name === updatedCard.name) {
           cardToUpdateIndex = i
         }
-        return card
       })
       storage[category][cardToUpdateIndex] = updatedCard
       localStorage.setItem('storedData', JSON.stringify(storage))
