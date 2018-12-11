@@ -119,8 +119,8 @@ export default class App extends Component {
           <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => {
             return <Landing episode={landingScroll} />}
           } />
-          <Route path={`${process.env.PUBLIC_URL}/menu`} component={Menu}/>
-          <Route path={`${process.env.PUBLIC_URL}/people`} render={() => {
+          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/menu`} component={Menu}/>
+          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/people`} render={() => {
             return (
               <Main
                 handleStoreData={this.handleStoreData}
@@ -130,7 +130,7 @@ export default class App extends Component {
               />
             )
           }} />
-          <Route path={`${process.env.PUBLIC_URL}/vehicles`} render={() => {
+          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/vehicles`} render={() => {
             return (
               <Main
                 handleStoreData={this.handleStoreData}
@@ -140,7 +140,7 @@ export default class App extends Component {
               />
             )
           }} />
-          <Route path={`${process.env.PUBLIC_URL}/planets`} render={() => {
+          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/planets`} render={() => {
             return (
               <Main
                 handleStoreData={this.handleStoreData}
@@ -150,7 +150,7 @@ export default class App extends Component {
               />
             )
           }} />
-          <Route path={`${process.env.PUBLIC_URL}/favorites`} render={() => {
+          <Route path={`${process.env.PUBLIC_URL}/a-new-scope/favorites`} render={() => {
             return (
               <Main
                 handleStoreData={this.handleStoreData}
