@@ -29,10 +29,12 @@ ShallowWrapper {
         <i
           className="fas fa-caret-left resident-arrow"
           onClick={[Function]}
+          role="presentation"
         />,
         <i
           className="fas fa-caret-right resident-arrow"
           onClick={[Function]}
+          role="presentation"
         />,
         Array [
           <h4
@@ -58,6 +60,7 @@ ShallowWrapper {
         "props": Object {
           "className": "fas fa-caret-left resident-arrow",
           "onClick": [Function],
+          "role": "presentation",
         },
         "ref": null,
         "rendered": null,
@@ -70,6 +73,7 @@ ShallowWrapper {
         "props": Object {
           "className": "fas fa-caret-right resident-arrow",
           "onClick": [Function],
+          "role": "presentation",
         },
         "ref": null,
         "rendered": null,
@@ -112,10 +116,12 @@ ShallowWrapper {
           <i
             className="fas fa-caret-left resident-arrow"
             onClick={[Function]}
+            role="presentation"
           />,
           <i
             className="fas fa-caret-right resident-arrow"
             onClick={[Function]}
+            role="presentation"
           />,
           Array [
             <h4
@@ -141,6 +147,7 @@ ShallowWrapper {
           "props": Object {
             "className": "fas fa-caret-left resident-arrow",
             "onClick": [Function],
+            "role": "presentation",
           },
           "ref": null,
           "rendered": null,
@@ -153,6 +160,7 @@ ShallowWrapper {
           "props": Object {
             "className": "fas fa-caret-right resident-arrow",
             "onClick": [Function],
+            "role": "presentation",
           },
           "ref": null,
           "rendered": null,

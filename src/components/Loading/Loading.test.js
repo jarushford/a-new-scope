@@ -1,6 +1,6 @@
 import React from 'react'
-import Loading from './Loading'
 import { shallow } from 'enzyme'
+import Loading from './Loading'
 
 describe('Loading Component', () => {
   it('Should match the snapshot', () => {

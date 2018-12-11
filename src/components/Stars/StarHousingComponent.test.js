@@ -1,6 +1,6 @@
-import React from 'react';
-import StarHousingComponent from './StarHousingComponent';
+import React from 'react'
 import { shallow } from 'enzyme'
+import StarHousingComponent from './StarHousingComponent'
 
 describe('Star Housing Component', () => {
   const wrapper = shallow(<StarHousingComponent />)

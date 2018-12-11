@@ -1,6 +1,6 @@
 import React from 'react'
-import Error from './Error'
 import { shallow } from 'enzyme'
+import Error from './Error'
 
 describe('Error', () => {
   it('should match the snapshot', () => {

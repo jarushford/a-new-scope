@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Stars from '../Stars/Stars'
+import Stars from './Stars'
 import '../App/app.scss'
 
 export default class StarHousingComponent extends Component {
@@ -16,14 +16,19 @@ export default class StarHousingComponent extends Component {
   }
 
   tick = () => {
+    const { direction, deltaX } = this.state
     let newX
-    this.state.direction ? 
-      newX = this.state.deltaX + 0.08
-        : newX = this.state.deltaX - 0.08
+
+    if (direction) {
+      newX = deltaX + 0.08
+    } else {
+      newX = deltaX - 0.08
+    }
+
     if (newX > 180 || newX < 0) {
       this.setState({
         deltaX: newX,
-        direction: !this.state.direction
+        direction: !direction
       })
     } else {
       this.setState({
@@ -34,9 +39,10 @@ export default class StarHousingComponent extends Component {
   }
 
   render() {
+    const { deltaX } = this.state
     return (
       <div className="star-housing">
-        <Stars deltaX={this.state.deltaX}/>
+        <Stars deltaX={deltaX} />
       </div>
     )
   }

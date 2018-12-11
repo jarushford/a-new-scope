@@ -17,79 +17,83 @@ export default class ResidentsScroller extends Component {
     const { content1, content2 } = this.props
     if (content1.length === 0) {
       this.setState({
-        residents: [{name: 'none', display: ''}],
+        residents: [{ name: 'none', display: '' }]
       })
     } else if (typeof content1 !== 'string') {
       this.setState({
-        residents: content1.map( (resident, i) => {
-          let formattedResident = {name: resident, display: 'none'} 
+        residents: content1.map((resident, i) => {
+          let formattedResident = { name: resident, display: 'none' }
           if (i === 0) {
-            formattedResident = {name: resident, display: ''} 
-          } 
+            formattedResident = { name: resident, display: '' }
+          }
           return formattedResident
         })
       })
     } else {
       this.setState({
-        content1: content1,
-        content2: content2
+        content1,
+        content2
       })
     }
   }
 
   clickArrow = (direction) => {
     const { residents, currentIndex } = this.state
-    let newIndex = direction += currentIndex
-    if (newIndex < 0) {newIndex = residents.length - 1}
-    if (newIndex >= residents.length) {newIndex = 0}
+    let newIndex = direction + currentIndex
+    if (newIndex < 0) { newIndex = residents.length - 1 }
+    if (newIndex >= residents.length) { newIndex = 0 }
 
-    const newResidents = residents.map( (resident, i) => {
+    const newResidents = residents.map((resident, i) => {
       let formattedResident
-      i === newIndex ? 
-        formattedResident = {name: resident.name, display: ''} 
-        : formattedResident = {name: resident.name, display: 'none'}
+      if (i === newIndex) {
+        formattedResident = { name: resident.name, display: '' }
+      } else {
+        formattedResident = { name: resident.name, display: 'none' }
+      }
       return formattedResident
     })
-    
+
     this.setState({
       currentIndex: newIndex,
       residents: newResidents
     })
   }
-  
+
   render() {
     const { residents, content1, content2 } = this.state
 
-    if(!residents && !content1) {
-      return <div></div>
-    }
-
-    if(content1) {
+    if (content1) {
       return (
-        <div className='secInfo'>
-          <h1 className='homeworld'>{content1}</h1>
-          <h1 className='population'>{content2}</h1>
+        <div className="secInfo">
+          <h1 className="homeworld">{content1}</h1>
+          <h1 className="population">{content2}</h1>
         </div>
       )
     }
 
     return (
-      <div className='residents-scroller'>
-        <i className="fas fa-caret-left resident-arrow" onClick={() => this.clickArrow(-1)}></i>
-        <i className="fas fa-caret-right resident-arrow" onClick={() => this.clickArrow(1)}></i>
+      <div className="residents-scroller">
+        <i className="fas fa-caret-left resident-arrow" role="presentation" onClick={() => this.clickArrow(-1)} />
+        <i className="fas fa-caret-right resident-arrow" role="presentation" onClick={() => this.clickArrow(1)} />
         {
-          residents.map( resident => {
-            return (
-              <h4 className={`resident ${resident.display}`} key={uid(resident)}>{resident.name}</h4>
-            )
-          })
+          residents.map(resident => (<h4
+            className={`resident ${resident.display}`}
+            key={uid(resident)}
+          >
+            {resident.name}
+          </h4>
+          ))
         }
       </div>
     )
   }
-} 
+}
 
-ResidentsScroller.protoTypes = {
+ResidentsScroller.propTypes = {
   content1: propTypes.oneOfType([propTypes.string, propTypes.array]).isRequired,
   content2: propTypes.string
+}
+
+ResidentsScroller.defaultProps = {
+  content2: ''
 }

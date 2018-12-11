@@ -8,12 +8,12 @@ import Loading from '../Loading/Loading'
 import Error from '../Error/Error'
 import './app.scss'
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super()
     this.state = {
       currentPage: 'landing',
-      landingScroll: '',
+      landingScroll: ''
     }
   }
 
@@ -24,21 +24,21 @@ class App extends Component {
   handleTitleScroll = async () => {
     try {
       const films = await Promise.race([
-        API.fetchTitleScroll(), 
-        new Promise(reject => {
-          setTimeout(()=> reject(new Error()), 8000)
+        API.fetchTitleScroll(),
+        new Promise((reject) => {
+          setTimeout(() => reject(new Error()), 8000)
         })
       ])
       const randomNumber = Math.round(Math.random() * 8)
       const film = films.results[randomNumber]
-      this.setState({ 
+      this.setState({
         landingScroll: {
           title: film.title,
           year: film.release_date,
           text: film.opening_crawl
         }
       })
-    } catch(error) {
+    } catch (error) {
       this.setState({
         currentPage: 'error'
       })
@@ -46,7 +46,7 @@ class App extends Component {
   }
 
   handleStoreData = (category, categoryData, favorite, favoriteCategory) => {
-    if (category === 'favorites') { 
+    if (category === 'favorites') {
       this.storeFavorite(categoryData, favorite)
       this.updateStoredData(favoriteCategory, categoryData)
     } else {
@@ -56,87 +56,81 @@ class App extends Component {
 
   storeData = (category, categoryData) => {
     const storage = JSON.parse(localStorage.getItem('storedData'))
-    let newStorage = Object.assign({[category]: categoryData, ...storage})
+    const newStorage = Object.assign({ [category]: categoryData, ...storage })
     localStorage.setItem('storedData', JSON.stringify(newStorage))
   }
 
-  updateStoredData(category, updatedCard) {
-    let storage = (JSON.parse(localStorage.getItem('storedData')))
+  updateStoredData = (category, updatedCard) => {
+    const storage = (JSON.parse(localStorage.getItem('storedData')))
     let cardToUpdateIndex = 0
-    storage[category].find( (card, i ) => {
-      if (card.name === updatedCard.name)
-      cardToUpdateIndex = i
-    })
-    storage[category][cardToUpdateIndex] = updatedCard
-    localStorage.setItem('storedData', JSON.stringify(storage))
+    if (storage) {
+      storage[category].find((card, i) => {
+        if (card.name === updatedCard.name) {
+          cardToUpdateIndex = i
+        }
+        return card
+      })
+      storage[category][cardToUpdateIndex] = updatedCard
+      localStorage.setItem('storedData', JSON.stringify(storage))
+    }
   }
 
-  storeFavorite = (data, favorite) => {
+  storeFavorite = (data, currentFavorite) => {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || []
-    if (!favorite) {
+    if (!currentFavorite) {
       const match = favorites.find(favorite => favorite.name === data.name)
-      favorites = favorites.filter(favorite => {
-        return favorite.name !== match.name
-      })
+      favorites = favorites.filter(favorite => favorite.name !== match.name)
     } else {
       favorites.push(data)
-      }
+    }
     localStorage.setItem('favorites', JSON.stringify(favorites))
   }
 
   changePage = (page) => {
-    page === 'landing' ?
-    this.setState({ currentPage: page }, this.handleTitleScroll)
-    : this.setState({ currentPage: page })
+    if (page === 'landing') {
+      this.setState({ currentPage: page }, this.handleTitleScroll)
+    } else {
+      this.setState({ currentPage: page })
+    }
   }
 
   render() {
     const { currentPage, landingScroll } = this.state
+    const mainHelper = (
+      <Main
+        handleStoreData={this.handleStoreData}
+        category={currentPage}
+        changePage={this.changePage}
+      />
+    )
     const renderHelper = {
       menu: <Menu
         changePage={this.changePage}
       />,
-      people: <Main
-        handleStoreData={this.handleStoreData}
-        category='people'
-        changePage={this.changePage}
+      people: mainHelper,
+      planets: mainHelper,
+      vehicles: mainHelper,
+      favorites: mainHelper,
+      landing: <Landing
+        continueToSite={this.changePage}
+        episode={landingScroll}
       />,
-      planets: <Main
-        handleStoreData={this.handleStoreData}
-        category='planets'
-        changePage={this.changePage}
-      />,
-      vehicles: <Main
-        handleStoreData={this.handleStoreData}
-        category='vehicles'
-        changePage={this.changePage}
-      />,
-      favorites: <Main
-        handleStoreData={this.handleStoreData}
-        category='favorites'
-        changePage={this.changePage}
-      />,
-      landing: <Landing 
-        continueToSite={this.changePage} 
-        episode={landingScroll}/>,
-      error: <Error changePage={this.changePage}/>
+      error: <Error changePage={this.changePage} />
     }
 
     if (!landingScroll && currentPage !== 'error') {
       return (
-      <div className="App">
-        <StarHousingComponent />
-        <Loading />
-      </div>
+        <div className="App">
+          <StarHousingComponent />
+          <Loading />
+        </div>
       )
     }
     return (
       <div className="App">
-      <StarHousingComponent />
-      {renderHelper[currentPage]}
+        <StarHousingComponent />
+        {renderHelper[currentPage]}
       </div>
     )
   }
 }
-
-export default App;
