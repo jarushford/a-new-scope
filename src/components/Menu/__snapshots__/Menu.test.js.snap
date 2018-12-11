@@ -94,6 +94,7 @@ ShallowWrapper {
           <div
             className="favorites-planet"
             onClick={[Function]}
+            role="presentation"
           >
             <h3
               className="planet-label"
@@ -107,6 +108,7 @@ ShallowWrapper {
             <div
               className="vehicles-planet"
               onClick={[Function]}
+              role="presentation"
             >
               <h3
                 className="planet-label"
@@ -120,6 +122,7 @@ ShallowWrapper {
               <div
                 className="planets-planet"
                 onClick={[Function]}
+                role="presentation"
               >
                 <h3
                   className="planet-label"
@@ -133,6 +136,7 @@ ShallowWrapper {
                 <div
                   className="people-planet"
                   onClick={[Function]}
+                  role="presentation"
                 >
                   <h3
                     className="planet-label"
@@ -150,6 +154,7 @@ ShallowWrapper {
           <div
             className="alt-menu alt-menu-favorites"
             onClick={[Function]}
+            role="presentation"
           >
             <h3>
               Favorites
@@ -158,6 +163,7 @@ ShallowWrapper {
           <div
             className="alt-menu alt-menu-vehicles"
             onClick={[Function]}
+            role="presentation"
           >
             <h3>
               Vehicles
@@ -166,6 +172,7 @@ ShallowWrapper {
           <div
             className="alt-menu alt-menu-planets"
             onClick={[Function]}
+            role="presentation"
           >
             <h3>
               Planets
@@ -174,6 +181,7 @@ ShallowWrapper {
           <div
             className="alt-menu alt-menu-people"
             onClick={[Function]}
+            role="presentation"
           >
             <h3>
               People
@@ -206,6 +214,7 @@ ShallowWrapper {
             <div
               className="favorites-planet"
               onClick={[Function]}
+              role="presentation"
             >
               <h3
                 className="planet-label"
@@ -219,6 +228,7 @@ ShallowWrapper {
               <div
                 className="vehicles-planet"
                 onClick={[Function]}
+                role="presentation"
               >
                 <h3
                   className="planet-label"
@@ -232,6 +242,7 @@ ShallowWrapper {
                 <div
                   className="planets-planet"
                   onClick={[Function]}
+                  role="presentation"
                 >
                   <h3
                     className="planet-label"
@@ -245,6 +256,7 @@ ShallowWrapper {
                   <div
                     className="people-planet"
                     onClick={[Function]}
+                    role="presentation"
                   >
                     <h3
                       className="planet-label"
@@ -272,6 +284,7 @@ ShallowWrapper {
               </h3>,
               "className": "favorites-planet",
               "onClick": [Function],
+              "role": "presentation",
             },
             "ref": null,
             "rendered": Object {
@@ -297,6 +310,7 @@ ShallowWrapper {
                 <div
                   className="vehicles-planet"
                   onClick={[Function]}
+                  role="presentation"
                 >
                   <h3
                     className="planet-label"
@@ -310,6 +324,7 @@ ShallowWrapper {
                   <div
                     className="planets-planet"
                     onClick={[Function]}
+                    role="presentation"
                   >
                     <h3
                       className="planet-label"
@@ -323,6 +338,7 @@ ShallowWrapper {
                     <div
                       className="people-planet"
                       onClick={[Function]}
+                      role="presentation"
                     >
                       <h3
                         className="planet-label"
@@ -349,6 +365,7 @@ ShallowWrapper {
                   </h3>,
                   "className": "vehicles-planet",
                   "onClick": [Function],
+                  "role": "presentation",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -374,6 +391,7 @@ ShallowWrapper {
                     <div
                       className="planets-planet"
                       onClick={[Function]}
+                      role="presentation"
                     >
                       <h3
                         className="planet-label"
@@ -387,6 +405,7 @@ ShallowWrapper {
                       <div
                         className="people-planet"
                         onClick={[Function]}
+                        role="presentation"
                       >
                         <h3
                           className="planet-label"
@@ -412,6 +431,7 @@ ShallowWrapper {
                       </h3>,
                       "className": "planets-planet",
                       "onClick": [Function],
+                      "role": "presentation",
                     },
                     "ref": null,
                     "rendered": Object {
@@ -436,6 +456,7 @@ ShallowWrapper {
                       "children": <div
                         className="people-planet"
                         onClick={[Function]}
+                        role="presentation"
                       >
                         <h3
                           className="planet-label"
@@ -458,6 +479,7 @@ ShallowWrapper {
                         </h3>,
                         "className": "people-planet",
                         "onClick": [Function],
+                        "role": "presentation",
                       },
                       "ref": null,
                       "rendered": Object {
@@ -494,6 +516,7 @@ ShallowWrapper {
             <div
               className="alt-menu alt-menu-favorites"
               onClick={[Function]}
+              role="presentation"
             >
               <h3>
                 Favorites
@@ -502,6 +525,7 @@ ShallowWrapper {
             <div
               className="alt-menu alt-menu-vehicles"
               onClick={[Function]}
+              role="presentation"
             >
               <h3>
                 Vehicles
@@ -510,6 +534,7 @@ ShallowWrapper {
             <div
               className="alt-menu alt-menu-planets"
               onClick={[Function]}
+              role="presentation"
             >
               <h3>
                 Planets
@@ -518,6 +543,7 @@ ShallowWrapper {
             <div
               className="alt-menu alt-menu-people"
               onClick={[Function]}
+              role="presentation"
             >
               <h3>
                 People
@@ -538,6 +564,7 @@ ShallowWrapper {
               </h3>,
               "className": "alt-menu alt-menu-favorites",
               "onClick": [Function],
+              "role": "presentation",
             },
             "ref": null,
             "rendered": Object {
@@ -563,6 +590,7 @@ ShallowWrapper {
               </h3>,
               "className": "alt-menu alt-menu-vehicles",
               "onClick": [Function],
+              "role": "presentation",
             },
             "ref": null,
             "rendered": Object {
@@ -588,6 +616,7 @@ ShallowWrapper {
               </h3>,
               "className": "alt-menu alt-menu-planets",
               "onClick": [Function],
+              "role": "presentation",
             },
             "ref": null,
             "rendered": Object {
@@ -613,6 +642,7 @@ ShallowWrapper {
               </h3>,
               "className": "alt-menu alt-menu-people",
               "onClick": [Function],
+              "role": "presentation",
             },
             "ref": null,
             "rendered": Object {
@@ -652,6 +682,7 @@ ShallowWrapper {
             <div
               className="favorites-planet"
               onClick={[Function]}
+              role="presentation"
             >
               <h3
                 className="planet-label"
@@ -665,6 +696,7 @@ ShallowWrapper {
               <div
                 className="vehicles-planet"
                 onClick={[Function]}
+                role="presentation"
               >
                 <h3
                   className="planet-label"
@@ -678,6 +710,7 @@ ShallowWrapper {
                 <div
                   className="planets-planet"
                   onClick={[Function]}
+                  role="presentation"
                 >
                   <h3
                     className="planet-label"
@@ -691,6 +724,7 @@ ShallowWrapper {
                   <div
                     className="people-planet"
                     onClick={[Function]}
+                    role="presentation"
                   >
                     <h3
                       className="planet-label"
@@ -708,6 +742,7 @@ ShallowWrapper {
             <div
               className="alt-menu alt-menu-favorites"
               onClick={[Function]}
+              role="presentation"
             >
               <h3>
                 Favorites
@@ -716,6 +751,7 @@ ShallowWrapper {
             <div
               className="alt-menu alt-menu-vehicles"
               onClick={[Function]}
+              role="presentation"
             >
               <h3>
                 Vehicles
@@ -724,6 +760,7 @@ ShallowWrapper {
             <div
               className="alt-menu alt-menu-planets"
               onClick={[Function]}
+              role="presentation"
             >
               <h3>
                 Planets
@@ -732,6 +769,7 @@ ShallowWrapper {
             <div
               className="alt-menu alt-menu-people"
               onClick={[Function]}
+              role="presentation"
             >
               <h3>
                 People
@@ -764,6 +802,7 @@ ShallowWrapper {
               <div
                 className="favorites-planet"
                 onClick={[Function]}
+                role="presentation"
               >
                 <h3
                   className="planet-label"
@@ -777,6 +816,7 @@ ShallowWrapper {
                 <div
                   className="vehicles-planet"
                   onClick={[Function]}
+                  role="presentation"
                 >
                   <h3
                     className="planet-label"
@@ -790,6 +830,7 @@ ShallowWrapper {
                   <div
                     className="planets-planet"
                     onClick={[Function]}
+                    role="presentation"
                   >
                     <h3
                       className="planet-label"
@@ -803,6 +844,7 @@ ShallowWrapper {
                     <div
                       className="people-planet"
                       onClick={[Function]}
+                      role="presentation"
                     >
                       <h3
                         className="planet-label"
@@ -830,6 +872,7 @@ ShallowWrapper {
                 </h3>,
                 "className": "favorites-planet",
                 "onClick": [Function],
+                "role": "presentation",
               },
               "ref": null,
               "rendered": Object {
@@ -855,6 +898,7 @@ ShallowWrapper {
                   <div
                     className="vehicles-planet"
                     onClick={[Function]}
+                    role="presentation"
                   >
                     <h3
                       className="planet-label"
@@ -868,6 +912,7 @@ ShallowWrapper {
                     <div
                       className="planets-planet"
                       onClick={[Function]}
+                      role="presentation"
                     >
                       <h3
                         className="planet-label"
@@ -881,6 +926,7 @@ ShallowWrapper {
                       <div
                         className="people-planet"
                         onClick={[Function]}
+                        role="presentation"
                       >
                         <h3
                           className="planet-label"
@@ -907,6 +953,7 @@ ShallowWrapper {
                     </h3>,
                     "className": "vehicles-planet",
                     "onClick": [Function],
+                    "role": "presentation",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -932,6 +979,7 @@ ShallowWrapper {
                       <div
                         className="planets-planet"
                         onClick={[Function]}
+                        role="presentation"
                       >
                         <h3
                           className="planet-label"
@@ -945,6 +993,7 @@ ShallowWrapper {
                         <div
                           className="people-planet"
                           onClick={[Function]}
+                          role="presentation"
                         >
                           <h3
                             className="planet-label"
@@ -970,6 +1019,7 @@ ShallowWrapper {
                         </h3>,
                         "className": "planets-planet",
                         "onClick": [Function],
+                        "role": "presentation",
                       },
                       "ref": null,
                       "rendered": Object {
@@ -994,6 +1044,7 @@ ShallowWrapper {
                         "children": <div
                           className="people-planet"
                           onClick={[Function]}
+                          role="presentation"
                         >
                           <h3
                             className="planet-label"
@@ -1016,6 +1067,7 @@ ShallowWrapper {
                           </h3>,
                           "className": "people-planet",
                           "onClick": [Function],
+                          "role": "presentation",
                         },
                         "ref": null,
                         "rendered": Object {
@@ -1052,6 +1104,7 @@ ShallowWrapper {
               <div
                 className="alt-menu alt-menu-favorites"
                 onClick={[Function]}
+                role="presentation"
               >
                 <h3>
                   Favorites
@@ -1060,6 +1113,7 @@ ShallowWrapper {
               <div
                 className="alt-menu alt-menu-vehicles"
                 onClick={[Function]}
+                role="presentation"
               >
                 <h3>
                   Vehicles
@@ -1068,6 +1122,7 @@ ShallowWrapper {
               <div
                 className="alt-menu alt-menu-planets"
                 onClick={[Function]}
+                role="presentation"
               >
                 <h3>
                   Planets
@@ -1076,6 +1131,7 @@ ShallowWrapper {
               <div
                 className="alt-menu alt-menu-people"
                 onClick={[Function]}
+                role="presentation"
               >
                 <h3>
                   People
@@ -1096,6 +1152,7 @@ ShallowWrapper {
                 </h3>,
                 "className": "alt-menu alt-menu-favorites",
                 "onClick": [Function],
+                "role": "presentation",
               },
               "ref": null,
               "rendered": Object {
@@ -1121,6 +1178,7 @@ ShallowWrapper {
                 </h3>,
                 "className": "alt-menu alt-menu-vehicles",
                 "onClick": [Function],
+                "role": "presentation",
               },
               "ref": null,
               "rendered": Object {
@@ -1146,6 +1204,7 @@ ShallowWrapper {
                 </h3>,
                 "className": "alt-menu alt-menu-planets",
                 "onClick": [Function],
+                "role": "presentation",
               },
               "ref": null,
               "rendered": Object {
@@ -1171,6 +1230,7 @@ ShallowWrapper {
                 </h3>,
                 "className": "alt-menu alt-menu-people",
                 "onClick": [Function],
+                "role": "presentation",
               },
               "ref": null,
               "rendered": Object {

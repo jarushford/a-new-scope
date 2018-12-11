@@ -26,17 +26,17 @@ export default class Main extends Component {
       try {
         categoryData = await Promise.race([
           APIHelper.buildCategoryObj(category),
-          new Promise((reject) => {
-            setTimeout(() => reject(new Error()), 8000)
+          new Promise((resolve, reject) => {
+            setTimeout(() => reject(new Error()), 5000)
           })
         ])
-        this.setState({ categoryData })
+        await this.setState({ categoryData })
+        return handleStoreData(category, categoryData)
       } catch {
-        changePage('error')
+        return changePage('error')
       }
-      return handleStoreData(category, categoryData)
     }
-    return this.setState({ categoryData: storage[category] })
+   return this.setState({ categoryData: storage[category] })
   }
 
   getFavorites(favorites) {

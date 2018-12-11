@@ -16,14 +16,17 @@ export const getCategoryData = async (category) => {
 
 export const convertPopulation = (population) => {
   let returnPop = population
-  if (population > 1000) {
+  if (population >= 1000) {
     returnPop = `${population / 1000}K`
   }
-  if (population > 1000000) {
+  if (population >= 1000000) {
     returnPop = `${population / 1000000} million`
   }
-  if (population > 1000000000) {
+  if (population >= 1000000000) {
     returnPop = `${population / 1000000000} billion`
+  }
+  if (population >= 1000000000000) {
+    returnPop = `${population / 1000000000000} trillion`
   }
   return returnPop
 }
