@@ -20,8 +20,7 @@ export default class Main extends Component {
     const { category, handleStoreData } = this.props
     if (category === 'favorites') {
       const favorites = JSON.parse(localStorage.getItem('favorites'))
-      this.getFavorites(favorites)
-      return
+      return this.getFavorites(favorites)
     }
     let categoryData
     const storage = JSON.parse(localStorage.getItem('storedData'))

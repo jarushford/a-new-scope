@@ -8,7 +8,7 @@ import Loading from '../Loading/Loading'
 import Error from '../Error/Error'
 import './app.scss'
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super()
     this.state = {
@@ -24,14 +24,14 @@ class App extends Component {
   handleTitleScroll = async () => {
     try {
       const films = await Promise.race([
-        API.fetchTitleScroll(), 
+        API.fetchTitleScroll(),
         new Promise(reject => {
           setTimeout(()=> reject(new Error()), 8000)
         })
       ])
       const randomNumber = Math.round(Math.random() * 8)
       const film = films.results[randomNumber]
-      this.setState({ 
+      this.setState({
         landingScroll: {
           title: film.title,
           year: film.release_date,
@@ -46,7 +46,7 @@ class App extends Component {
   }
 
   handleStoreData = (category, categoryData, favorite, favoriteCategory) => {
-    if (category === 'favorites') { 
+    if (category === 'favorites') {
       this.storeFavorite(categoryData, favorite)
       this.updateStoredData(favoriteCategory, categoryData)
     } else {
@@ -60,15 +60,17 @@ class App extends Component {
     localStorage.setItem('storedData', JSON.stringify(newStorage))
   }
 
-  updateStoredData(category, updatedCard) {
+  updateStoredData = (category, updatedCard) => {
     let storage = (JSON.parse(localStorage.getItem('storedData')))
     let cardToUpdateIndex = 0
-    storage[category].find( (card, i ) => {
-      if (card.name === updatedCard.name)
-      cardToUpdateIndex = i
-    })
-    storage[category][cardToUpdateIndex] = updatedCard
-    localStorage.setItem('storedData', JSON.stringify(storage))
+    if (storage) {
+      storage[category].find((card, i) => {
+        if (card.name === updatedCard.name)
+        cardToUpdateIndex = i
+      })
+      storage[category][cardToUpdateIndex] = updatedCard
+      localStorage.setItem('storedData', JSON.stringify(storage))
+    }
   }
 
   storeFavorite = (data, favorite) => {
@@ -92,30 +94,19 @@ class App extends Component {
 
   render() {
     const { currentPage, landingScroll } = this.state
+    const mainHelper = <Main
+      handleStoreData={this.handleStoreData}
+      category={currentPage}
+      changePage={this.changePage}
+    />
     const renderHelper = {
       menu: <Menu
         changePage={this.changePage}
       />,
-      people: <Main
-        handleStoreData={this.handleStoreData}
-        category='people'
-        changePage={this.changePage}
-      />,
-      planets: <Main
-        handleStoreData={this.handleStoreData}
-        category='planets'
-        changePage={this.changePage}
-      />,
-      vehicles: <Main
-        handleStoreData={this.handleStoreData}
-        category='vehicles'
-        changePage={this.changePage}
-      />,
-      favorites: <Main
-        handleStoreData={this.handleStoreData}
-        category='favorites'
-        changePage={this.changePage}
-      />,
+      people: mainHelper,
+      planets: mainHelper,
+      vehicles: mainHelper,
+      favorites: mainHelper,
       landing: <Landing 
         continueToSite={this.changePage} 
         episode={landingScroll}/>,
@@ -124,19 +115,17 @@ class App extends Component {
 
     if (!landingScroll && currentPage !== 'error') {
       return (
-      <div className="App">
+      <div className='App'>
         <StarHousingComponent />
         <Loading />
       </div>
       )
     }
     return (
-      <div className="App">
+      <div className='App'>
       <StarHousingComponent />
       {renderHelper[currentPage]}
       </div>
     )
   }
 }
-
-export default App;

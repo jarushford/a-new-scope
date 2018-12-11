@@ -102,12 +102,12 @@ describe('App', () => {
 
     beforeEach(() => {
       storeDataSpy = jest.spyOn(wrapper.instance(), 'storeData')
-      updateStoredDataSpy = jest.spyOn(wrapper.instance(), 'updateStoredData')
       storeFavoriteSpy = jest.spyOn(wrapper.instance(), 'storeFavorite')
+      updateStoredDataSpy = jest.spyOn(wrapper.instance(), 'updateStoredData')
     })
 
     it('Should call storeFavorite and updateStoredData functions if category is favorites', () => {
-      wrapper.instance().handleStoreData('favorites', [{name: 'data'}])
+      wrapper.instance().handleStoreData('favorites', [{name: 'data'}], true, 'people')
 
       expect(storeFavoriteSpy).toHaveBeenCalled()
       expect(updateStoredDataSpy).toHaveBeenCalled()

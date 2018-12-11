@@ -98,14 +98,50 @@ describe('Main', () => {
     })
 
     it('Should load favorites from local storage if the category is favorites', () => {
+      const expected = [{
+        name: 'Luke',
+        species: 'human',
+        favorite: true
+      }]
 
+      localStorage.setItem('favorites', JSON.stringify(expected))
+
+      const wrapper = shallow(<Main 
+        changePage={mockChangePage} 
+        category={'favorites'} 
+        handleStoreData={handleStoreData}
+      />)
+
+      expect(wrapper.state().categoryData).toEqual(expected)
+
+      localStorage.removeItem('favorites')
     })
 
     it('Should load category data from local storage if it exists', () => {
+      const mockCategoryData = [
+        {
+          name: 'Luke',
+          species: 'Human',
+          homeworld: 'Tatooine'
+        },
+        {
+          name: 'R2-D2',
+          species: 'droid',
+          homeworld: 'Tatooine'
+        }
+      ]
 
-    })
+      localStorage.setItem('storedData', JSON.stringify({ people: mockCategoryData}))
 
-    it('Should store category data in local storage if was not set already', () => {
+      const wrapper = shallow(<Main 
+        changePage={mockChangePage} 
+        category={'people'} 
+        handleStoreData={handleStoreData}
+      />)
+
+      wrapper.instance().componentDidMount()
+
+      expect(wrapper.state().categoryData).toEqual(mockCategoryData)
 
     })
   })

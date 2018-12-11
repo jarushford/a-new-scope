@@ -55,7 +55,7 @@ export default class Card extends Component {
 
   flipCard = (e) => {
     if(e.target.classList.contains('resident-arrow') 
-      || e.target.classList.contains('favorite-btn') ) {return}
+      || e.target.classList.contains('favorite-btn') ) { return }
 
     if (this.state.flipped === true) {
       this.setState({
