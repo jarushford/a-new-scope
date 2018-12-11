@@ -1,6 +1,6 @@
-import Main from './Main'
+import React from 'react'
 import { shallow } from 'enzyme'
-import React from 'react';
+import Main from './Main'
 import { buildCategoryObj } from '../../utils/api/apiHelper'
 
 const mockCategoryData = [
@@ -31,16 +31,12 @@ describe('Main', () => {
     mockChangePage = jest.fn()
     handleStoreData = jest.fn()
     wrapper = shallow(
-      <Main 
-        changePage={mockChangePage} 
-        category={'vehicles'} 
-        handleStoreData={handleStoreData}/>)
-  })
-
-  it('should default state to no error', () => {
-    const expected = false
-
-    expect(wrapper.state().error).toEqual(expected)
+      <Main
+        changePage={mockChangePage}
+        category="vehicles"
+        handleStoreData={handleStoreData}
+      />
+    )
   })
 
   it('should redirect to Landing when the millenium falcon btn is clicked', () => {
@@ -65,9 +61,7 @@ describe('Main', () => {
   })
 
   describe('ComponentDidMount', () => {
-
     it('Should return category data when everything is ok', async () => {
-
       const expected = [
         {
           name: 'Luke',
@@ -85,18 +79,6 @@ describe('Main', () => {
       expect(wrapper.state().categoryData).toEqual(expected)
     })
 
-    it('Should set state to error when everything is not ok', async () => {
-
-      buildCategoryObj.mockImplementation(() => {
-        throw new Error('Could not fetch')
-      })
-
-      const expected = true
-
-      await wrapper.instance().componentDidMount()
-      expect(wrapper.state().error).toEqual(expected)
-    })
-
     it('Should load favorites from local storage if the category is favorites', () => {
       const expected = [{
         name: 'Luke',
@@ -106,9 +88,9 @@ describe('Main', () => {
 
       localStorage.setItem('favorites', JSON.stringify(expected))
 
-      const wrapper = shallow(<Main 
-        changePage={mockChangePage} 
-        category={'favorites'} 
+      wrapper = shallow(<Main
+        changePage={mockChangePage}
+        category="favorites"
         handleStoreData={handleStoreData}
       />)
 
@@ -118,36 +100,21 @@ describe('Main', () => {
     })
 
     it('Should load category data from local storage if it exists', () => {
-      const mockCategoryData = [
-        {
-          name: 'Luke',
-          species: 'Human',
-          homeworld: 'Tatooine'
-        },
-        {
-          name: 'R2-D2',
-          species: 'droid',
-          homeworld: 'Tatooine'
-        }
-      ]
+      localStorage.setItem('storedData', JSON.stringify({ people: mockCategoryData }))
 
-      localStorage.setItem('storedData', JSON.stringify({ people: mockCategoryData}))
-
-      const wrapper = shallow(<Main 
-        changePage={mockChangePage} 
-        category={'people'} 
+      wrapper = shallow(<Main
+        changePage={mockChangePage}
+        category="people"
         handleStoreData={handleStoreData}
       />)
 
       wrapper.instance().componentDidMount()
 
       expect(wrapper.state().categoryData).toEqual(mockCategoryData)
-
     })
   })
 
   describe('getFavorites', () => {
-
     it('Should set category data to none if there are no current favorites', () => {
       const expectedCategoryData = 'none'
       wrapper.instance().getFavorites([])
@@ -156,9 +123,9 @@ describe('Main', () => {
     })
 
     it('Should set category data an array of favorites if there are favorites', () => {
-      const favorites = [{name: 'fav1'}, {name: 'fav2'}]
+      const favorites = [{ name: 'fav1' }, { name: 'fav2' }]
       wrapper.instance().getFavorites(favorites)
-      
+
       expect(wrapper.state().categoryData).toEqual(favorites)
     })
   })

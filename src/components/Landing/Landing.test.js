@@ -1,15 +1,16 @@
 import React from 'react'
-import Landing from './Landing'
 import { shallow } from 'enzyme'
+import Landing from './Landing'
 
-describe( 'Landing', () => {
+describe('Landing', () => {
   const mockChange = jest.fn()
-  const mockepisode = {title: 'A New Hope', year: '1995', text: 'text'}
+  const mockepisode = { title: 'A New Hope', year: '1995', text: 'text' }
   const wrapper = shallow(
-    <Landing 
+    <Landing
       continueToSite={mockChange}
       episode={mockepisode}
-    />)
+    />
+  )
 
   it('should change to the menu screen when the enter button is clicked', () => {
     wrapper.find('.enter-btn').simulate('click')

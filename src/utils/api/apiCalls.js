@@ -76,7 +76,7 @@ export const getPlanets = (planets) => {
 
 export const getVehicles = (vehicles) => {
   return vehicles.map(
-    (vehicle) => ({
+    vehicle => ({
       name: vehicle.name,
       type: 'vehicle',
       main1: vehicle.model,

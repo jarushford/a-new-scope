@@ -3,7 +3,9 @@
 exports[`Error should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Error />,
+  Symbol(enzyme.__unrendered__): <Error
+    changePage={null}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -36,6 +38,7 @@ ShallowWrapper {
         <button
           className="error-sub error-button"
           onClick={[Function]}
+          type="submit"
         >
           Click here to return to site.
         </button>,
@@ -89,6 +92,7 @@ ShallowWrapper {
           "children": "Click here to return to site.",
           "className": "error-sub error-button",
           "onClick": [Function],
+          "type": "submit",
         },
         "ref": null,
         "rendered": "Click here to return to site.",
@@ -122,6 +126,7 @@ ShallowWrapper {
           <button
             className="error-sub error-button"
             onClick={[Function]}
+            type="submit"
           >
             Click here to return to site.
           </button>,
@@ -175,6 +180,7 @@ ShallowWrapper {
             "children": "Click here to return to site.",
             "className": "error-sub error-button",
             "onClick": [Function],
+            "type": "submit",
           },
           "ref": null,
           "rendered": "Click here to return to site.",

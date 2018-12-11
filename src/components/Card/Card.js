@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import ResidentsScroller from '../ResidentsScroller/ResidentsScroller'
 
 export default class Card extends Component {
@@ -8,12 +8,12 @@ export default class Card extends Component {
     this.state = {
       flipped: false,
       unflipped: false,
-      cardObj: null,
+      cardObj: null
     }
   }
 
   componentDidMount() {
-    const { cardData } = this.props
+    const { cardData, cardType } = this.props
     const cardObj = {
       category: cardData.category,
       favorite: cardData.favorite,
@@ -23,39 +23,40 @@ export default class Card extends Component {
       main1: cardData.main1,
       main2Label: '',
       main2: cardData.main2,
-      secHeader:'',
+      secHeader: '',
       secInfoMain: cardData.secInfoMain,
-      secInfoOther: cardData.secInfoOther || '',
+      secInfoOther: cardData.secInfoOther || ''
     }
 
-    switch(this.props.cardType) {
+    switch (cardType) {
       case 'people':
         cardObj.main1Label = 'Height'
         cardObj.main2Label = 'Weight'
         cardObj.secHeader = 'Homeworld'
-        break;
+        break
       case 'vehicles':
         cardObj.main1Label = 'Model'
         cardObj.main2Label = 'Class'
         cardObj.secHeader = 'Passengers'
-        break;  
+        break
       case 'planets':
         cardObj.main1Label = 'Population'
         cardObj.main2Label = 'Climate'
-        cardObj.secHeader = 'Residents' 
-        break;
-      default: break;
+        cardObj.secHeader = 'Residents'
+        break
+      default:
+        break
     }
 
     this.setState({ cardObj })
   }
 
-
   flipCard = (e) => {
-    if(e.target.classList.contains('resident-arrow') 
-      || e.target.classList.contains('favorite-btn') ) { return }
+    const { flipped } = this.state
+    if (e.target.classList.contains('resident-arrow')
+      || e.target.classList.contains('favorite-btn')) { return }
 
-    if (this.state.flipped === true) {
+    if (flipped === true) {
       this.setState({
         flipped: false,
         unflipped: true
@@ -69,77 +70,84 @@ export default class Card extends Component {
   }
 
   toggleFavorite = (cardObj) => {
-    const newCardObj = {...cardObj, favorite: !cardObj.favorite}
-    this.setState({cardObj: newCardObj}, () => { 
-      this.props.handleStoreData('favorites', newCardObj, newCardObj.favorite, cardObj.category)
+    const newCardObj = { ...cardObj, favorite: !cardObj.favorite }
+    const { handleStoreData } = this.props
+    this.setState({ cardObj: newCardObj }, () => {
+      handleStoreData('favorites', newCardObj, newCardObj.favorite, cardObj.category)
     })
   }
 
   render() {
-    const { flipped, unflipped, cardObj } = this.state 
+    const { flipped, unflipped, cardObj } = this.state
     const { cardType } = this.props
     let cardObjPeople
     if (cardType === 'people') {
-      cardObjPeople = true 
+      cardObjPeople = true
     } else {
       cardObjPeople = ''
     }
     if (cardObj === null) {
-      return (<div></div>)
-    } else {
-      return (
-        <div
-          className={`card ${flipped && 'flipped'} ${unflipped && 'unflipped'}`}
-          onClick={(e) => this.flipCard(e)}
-        >
-          <div className='card-front'>
-            <div className={`image-side-title card-title card-header-${cardType}`}>
-              <h1>{cardObj.name}</h1>
-              <i
-                className={`fas fa-star ${cardObj.favorite && 'favorite'} favorite-btn`}
-                onClick={() => this.toggleFavorite(cardObj)}
-              >
-              </i>
-            </div>
-            <img className='front-image' src={`./images/${cardObj.name.replace('\/', '-')}.jpg`} alt='card-image'></img>
-          </div>
-          <div className={` card-title card-header-${cardType}`}>
+      return (<div />)
+    }
+    return (
+      <div
+        className={`card ${flipped && 'flipped'} ${unflipped && 'unflipped'}`}
+        role="presentation"
+        onClick={e => this.flipCard(e)}
+      >
+        <div className="card-front">
+          <div className={`image-side-title card-title card-header-${cardType}`}>
             <h1>{cardObj.name}</h1>
             <i
               className={`fas fa-star ${cardObj.favorite && 'favorite'} favorite-btn`}
+              role="presentation"
               onClick={() => this.toggleFavorite(cardObj)}
-            >
-            </i>
-          </div>
-          <h1 className='card-type'>{cardObj.type}</h1>
-          <div className='stats-container'>
-            <div className='stat'>
-              <h1>{cardObj.main1Label}</h1>
-              <p>{`${cardObj.main1} ${cardObjPeople && 'cm'}`}</p>
-            </div>
-            <div className='div-line'></div>
-            <div className='stat'>
-              <h1>{cardObj.main2Label}</h1>
-              <p>{`${cardObj.main2} ${cardObjPeople && 'kg'}`}</p>
-            </div>
-          </div>
-          <div>
-            <div className={`homeworld-title card-header-${cardType}`}>
-              <h1 className={`card-header-${cardType}`}>{cardObj.secHeader}</h1>
-            </div>
-            <ResidentsScroller 
-              content1={cardObj.secInfoMain} 
-              content2={cardObj.secInfoOther} 
             />
           </div>
-          <img className='card-icon' alt='card icon' src={`./images/${cardType}_icon.svg`}></img>
+          <img className="front-image" src={`./images/${cardObj.name.replace('/', '-')}.jpg`} alt="" />
         </div>
-      )
-    }
+        <div className={` card-title card-header-${cardType}`}>
+          <h1>{cardObj.name}</h1>
+          <i
+            className={`fas fa-star ${cardObj.favorite && 'favorite'} favorite-btn`}
+            role="presentation"
+            onClick={() => this.toggleFavorite(cardObj)}
+          />
+        </div>
+        <h1 className="card-type">{cardObj.type}</h1>
+        <div className="stats-container">
+          <div className="stat">
+            <h1>{cardObj.main1Label}</h1>
+            <p>{`${cardObj.main1} ${cardObjPeople && 'cm'}`}</p>
+          </div>
+          <div className="div-line" />
+          <div className="stat">
+            <h1>{cardObj.main2Label}</h1>
+            <p>{`${cardObj.main2} ${cardObjPeople && 'kg'}`}</p>
+          </div>
+        </div>
+        <div>
+          <div className={`homeworld-title card-header-${cardType}`}>
+            <h1 className={`card-header-${cardType}`}>{cardObj.secHeader}</h1>
+          </div>
+          <ResidentsScroller
+            content1={cardObj.secInfoMain}
+            content2={cardObj.secInfoOther}
+          />
+        </div>
+        <img className="card-icon" alt="card icon" src={`./images/${cardType}_icon.svg`} />
+      </div>
+    )
   }
 }
 
 Card.propTypes = {
-  cardType: propTypes.string,
-  cardData: propTypes.object
+  cardType: PropTypes.string,
+  cardData: PropTypes.object.isRequired,
+  handleStoreData: PropTypes.func
+}
+
+Card.defaultProps = {
+  cardType: '',
+  handleStoreData: null
 }

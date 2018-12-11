@@ -1,15 +1,17 @@
-import React from 'react';
-import App from './App';
-import { fetchTitleScroll } from '../../utils/api/apiCalls'
+import React from 'react'
 import { shallow } from 'enzyme'
+import App from './App'
+import { fetchTitleScroll } from '../../utils/api/apiCalls'
 
 const mockFilm = {
-  title: 'ep1', 
-  release_date: '1995', 
+  title: 'ep1',
+  release_date: '1995',
   opening_crawl: 'starwars'
 }
 
-const mockFilms = {results: [mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm]}
+const mockFilms = {
+  results: [mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm, mockFilm]
+}
 
 jest.mock('../../utils/api/apiCalls')
 
@@ -19,16 +21,16 @@ beforeAll(() => {
 
 describe('App', () => {
   let wrapper
-  
+
   beforeEach(() => {
     wrapper = shallow(<App />)
   })
-  
+
   it('on page load the current page should be landing', () => {
-    wrapper = shallow(<App />, { disableLifecycleMethods: true})
+    wrapper = shallow(<App />, { disableLifecycleMethods: true })
     expect(wrapper.state().currentPage).toEqual('landing')
   })
-  
+
   it('should match the snapshot when loading', () => {
     wrapper.setState({
       landingScroll: mockFilm
@@ -41,14 +43,13 @@ describe('App', () => {
   })
 
   describe('Changepage', () => {
-    
     it('should change current page to the value passed into changePage', () => {
       wrapper.instance().changePage('menu')
       expect(wrapper.instance().state.currentPage).toEqual('menu')
     })
 
     it('should run handleTitleScroll if page is landing', () => {
-      wrapper = shallow(<App />, { disableLifecycleMethods: true})
+      wrapper = shallow(<App />, { disableLifecycleMethods: true })
       const spy = jest.spyOn(wrapper.instance(), 'handleTitleScroll')
 
       wrapper.instance().changePage('landing')
@@ -57,9 +58,8 @@ describe('App', () => {
   })
 
   describe('ComponentDidMount', () => {
-
     it('Should call handleTitleScroll', () => {
-      wrapper = shallow(<App />, { disableLifecycleMethods: true})
+      wrapper = shallow(<App />, { disableLifecycleMethods: true })
       const spy = jest.spyOn(wrapper.instance(), 'handleTitleScroll')
 
       wrapper.instance().componentDidMount()
@@ -69,24 +69,20 @@ describe('App', () => {
 
   describe('HandleTitleScroll', () => {
     describe('Success', () => {
-
       it('should update landingScroll in state if fetch is successful', async () => {
-
         const expectedState = {
-            title: 'ep1', 
-            year: '1995', 
-            text: 'starwars'
+          title: 'ep1',
+          year: '1995',
+          text: 'starwars'
         }
 
         await wrapper.instance().handleTitleScroll()
         expect(wrapper.state().landingScroll).toEqual(expectedState)
       })
     })
-    
-    describe('Error', () => {
 
-      it('should update currentPage to error in state if fetch rejects', async () => {      
-        
+    describe('Error', () => {
+      it('should update currentPage to error in state if fetch rejects', async () => {
         fetchTitleScroll.mockImplementation(() => {
           throw new Error('Could not fetch')
         })
@@ -105,7 +101,7 @@ describe('App', () => {
 
   describe('handleStoreData', () => {
     let storeDataSpy
-    let storeFavoriteSpy 
+    let storeFavoriteSpy
     let updateStoredDataSpy
 
     beforeEach(() => {
@@ -115,21 +111,20 @@ describe('App', () => {
     })
 
     it('Should call storeFavorite and updateStoredData functions if category is favorites', () => {
-      wrapper.instance().handleStoreData('favorites', [{name: 'data'}], true, 'people')
+      wrapper.instance().handleStoreData('favorites', [{ name: 'data' }], true, 'people')
 
       expect(storeFavoriteSpy).toHaveBeenCalled()
       expect(updateStoredDataSpy).toHaveBeenCalled()
     })
 
     it('Should call storeData if category isnt favorites', () => {
-      wrapper.instance().handleStoreData('vehicles', [{name: 'data'}])
+      wrapper.instance().handleStoreData('vehicles', [{ name: 'data' }])
 
       expect(storeDataSpy).toHaveBeenCalled()
     })
   })
 
   describe('storeData', () => {
-    
     it('Should reassign storedData in local storage to a new object with the new category data included', () => {
       const mockPeople = [{ name: 'Luke', species: 'human', favorite: false }]
       const mockPlanets = [{ name: 'Alderaan', terrain: 'grassland' }]
@@ -148,7 +143,6 @@ describe('App', () => {
   })
 
   describe('updateStoreData', () => {
-    
     it('Should find the card to be updated in localstorage and replace it with the changed card', () => {
       const newCard = { name: 'Luke', species: 'human', favorite: true }
 
@@ -162,7 +156,6 @@ describe('App', () => {
   })
 
   describe('storeFavorite', () => {
-    
     it('Should push in the new favorited card to local storage if it is a new favorite', () => {
       const newCard = { name: 'Luke', species: 'human', favorite: true }
       localStorage.removeItem('favorites')
@@ -184,5 +177,4 @@ describe('App', () => {
       localStorage.removeItem('favorites')
     })
   })
-
 })

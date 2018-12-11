@@ -64,6 +64,7 @@ ShallowWrapper {
             <h2
               className="enter-btn"
               onClick={[Function]}
+              role="presentation"
             >
               ENTER
             </h2>
@@ -148,6 +149,7 @@ ShallowWrapper {
               <h2
                 className="enter-btn"
                 onClick={[Function]}
+                role="presentation"
               >
                 ENTER
               </h2>
@@ -234,6 +236,7 @@ ShallowWrapper {
                 <h2
                   className="enter-btn"
                   onClick={[Function]}
+                  role="presentation"
                 >
                   ENTER
                 </h2>,
@@ -265,6 +268,7 @@ ShallowWrapper {
                   "children": "ENTER",
                   "className": "enter-btn",
                   "onClick": [Function],
+                  "role": "presentation",
                 },
                 "ref": null,
                 "rendered": "ENTER",
@@ -481,6 +485,7 @@ ShallowWrapper {
               <h2
                 className="enter-btn"
                 onClick={[Function]}
+                role="presentation"
               >
                 ENTER
               </h2>
@@ -565,6 +570,7 @@ ShallowWrapper {
                 <h2
                   className="enter-btn"
                   onClick={[Function]}
+                  role="presentation"
                 >
                   ENTER
                 </h2>
@@ -651,6 +657,7 @@ ShallowWrapper {
                   <h2
                     className="enter-btn"
                     onClick={[Function]}
+                    role="presentation"
                   >
                     ENTER
                   </h2>,
@@ -682,6 +689,7 @@ ShallowWrapper {
                     "children": "ENTER",
                     "className": "enter-btn",
                     "onClick": [Function],
+                    "role": "presentation",
                   },
                   "ref": null,
                   "rendered": "ENTER",

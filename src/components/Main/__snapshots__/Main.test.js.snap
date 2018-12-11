@@ -54,6 +54,7 @@ ShallowWrapper {
           <div
             className="continue-to-site-btn back-rings"
             onClick={[Function]}
+            role="presentation"
           >
             <img
               alt="ring"
@@ -88,6 +89,7 @@ ShallowWrapper {
                 "species": "Human",
               }
             }
+            cardType=""
             handleStoreData={
               [MockFunction] {
                 "calls": Array [
@@ -124,6 +126,7 @@ ShallowWrapper {
                 "species": "droid",
               }
             }
+            cardType=""
             handleStoreData={
               [MockFunction] {
                 "calls": Array [
@@ -157,6 +160,7 @@ ShallowWrapper {
           alt="Landing Btn"
           className="return-to-landing-btn"
           onClick={[Function]}
+          role="presentation"
           src="./images/millenium_color.png"
         />,
       ],
@@ -173,6 +177,7 @@ ShallowWrapper {
             <div
               className="continue-to-site-btn back-rings"
               onClick={[Function]}
+              role="presentation"
             >
               <img
                 alt="ring"
@@ -224,6 +229,7 @@ ShallowWrapper {
               ],
               "className": "continue-to-site-btn back-rings",
               "onClick": [Function],
+              "role": "presentation",
             },
             "ref": null,
             "rendered": Array [
@@ -298,6 +304,7 @@ ShallowWrapper {
                   "species": "Human",
                 }
               }
+              cardType=""
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -334,6 +341,7 @@ ShallowWrapper {
                   "species": "droid",
                 }
               }
+              cardType=""
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -377,7 +385,7 @@ ShallowWrapper {
                 "name": "Luke",
                 "species": "Human",
               },
-              "cardType": undefined,
+              "cardType": "",
               "handleStoreData": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -418,7 +426,7 @@ ShallowWrapper {
                 "name": "R2-D2",
                 "species": "droid",
               },
-              "cardType": undefined,
+              "cardType": "",
               "handleStoreData": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -460,6 +468,7 @@ ShallowWrapper {
           "alt": "Landing Btn",
           "className": "return-to-landing-btn",
           "onClick": [Function],
+          "role": "presentation",
           "src": "./images/millenium_color.png",
         },
         "ref": null,
@@ -482,6 +491,7 @@ ShallowWrapper {
             <div
               className="continue-to-site-btn back-rings"
               onClick={[Function]}
+              role="presentation"
             >
               <img
                 alt="ring"
@@ -516,6 +526,7 @@ ShallowWrapper {
                   "species": "Human",
                 }
               }
+              cardType=""
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -552,6 +563,7 @@ ShallowWrapper {
                   "species": "droid",
                 }
               }
+              cardType=""
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -585,6 +597,7 @@ ShallowWrapper {
             alt="Landing Btn"
             className="return-to-landing-btn"
             onClick={[Function]}
+            role="presentation"
             src="./images/millenium_color.png"
           />,
         ],
@@ -601,6 +614,7 @@ ShallowWrapper {
               <div
                 className="continue-to-site-btn back-rings"
                 onClick={[Function]}
+                role="presentation"
               >
                 <img
                   alt="ring"
@@ -652,6 +666,7 @@ ShallowWrapper {
                 ],
                 "className": "continue-to-site-btn back-rings",
                 "onClick": [Function],
+                "role": "presentation",
               },
               "ref": null,
               "rendered": Array [
@@ -726,6 +741,7 @@ ShallowWrapper {
                     "species": "Human",
                   }
                 }
+                cardType=""
                 handleStoreData={
                   [MockFunction] {
                     "calls": Array [
@@ -762,6 +778,7 @@ ShallowWrapper {
                     "species": "droid",
                   }
                 }
+                cardType=""
                 handleStoreData={
                   [MockFunction] {
                     "calls": Array [
@@ -805,7 +822,7 @@ ShallowWrapper {
                   "name": "Luke",
                   "species": "Human",
                 },
-                "cardType": undefined,
+                "cardType": "",
                 "handleStoreData": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -846,7 +863,7 @@ ShallowWrapper {
                   "name": "R2-D2",
                   "species": "droid",
                 },
-                "cardType": undefined,
+                "cardType": "",
                 "handleStoreData": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -888,6 +905,7 @@ ShallowWrapper {
             "alt": "Landing Btn",
             "className": "return-to-landing-btn",
             "onClick": [Function],
+            "role": "presentation",
             "src": "./images/millenium_color.png",
           },
           "ref": null,
@@ -972,6 +990,7 @@ ShallowWrapper {
           <div
             className="continue-to-site-btn back-rings"
             onClick={[Function]}
+            role="presentation"
           >
             <img
               alt="ring"
@@ -1006,6 +1025,7 @@ ShallowWrapper {
                 "species": "Human",
               }
             }
+            cardType=""
             handleStoreData={
               [MockFunction] {
                 "calls": Array [
@@ -1042,6 +1062,7 @@ ShallowWrapper {
                 "species": "droid",
               }
             }
+            cardType=""
             handleStoreData={
               [MockFunction] {
                 "calls": Array [
@@ -1075,6 +1096,7 @@ ShallowWrapper {
           alt="Landing Btn"
           className="return-to-landing-btn"
           onClick={[Function]}
+          role="presentation"
           src="./images/millenium_color.png"
         />,
       ],
@@ -1091,6 +1113,7 @@ ShallowWrapper {
             <div
               className="continue-to-site-btn back-rings"
               onClick={[Function]}
+              role="presentation"
             >
               <img
                 alt="ring"
@@ -1142,6 +1165,7 @@ ShallowWrapper {
               ],
               "className": "continue-to-site-btn back-rings",
               "onClick": [Function],
+              "role": "presentation",
             },
             "ref": null,
             "rendered": Array [
@@ -1216,6 +1240,7 @@ ShallowWrapper {
                   "species": "Human",
                 }
               }
+              cardType=""
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -1252,6 +1277,7 @@ ShallowWrapper {
                   "species": "droid",
                 }
               }
+              cardType=""
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -1295,7 +1321,7 @@ ShallowWrapper {
                 "name": "Luke",
                 "species": "Human",
               },
-              "cardType": undefined,
+              "cardType": "",
               "handleStoreData": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -1336,7 +1362,7 @@ ShallowWrapper {
                 "name": "R2-D2",
                 "species": "droid",
               },
-              "cardType": undefined,
+              "cardType": "",
               "handleStoreData": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -1378,6 +1404,7 @@ ShallowWrapper {
           "alt": "Landing Btn",
           "className": "return-to-landing-btn",
           "onClick": [Function],
+          "role": "presentation",
           "src": "./images/millenium_color.png",
         },
         "ref": null,
@@ -1400,6 +1427,7 @@ ShallowWrapper {
             <div
               className="continue-to-site-btn back-rings"
               onClick={[Function]}
+              role="presentation"
             >
               <img
                 alt="ring"
@@ -1434,6 +1462,7 @@ ShallowWrapper {
                   "species": "Human",
                 }
               }
+              cardType=""
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -1470,6 +1499,7 @@ ShallowWrapper {
                   "species": "droid",
                 }
               }
+              cardType=""
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -1503,6 +1533,7 @@ ShallowWrapper {
             alt="Landing Btn"
             className="return-to-landing-btn"
             onClick={[Function]}
+            role="presentation"
             src="./images/millenium_color.png"
           />,
         ],
@@ -1519,6 +1550,7 @@ ShallowWrapper {
               <div
                 className="continue-to-site-btn back-rings"
                 onClick={[Function]}
+                role="presentation"
               >
                 <img
                   alt="ring"
@@ -1570,6 +1602,7 @@ ShallowWrapper {
                 ],
                 "className": "continue-to-site-btn back-rings",
                 "onClick": [Function],
+                "role": "presentation",
               },
               "ref": null,
               "rendered": Array [
@@ -1644,6 +1677,7 @@ ShallowWrapper {
                     "species": "Human",
                   }
                 }
+                cardType=""
                 handleStoreData={
                   [MockFunction] {
                     "calls": Array [
@@ -1680,6 +1714,7 @@ ShallowWrapper {
                     "species": "droid",
                   }
                 }
+                cardType=""
                 handleStoreData={
                   [MockFunction] {
                     "calls": Array [
@@ -1723,7 +1758,7 @@ ShallowWrapper {
                   "name": "Luke",
                   "species": "Human",
                 },
-                "cardType": undefined,
+                "cardType": "",
                 "handleStoreData": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -1764,7 +1799,7 @@ ShallowWrapper {
                   "name": "R2-D2",
                   "species": "droid",
                 },
-                "cardType": undefined,
+                "cardType": "",
                 "handleStoreData": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -1806,6 +1841,7 @@ ShallowWrapper {
             "alt": "Landing Btn",
             "className": "return-to-landing-btn",
             "onClick": [Function],
+            "role": "presentation",
             "src": "./images/millenium_color.png",
           },
           "ref": null,

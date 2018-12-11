@@ -75,12 +75,14 @@ export default class ResidentsScroller extends Component {
         <i className="fas fa-caret-right resident-arrow" role="presentation" onClick={() => this.clickArrow(1)} />
         {
           residents.map((resident) => {
-            return (<h4
-              className={`resident ${resident.display}`}
-              key={uid(resident)}
-            >
-              {resident.name}
-            </h4>)
+            return (
+              <h4
+                className={`resident ${resident.display}`}
+                key={uid(resident)}
+              >
+                {resident.name}
+              </h4>
+            )
           })
         }
       </div>

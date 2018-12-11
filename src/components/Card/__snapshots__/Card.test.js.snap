@@ -48,10 +48,11 @@ ShallowWrapper {
             <i
               className="fas fa-star false favorite-btn"
               onClick={[Function]}
+              role="presentation"
             />
           </div>
           <img
-            alt="card-image"
+            alt=""
             className="front-image"
             src="./images/Test Planet.jpg"
           />
@@ -65,6 +66,7 @@ ShallowWrapper {
           <i
             className="fas fa-star false favorite-btn"
             onClick={[Function]}
+            role="presentation"
           />
         </div>,
         <h1
@@ -127,6 +129,7 @@ ShallowWrapper {
       ],
       "className": "card false false",
       "onClick": [Function],
+      "role": "presentation",
     },
     "ref": null,
     "rendered": Array [
@@ -145,10 +148,11 @@ ShallowWrapper {
               <i
                 className="fas fa-star false favorite-btn"
                 onClick={[Function]}
+                role="presentation"
               />
             </div>,
             <img
-              alt="card-image"
+              alt=""
               className="front-image"
               src="./images/Test Planet.jpg"
             />,
@@ -169,6 +173,7 @@ ShallowWrapper {
                 <i
                   className="fas fa-star false favorite-btn"
                   onClick={[Function]}
+                  role="presentation"
                 />,
               ],
               "className": "image-side-title card-title card-header-planets",
@@ -193,6 +198,7 @@ ShallowWrapper {
                 "props": Object {
                   "className": "fas fa-star false favorite-btn",
                   "onClick": [Function],
+                  "role": "presentation",
                 },
                 "ref": null,
                 "rendered": null,
@@ -206,7 +212,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "card-image",
+              "alt": "",
               "className": "front-image",
               "src": "./images/Test Planet.jpg",
             },
@@ -229,6 +235,7 @@ ShallowWrapper {
             <i
               className="fas fa-star false favorite-btn"
               onClick={[Function]}
+              role="presentation"
             />,
           ],
           "className": " card-title card-header-planets",
@@ -253,6 +260,7 @@ ShallowWrapper {
             "props": Object {
               "className": "fas fa-star false favorite-btn",
               "onClick": [Function],
+              "role": "presentation",
             },
             "ref": null,
             "rendered": null,
@@ -513,10 +521,11 @@ ShallowWrapper {
               <i
                 className="fas fa-star false favorite-btn"
                 onClick={[Function]}
+                role="presentation"
               />
             </div>
             <img
-              alt="card-image"
+              alt=""
               className="front-image"
               src="./images/Test Planet.jpg"
             />
@@ -530,6 +539,7 @@ ShallowWrapper {
             <i
               className="fas fa-star false favorite-btn"
               onClick={[Function]}
+              role="presentation"
             />
           </div>,
           <h1
@@ -592,6 +602,7 @@ ShallowWrapper {
         ],
         "className": "card false false",
         "onClick": [Function],
+        "role": "presentation",
       },
       "ref": null,
       "rendered": Array [
@@ -610,10 +621,11 @@ ShallowWrapper {
                 <i
                   className="fas fa-star false favorite-btn"
                   onClick={[Function]}
+                  role="presentation"
                 />
               </div>,
               <img
-                alt="card-image"
+                alt=""
                 className="front-image"
                 src="./images/Test Planet.jpg"
               />,
@@ -634,6 +646,7 @@ ShallowWrapper {
                   <i
                     className="fas fa-star false favorite-btn"
                     onClick={[Function]}
+                    role="presentation"
                   />,
                 ],
                 "className": "image-side-title card-title card-header-planets",
@@ -658,6 +671,7 @@ ShallowWrapper {
                   "props": Object {
                     "className": "fas fa-star false favorite-btn",
                     "onClick": [Function],
+                    "role": "presentation",
                   },
                   "ref": null,
                   "rendered": null,
@@ -671,7 +685,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "card-image",
+                "alt": "",
                 "className": "front-image",
                 "src": "./images/Test Planet.jpg",
               },
@@ -694,6 +708,7 @@ ShallowWrapper {
               <i
                 className="fas fa-star false favorite-btn"
                 onClick={[Function]}
+                role="presentation"
               />,
             ],
             "className": " card-title card-header-planets",
@@ -718,6 +733,7 @@ ShallowWrapper {
               "props": Object {
                 "className": "fas fa-star false favorite-btn",
                 "onClick": [Function],
+                "role": "presentation",
               },
               "ref": null,
               "rendered": null,
@@ -1000,6 +1016,7 @@ ShallowWrapper {
       }
     }
     cardType="planets"
+    handleStoreData={null}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

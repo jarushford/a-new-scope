@@ -28,7 +28,7 @@ export default class Stars extends Component {
     ctx.fillStyle = 'black'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < 2000; i += 1) {
       const randCoords = {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -57,7 +57,7 @@ export default class Stars extends Component {
     ctx.fillStyle = 'black'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 500; i += 1) {
       if (i % 2 === 0) {
         ctx.fillStyle = 'white'
         ctx.beginPath()

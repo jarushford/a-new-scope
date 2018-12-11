@@ -13,7 +13,7 @@ export default class App extends Component {
     super()
     this.state = {
       currentPage: 'landing',
-      landingScroll: '',
+      landingScroll: ''
     }
   }
 
@@ -25,8 +25,8 @@ export default class App extends Component {
     try {
       const films = await Promise.race([
         API.fetchTitleScroll(),
-        new Promise(reject => {
-          setTimeout(()=> reject(new Error()), 8000)
+        new Promise((reject) => {
+          setTimeout(() => reject(new Error()), 8000)
         })
       ])
       const randomNumber = Math.round(Math.random() * 8)
@@ -38,7 +38,7 @@ export default class App extends Component {
           text: film.opening_crawl
         }
       })
-    } catch(error) {
+    } catch (error) {
       this.setState({
         currentPage: 'error'
       })
@@ -56,49 +56,52 @@ export default class App extends Component {
 
   storeData = (category, categoryData) => {
     const storage = JSON.parse(localStorage.getItem('storedData'))
-    let newStorage = Object.assign({[category]: categoryData, ...storage})
+    const newStorage = Object.assign({ [category]: categoryData, ...storage })
     localStorage.setItem('storedData', JSON.stringify(newStorage))
   }
 
   updateStoredData = (category, updatedCard) => {
-    let storage = (JSON.parse(localStorage.getItem('storedData')))
+    const storage = (JSON.parse(localStorage.getItem('storedData')))
     let cardToUpdateIndex = 0
     if (storage) {
       storage[category].find((card, i) => {
-        if (card.name === updatedCard.name)
-        cardToUpdateIndex = i
+        if (card.name === updatedCard.name) {
+          cardToUpdateIndex = i
+        }
       })
       storage[category][cardToUpdateIndex] = updatedCard
       localStorage.setItem('storedData', JSON.stringify(storage))
     }
   }
 
-  storeFavorite = (data, favorite) => {
+  storeFavorite = (data, currentFavorite) => {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || []
-    if (!favorite) {
+    if (!currentFavorite) {
       const match = favorites.find(favorite => favorite.name === data.name)
-      favorites = favorites.filter(favorite => {
+      favorites = favorites.filter((favorite) => {
         return favorite.name !== match.name
       })
     } else {
       favorites.push(data)
-      }
+    }
     localStorage.setItem('favorites', JSON.stringify(favorites))
   }
 
   changePage = (page) => {
-    page === 'landing' ?
-    this.setState({ currentPage: page }, this.handleTitleScroll)
-    : this.setState({ currentPage: page })
+    page === 'landing'
+      ? this.setState({ currentPage: page }, this.handleTitleScroll)
+      : this.setState({ currentPage: page })
   }
 
   render() {
     const { currentPage, landingScroll } = this.state
-    const mainHelper = <Main
-      handleStoreData={this.handleStoreData}
-      category={currentPage}
-      changePage={this.changePage}
-    />
+    const mainHelper = (
+      <Main
+        handleStoreData={this.handleStoreData}
+        category={currentPage}
+        changePage={this.changePage}
+      />
+    )
     const renderHelper = {
       menu: <Menu
         changePage={this.changePage}
@@ -107,24 +110,25 @@ export default class App extends Component {
       planets: mainHelper,
       vehicles: mainHelper,
       favorites: mainHelper,
-      landing: <Landing 
-        continueToSite={this.changePage} 
-        episode={landingScroll}/>,
-      error: <Error changePage={this.changePage}/>
+      landing: <Landing
+        continueToSite={this.changePage}
+        episode={landingScroll}
+      />,
+      error: <Error changePage={this.changePage} />
     }
 
     if (!landingScroll && currentPage !== 'error') {
       return (
-      <div className='App'>
-        <StarHousingComponent />
-        <Loading />
-      </div>
+        <div className="App">
+          <StarHousingComponent />
+          <Loading />
+        </div>
       )
     }
     return (
-      <div className='App'>
-      <StarHousingComponent />
-      {renderHelper[currentPage]}
+      <div className="App">
+        <StarHousingComponent />
+        {renderHelper[currentPage]}
       </div>
     )
   }
