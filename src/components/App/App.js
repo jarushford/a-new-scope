@@ -116,11 +116,11 @@ export default class App extends Component {
       <div className="App">
         <StarHousingComponent />
         <Switch>
-          <Route exact path='/' render={() => {
+          <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => {
             return <Landing episode={landingScroll} />}
           } />
-          <Route path='/menu' component={Menu}/>
-          <Route path='/people' render={() => {
+          <Route path={`${process.env.PUBLIC_URL}/menu`} component={Menu}/>
+          <Route path={`${process.env.PUBLIC_URL}/people`} render={() => {
             return (
               <Main
                 handleStoreData={this.handleStoreData}
@@ -130,7 +130,7 @@ export default class App extends Component {
               />
             )
           }} />
-          <Route path='/vehicles' render={() => {
+          <Route path={`${process.env.PUBLIC_URL}/vehicles`} render={() => {
             return (
               <Main
                 handleStoreData={this.handleStoreData}
@@ -140,7 +140,7 @@ export default class App extends Component {
               />
             )
           }} />
-          <Route path='/planets' render={() => {
+          <Route path={`${process.env.PUBLIC_URL}/planets`} render={() => {
             return (
               <Main
                 handleStoreData={this.handleStoreData}
@@ -150,7 +150,7 @@ export default class App extends Component {
               />
             )
           }} />
-          <Route path='/favorites' render={() => {
+          <Route path={`${process.env.PUBLIC_URL}/favorites`} render={() => {
             return (
               <Main
                 handleStoreData={this.handleStoreData}
