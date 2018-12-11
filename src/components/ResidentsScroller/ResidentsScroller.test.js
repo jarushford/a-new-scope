@@ -6,6 +6,7 @@ describe('residentsScroller', () => {
   let content1
   let content2
   let wrapper
+  let residents
   
   
   beforeEach(() => {

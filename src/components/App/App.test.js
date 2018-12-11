@@ -46,6 +46,14 @@ describe('App', () => {
       wrapper.instance().changePage('menu')
       expect(wrapper.instance().state.currentPage).toEqual('menu')
     })
+
+    it('should run handleTitleScroll if page is landing', () => {
+      wrapper = shallow(<App />, { disableLifecycleMethods: true})
+      const spy = jest.spyOn(wrapper.instance(), 'handleTitleScroll')
+
+      wrapper.instance().changePage('landing')
+      expect(spy).toHaveBeenCalled()
+    })
   })
 
   describe('ComponentDidMount', () => {
@@ -122,26 +130,58 @@ describe('App', () => {
 
   describe('storeData', () => {
     
-    it.skip('Should set reassign storedData in local storage to a new object with the new category data included', () => {
+    it('Should reassign storedData in local storage to a new object with the new category data included', () => {
+      const mockPeople = [{ name: 'Luke', species: 'human', favorite: false }]
+      const mockPlanets = [{ name: 'Alderaan', terrain: 'grassland' }]
 
+      const expected = {
+        planets: mockPlanets,
+        people: mockPeople
+      }
+
+      localStorage.setItem('storedData', JSON.stringify({ people: mockPeople }))
+      wrapper.instance().storeData('planets', mockPlanets)
+      const result = JSON.parse(localStorage.getItem('storedData'))
+
+      expect(result).toEqual(expected)
     })
   })
 
   describe('updateStoreData', () => {
     
-    it.skip('Should find the card to be updated in localstorage and replace it with the changed card', () => {
+    it('Should find the card to be updated in localstorage and replace it with the changed card', () => {
+      const newCard = { name: 'Luke', species: 'human', favorite: true }
 
+      wrapper.instance().updateStoredData('people', newCard)
+      const result = JSON.parse(localStorage.getItem('storedData')).people
+
+      expect(result).toEqual([newCard])
+
+      localStorage.removeItem('storedData')
     })
   })
 
   describe('storeFavorite', () => {
     
-    it.skip('Should push in the new favorited card to local storage if it is a new favorite', () => {
+    it('Should push in the new favorited card to local storage if it is a new favorite', () => {
+      const newCard = { name: 'Luke', species: 'human', favorite: true }
+      localStorage.removeItem('favorites')
 
+      wrapper.instance().storeFavorite(newCard, true)
+      const result = JSON.parse(localStorage.getItem('favorites'))
+
+      expect(result).toEqual([newCard])
     })
 
-    it.skip('Should remove the favorite from local storage if the favorite was removed', () => {
+    it('Should remove the favorite from local storage if the favorite was removed', () => {
+      const newCard = { name: 'Luke', species: 'human', favorite: false }
 
+      wrapper.instance().storeFavorite(newCard, false)
+      const result = JSON.parse(localStorage.getItem('favorites'))
+
+      expect(result).toEqual([])
+
+      localStorage.removeItem('favorites')
     })
   })
 

@@ -82,7 +82,7 @@ ShallowWrapper {
               Population
             </h1>
             <p>
-              200K
+              200K 
             </p>
           </div>
           <div
@@ -95,7 +95,7 @@ ShallowWrapper {
               Climate
             </h1>
             <p>
-              Warm
+              Warm 
             </p>
           </div>
         </div>,
@@ -286,7 +286,7 @@ ShallowWrapper {
                 Population
               </h1>
               <p>
-                200K
+                200K 
               </p>
             </div>,
             <div
@@ -299,7 +299,7 @@ ShallowWrapper {
                 Climate
               </h1>
               <p>
-                Warm
+                Warm 
               </p>
             </div>,
           ],
@@ -317,7 +317,7 @@ ShallowWrapper {
                   Population
                 </h1>,
                 <p>
-                  200K
+                  200K 
                 </p>,
               ],
               "className": "stat",
@@ -340,10 +340,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "200K",
+                  "children": "200K ",
                 },
                 "ref": null,
-                "rendered": "200K",
+                "rendered": "200K ",
                 "type": "p",
               },
             ],
@@ -370,7 +370,7 @@ ShallowWrapper {
                   Climate
                 </h1>,
                 <p>
-                  Warm
+                  Warm 
                 </p>,
               ],
               "className": "stat",
@@ -393,10 +393,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Warm",
+                  "children": "Warm ",
                 },
                 "ref": null,
-                "rendered": "Warm",
+                "rendered": "Warm ",
                 "type": "p",
               },
             ],
@@ -547,7 +547,7 @@ ShallowWrapper {
                 Population
               </h1>
               <p>
-                200K
+                200K 
               </p>
             </div>
             <div
@@ -560,7 +560,7 @@ ShallowWrapper {
                 Climate
               </h1>
               <p>
-                Warm
+                Warm 
               </p>
             </div>
           </div>,
@@ -751,7 +751,7 @@ ShallowWrapper {
                   Population
                 </h1>
                 <p>
-                  200K
+                  200K 
                 </p>
               </div>,
               <div
@@ -764,7 +764,7 @@ ShallowWrapper {
                   Climate
                 </h1>
                 <p>
-                  Warm
+                  Warm 
                 </p>
               </div>,
             ],
@@ -782,7 +782,7 @@ ShallowWrapper {
                     Population
                   </h1>,
                   <p>
-                    200K
+                    200K 
                   </p>,
                 ],
                 "className": "stat",
@@ -805,10 +805,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "200K",
+                    "children": "200K ",
                   },
                   "ref": null,
-                  "rendered": "200K",
+                  "rendered": "200K ",
                   "type": "p",
                 },
               ],
@@ -835,7 +835,7 @@ ShallowWrapper {
                     Climate
                   </h1>,
                   <p>
-                    Warm
+                    Warm 
                   </p>,
                 ],
                 "className": "stat",
@@ -858,10 +858,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Warm",
+                    "children": "Warm ",
                   },
                   "ref": null,
-                  "rendered": "Warm",
+                  "rendered": "Warm ",
                   "type": "p",
                 },
               ],

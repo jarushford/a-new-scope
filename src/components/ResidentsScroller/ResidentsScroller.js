@@ -60,10 +60,6 @@ export default class ResidentsScroller extends Component {
   render() {
     const { residents, content1, content2 } = this.state
 
-    if(!residents && !content1) {
-      return <div></div>
-    }
-
     if(content1) {
       return (
         <div className='secInfo'>

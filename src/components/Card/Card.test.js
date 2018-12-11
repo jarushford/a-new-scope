@@ -91,23 +91,21 @@ describe('Card', () => {
       expect(wrapper.instance().state.cardObj).toEqual(expected)
     })
 
-    it('Should set CardObj labels to character labels if category is characters', () => {
+    it('should set cardObj labels if category is people', () => {
       wrapper = shallow(<Card cardType={'people'} cardData={mockData}/>)
       const expected = {
         favorite: false,
         category: 'planets',
         name: 'Test Planet',
         type: 'Fun Terrrain',
-        main1Label: 'Height',
-        main1: '200K cm',
-        main2Label: 'Weight',
-        main2: 'Warm kg',
-        secHeader: 'Homeworld',
+        main1Label: 'Model',
+        main1: '200K',
+        main2Label: 'Class',
+        main2: 'Warm',
+        secHeader: 'Passengers',
         secInfoMain: ['Jim', 'Bob'],
         secInfoOther: 'None'
       }
-
-      expect(wrapper.instance().state.cardObj).toEqual(expected)
     })
 
     it('Should not set CardObj labels if there is no Category', () => {

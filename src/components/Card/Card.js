@@ -31,9 +31,7 @@ export default class Card extends Component {
     switch(this.props.cardType) {
       case 'people':
         cardObj.main1Label = 'Height'
-        cardObj.main1 += ' cm'
         cardObj.main2Label = 'Weight'
-        cardObj.main2 += ' kg'
         cardObj.secHeader = 'Homeworld'
         break;
       case 'vehicles':
@@ -80,6 +78,12 @@ export default class Card extends Component {
   render() {
     const { flipped, unflipped, cardObj } = this.state 
     const { cardType } = this.props
+    let cardObjPeople
+    if (cardType === 'people') {
+      cardObjPeople = true 
+    } else {
+      cardObjPeople = ''
+    }
     if (cardObj === null) {
       return (<div></div>)
     } else {
@@ -111,12 +115,12 @@ export default class Card extends Component {
           <div className='stats-container'>
             <div className='stat'>
               <h1>{cardObj.main1Label}</h1>
-              <p>{cardObj.main1}</p>
+              <p>{`${cardObj.main1} ${cardObjPeople && 'cm'}`}</p>
             </div>
             <div className='div-line'></div>
             <div className='stat'>
               <h1>{cardObj.main2Label}</h1>
-              <p>{cardObj.main2}</p>
+              <p>{`${cardObj.main2} ${cardObjPeople && 'kg'}`}</p>
             </div>
           </div>
           <div>
