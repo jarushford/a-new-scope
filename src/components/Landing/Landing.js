@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-export default function Landing({ continueToSite, episode }) {
+export default function Landing({ episode }) {
   return (
     <div className="landing">
       <header className="landing-header">
@@ -10,7 +11,9 @@ export default function Landing({ continueToSite, episode }) {
           <h2 className="landing-year">{episode.year.substring(0, 4)}</h2>
         </div>
         <div className="continue-to-site-btn">
-          <h2 className="enter-btn" role="presentation" onClick={() => continueToSite('menu')}>ENTER</h2>
+          <Link to='/menu'>
+            <h2 className="enter-btn" role="presentation">ENTER</h2>
+          </Link>
           <img src="./images/outerring.svg" alt="ring" className="outerring ring" />
           <img src="./images/outerring.svg" alt="ring" className="middlering ring" />
           <img src="./images/outerring.svg" alt="ring" className="innerring ring" />
@@ -32,7 +35,6 @@ export default function Landing({ continueToSite, episode }) {
 }
 
 Landing.propTypes = {
-  continueToSite: PropTypes.func.isRequired,
   episode: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object

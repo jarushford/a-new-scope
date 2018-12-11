@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
 import * as API from '../../utils/api/apiCalls'
 import StarHousingComponent from '../Stars/StarHousingComponent'
 import Landing from '../Landing/Landing'
@@ -12,7 +13,7 @@ export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentPage: 'landing',
+      error: false,
       landingScroll: ''
     }
   }
@@ -26,7 +27,7 @@ export default class App extends Component {
       const films = await Promise.race([
         API.fetchTitleScroll(),
         new Promise((resolve, reject) => {
-          setTimeout(() => reject(new Error()), 5000)
+          setTimeout(() => reject(new Error()), 8000)
         })
       ])
       const randomNumber = Math.round(Math.random() * 8)
@@ -39,9 +40,7 @@ export default class App extends Component {
         }
       })
     } catch (error) {
-      this.setState({
-        currentPage: 'error'
-      })
+      this.setState({error: true})
     }
   }
 
@@ -85,39 +84,26 @@ export default class App extends Component {
     localStorage.setItem('favorites', JSON.stringify(favorites))
   }
 
-  changePage = (page) => {
-    if (page === 'landing') {
-      this.setState({ currentPage: page }, this.handleTitleScroll)
-    } else {
-      this.setState({ currentPage: page })
-    }
+  setError = (error) => {
+    this.setState({error})
   }
 
   render() {
-    const { currentPage, landingScroll } = this.state
-    const mainHelper = (
-      <Main
-        handleStoreData={this.handleStoreData}
-        category={currentPage}
-        changePage={this.changePage}
-      />
-    )
-    const renderHelper = {
-      menu: <Menu
-        changePage={this.changePage}
-      />,
-      people: mainHelper,
-      planets: mainHelper,
-      vehicles: mainHelper,
-      favorites: mainHelper,
-      landing: <Landing
-        continueToSite={this.changePage}
-        episode={landingScroll}
-      />,
-      error: <Error changePage={this.changePage} />
-    }
+    const { error, landingScroll } = this.state
 
-    if (!landingScroll && currentPage !== 'error') {
+    if (error) {
+      return (
+        <div className="App">
+          <StarHousingComponent />
+          <Error 
+              returnToLanding={this.handleTitleScroll}
+              setError={this.setError}  
+          />
+        </div>
+      )
+    }
+     
+    if (!landingScroll) {
       return (
         <div className="App">
           <StarHousingComponent />
@@ -125,10 +111,57 @@ export default class App extends Component {
         </div>
       )
     }
+
     return (
       <div className="App">
         <StarHousingComponent />
-        {renderHelper[currentPage]}
+          <Switch>
+            <Route path='/menu' component={Menu}/>
+            <Route exact path='/' render={() => {
+              return <Landing
+              episode={landingScroll}
+            /> }} />
+            <Route path='/people' render={() => {
+              return (
+                <Main
+                handleStoreData={this.handleStoreData}
+                category='people'
+                returnToLanding={this.handleTitleScroll}
+                setError={this.setError}
+                />
+              )
+            }} />
+            <Route path='/vehicles' render={() => {
+              return (
+                <Main
+                handleStoreData={this.handleStoreData}
+                category='vehicles'
+                returnToLanding={this.handleTitleScroll}
+                setError={this.setError}
+                />
+              )
+            }} />
+            <Route path='/planets' render={() => {
+              return (
+                <Main
+                handleStoreData={this.handleStoreData}
+                category='planets'
+                returnToLanding={this.handleTitleScroll}
+                setError={this.setError}
+                />
+              )
+            }} />
+            <Route path='/favorites' render={() => {
+              return (
+                <Main
+                handleStoreData={this.handleStoreData}
+                category='favorites'
+                returnToLanding={this.handleTitleScroll}
+                setError={this.setError}
+                />
+              )
+            }} />
+          </Switch> 
       </div>
     )
   }
