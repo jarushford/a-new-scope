@@ -21,7 +21,18 @@ npm start
 ![alt text](public/images/READMEpics/home.png)
 ![alt text](public/images/READMEpics/menu.png)
 ![alt text](public/images/READMEpics/main.png)
+
+### Wireframes 
 ![alt text](public/images/READMEpics/wireframes.png)
+
+### Primary Technologies Used
+
+- ReactJS
+- JSX
+- Fetch API
+- Jest/Enzyme
+- React Router
+- Sass
 
 ### Authors
 
