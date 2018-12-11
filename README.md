@@ -33,6 +33,7 @@ npm start
 - Jest/Enzyme
 - React Router
 - Sass
+- Canvas API
 
 ### Authors
 
