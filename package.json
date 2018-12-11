@@ -2,6 +2,7 @@
   "name": "a-new-scope",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jake.lauer27.github.io/a-new-scope",
   "dependencies": {
     "node-sass": "^4.10.0",
     "prop-types": "^15.6.2",
@@ -12,6 +13,7 @@
     "react-uid": "^2.2.0"
   },
   "scripts": {
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,6 +36,7 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint-config-airbnb": "^17.1.0",
+    "gh-pages": "^2.0.1",
     "jest-canvas-mock": "^1.1.0"
   }
 }

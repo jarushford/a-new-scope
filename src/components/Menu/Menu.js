@@ -46,30 +46,38 @@ export default function Menu() {
         </div>
       </div>
       <div className="alt-menu-container">
-        <div
-          role="presentation"
-          className="alt-menu alt-menu-favorites"
-        >
-          <h3 className="planet-label">Favorites</h3>
-        </div>
+        <Link to='/favorites'>
+          <div
+            role="presentation"
+            className="alt-menu alt-menu-favorites"
+          >
+            <h3 className="planet-label">Favorites</h3>
+          </div>
+        </Link>
+        <Link to='/vehicles'>
         <div
           role="presentation"
           className="alt-menu alt-menu-vehicles"
         >
           <h3 className="planet-label">Vehicles</h3>
         </div>
-        <div
-          role="presentation"
-          className="alt-menu alt-menu-planets"
-        >
-          <h3 className="planet-label">Planets</h3>
-        </div>
-        <div
-          role="presentation"
-          className="alt-menu alt-menu-people"
-        >
-          <h3 className="planet-label">People</h3>
-        </div>
+        </Link>
+        <Link to='/planets'>
+          <div
+            role="presentation"
+            className="alt-menu alt-menu-planets"
+            >
+            <h3 className="planet-label">Planets</h3>
+          </div>
+        </Link>
+        <Link to='/people'>
+          <div
+            role="presentation"
+            className="alt-menu alt-menu-people"
+            >
+            <h3 className="planet-label">People</h3>
+          </div>
+        </Link>
       </div>
     </div>
   )
