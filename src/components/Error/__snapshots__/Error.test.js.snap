@@ -4,7 +4,8 @@ exports[`Error should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Error
-    returnToLanding={null}
+    returnToLanding={[MockFunction]}
+    setError={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

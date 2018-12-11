@@ -97,7 +97,7 @@ export default class Main extends Component {
             alt="Landing Btn"
             src="./images/millenium_color.png"
             role="presentation"
-            onClick={() => returnToLanding}
+            onClick={() => returnToLanding()}
           />
         </Link>
       </main>

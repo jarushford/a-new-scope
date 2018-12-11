@@ -3,17 +3,16 @@ import { shallow } from 'enzyme'
 import Error from './Error'
 
 describe('Error', () => {
+    const mockReturnToLanding = jest.fn()
+    const mockSetError = jest.fn()
+    const wrapper = shallow(<Error returnToLanding={mockReturnToLanding} setError={mockSetError}/>)
   it('should match the snapshot', () => {
-    const wrapper = shallow(<Error />)
-
     expect(wrapper).toMatchSnapshot()
   })
 
   it('should go back to the landing page on click', () => {
-    const mockChangePage = jest.fn()
-    const wrapper = shallow(<Error changePage={mockChangePage} />)
-
     wrapper.find('.error-button').simulate('click')
-    expect(mockChangePage).toBeCalled()
+    expect(mockReturnToLanding).toBeCalled()
+    expect(mockSetError).toBeCalled()
   })
 })

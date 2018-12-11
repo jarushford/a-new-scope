@@ -115,53 +115,52 @@ export default class App extends Component {
     return (
       <div className="App">
         <StarHousingComponent />
-          <Switch>
-            <Route path='/menu' component={Menu}/>
-            <Route exact path='/' render={() => {
-              return <Landing
-              episode={landingScroll}
-            /> }} />
-            <Route path='/people' render={() => {
-              return (
-                <Main
+        <Switch>
+          <Route exact path='/' render={() => {
+            return <Landing episode={landingScroll} />}
+          } />
+          <Route path='/menu' component={Menu}/>
+          <Route path='/people' render={() => {
+            return (
+              <Main
                 handleStoreData={this.handleStoreData}
                 category='people'
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-                />
-              )
-            }} />
-            <Route path='/vehicles' render={() => {
-              return (
-                <Main
+              />
+            )
+          }} />
+          <Route path='/vehicles' render={() => {
+            return (
+              <Main
                 handleStoreData={this.handleStoreData}
                 category='vehicles'
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-                />
-              )
-            }} />
-            <Route path='/planets' render={() => {
-              return (
-                <Main
+              />
+            )
+          }} />
+          <Route path='/planets' render={() => {
+            return (
+              <Main
                 handleStoreData={this.handleStoreData}
                 category='planets'
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-                />
-              )
-            }} />
-            <Route path='/favorites' render={() => {
-              return (
-                <Main
+              />
+            )
+          }} />
+          <Route path='/favorites' render={() => {
+            return (
+              <Main
                 handleStoreData={this.handleStoreData}
                 category='favorites'
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-                />
-              )
-            }} />
-          </Switch> 
+              />
+            )
+          }} />
+        </Switch> 
       </div>
     )
   }

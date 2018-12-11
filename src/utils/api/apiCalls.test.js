@@ -175,7 +175,7 @@ describe('getPlanets', () => {
       name: 'Alderaan',
       terrain: 'grassland, mountains',
       climate: 'temperate',
-      population: 2000000000,
+      population: 1000000000000,
       residents: ['https://swapi.co/api/people/5/']
     }]
     window.fetch = jest.fn().mockImplementation(
@@ -192,7 +192,7 @@ describe('getPlanets', () => {
       favorite: false,
       name: 'Alderaan',
       type: 'grassland, mountains',
-      main1: '2 billion',
+      main1: '1 trillion',
       main2: 'temperate',
       secInfoMain: ['Leia Organa'],
       secInfoOther: ''
