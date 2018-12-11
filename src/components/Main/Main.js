@@ -3,6 +3,7 @@ import { uid } from 'react-uid'
 import PropTypes from 'prop-types'
 import Card from '../Card/Card'
 import Loading from '../Loading/Loading'
+import { Link } from 'react-router-dom'
 import * as APIHelper from '../../utils/api/apiHelper'
 
 
@@ -15,7 +16,7 @@ export default class Main extends Component {
   }
 
   async componentDidMount() {
-    const { category, handleStoreData, changePage } = this.props
+    const { category, handleStoreData, setError } = this.props
     if (category === 'favorites') {
       const favorites = JSON.parse(localStorage.getItem('favorites'))
       return this.getFavorites(favorites)
@@ -33,7 +34,7 @@ export default class Main extends Component {
         await this.setState({ categoryData })
         return handleStoreData(category, categoryData)
       } catch {
-        return changePage('error')
+        return setError(true)
       }
     }
    return this.setState({ categoryData: storage[category] })
@@ -52,7 +53,7 @@ export default class Main extends Component {
   }
 
   render() {
-    const { category, changePage, handleStoreData } = this.props
+    const { category, returnToLanding, handleStoreData } = this.props
     const { categoryData } = this.state
     let render
 
@@ -78,30 +79,35 @@ export default class Main extends Component {
     return (
       <main className="main">
         <div className="header-container">
-          <div className="continue-to-site-btn back-rings" role="presentation" onClick={() => changePage('menu')}>
+        <Link to='/menu'>
+          <div className="continue-to-site-btn back-rings" role="presentation">
             <img src="./images/outerring.svg" alt="ring" className="outerring ring" />
             <img src="./images/outerring.svg" alt="ring" className="middlering ring" />
             <img src="./images/outerring.svg" alt="ring" className="innerring ring" />
           </div>
+        </Link>
           <h1 className="main-header">{category}</h1>
         </div>
         <section className="card-section">
           {render}
         </section>
-        <img
-          className="return-to-landing-btn"
-          alt="Landing Btn"
-          src="./images/millenium_color.png"
-          role="presentation"
-          onClick={() => changePage('landing')}
-        />
+        <Link to='/'>
+          <img
+            className="return-to-landing-btn"
+            alt="Landing Btn"
+            src="./images/millenium_color.png"
+            role="presentation"
+            onClick={() => returnToLanding}
+          />
+        </Link>
       </main>
     )
   }
 }
 
 Main.propTypes = {
-  changePage: PropTypes.func.isRequired,
+  returnToLanding: PropTypes.func.isRequired,
   category: PropTypes.string.isRequired,
-  handleStoreData: PropTypes.func.isRequired
+  handleStoreData: PropTypes.func.isRequired,
+  setError: PropTypes.func.isRequired
 }
