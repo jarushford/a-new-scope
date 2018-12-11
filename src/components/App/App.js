@@ -68,6 +68,7 @@ export default class App extends Component {
         if (card.name === updatedCard.name) {
           cardToUpdateIndex = i
         }
+        return card
       })
       storage[category][cardToUpdateIndex] = updatedCard
       localStorage.setItem('storedData', JSON.stringify(storage))
@@ -78,9 +79,7 @@ export default class App extends Component {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || []
     if (!currentFavorite) {
       const match = favorites.find(favorite => favorite.name === data.name)
-      favorites = favorites.filter((favorite) => {
-        return favorite.name !== match.name
-      })
+      favorites = favorites.filter(favorite => favorite.name !== match.name)
     } else {
       favorites.push(data)
     }
@@ -88,9 +87,11 @@ export default class App extends Component {
   }
 
   changePage = (page) => {
-    page === 'landing'
-      ? this.setState({ currentPage: page }, this.handleTitleScroll)
-      : this.setState({ currentPage: page })
+    if (page === 'landing') {
+      this.setState({ currentPage: page }, this.handleTitleScroll)
+    } else {
+      this.setState({ currentPage: page })
+    }
   }
 
   render() {

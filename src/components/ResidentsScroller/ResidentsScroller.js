@@ -45,9 +45,11 @@ export default class ResidentsScroller extends Component {
 
     const newResidents = residents.map((resident, i) => {
       let formattedResident
-      i === newIndex
-        ? formattedResident = { name: resident.name, display: '' }
-        : formattedResident = { name: resident.name, display: 'none' }
+      if (i === newIndex) {
+        formattedResident = { name: resident.name, display: '' }
+      } else {
+        formattedResident = { name: resident.name, display: 'none' }
+      }
       return formattedResident
     })
 
@@ -74,16 +76,13 @@ export default class ResidentsScroller extends Component {
         <i className="fas fa-caret-left resident-arrow" role="presentation" onClick={() => this.clickArrow(-1)} />
         <i className="fas fa-caret-right resident-arrow" role="presentation" onClick={() => this.clickArrow(1)} />
         {
-          residents.map((resident) => {
-            return (
-              <h4
-                className={`resident ${resident.display}`}
-                key={uid(resident)}
-              >
-                {resident.name}
-              </h4>
-            )
-          })
+          residents.map(resident => (<h4
+            className={`resident ${resident.display}`}
+            key={uid(resident)}
+          >
+            {resident.name}
+          </h4>
+          ))
         }
       </div>
     )

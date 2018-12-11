@@ -74,17 +74,15 @@ export const getPlanets = (planets) => {
   return Promise.all(unresolvedPromises)
 }
 
-export const getVehicles = (vehicles) => {
-  return vehicles.map(
-    vehicle => ({
-      name: vehicle.name,
-      type: 'vehicle',
-      main1: vehicle.model,
-      main2: vehicle.vehicle_class,
-      secInfoMain: vehicle.passengers,
-      secInfoOther: '',
-      category: 'vehicles',
-      favorite: false
-    })
-  )
-}
+export const getVehicles = vehicles => vehicles.map(
+  vehicle => ({
+    name: vehicle.name,
+    type: 'vehicle',
+    main1: vehicle.model,
+    main2: vehicle.vehicle_class,
+    secInfoMain: vehicle.passengers,
+    secInfoOther: '',
+    category: 'vehicles',
+    favorite: false
+  })
+)

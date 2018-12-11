@@ -32,7 +32,7 @@ export default class Main extends Component {
         ])
         this.setState({ categoryData })
       } catch {
-        return changePage('error')
+        changePage('error')
       }
       return handleStoreData(category, categoryData)
     }
@@ -67,16 +67,13 @@ export default class Main extends Component {
         <div className="no-favorite-message">You have no saved favorites</div>
       )
     } else {
-      render = categoryData.map((current) => {
-        return (
-          <Card
-            handleStoreData={handleStoreData}
-            cardData={current}
-            key={uid(current)}
-            cardType={current.category}
-          />
-        )
-      })
+      render = categoryData.map(current => (<Card
+        handleStoreData={handleStoreData}
+        cardData={current}
+        key={uid(current)}
+        cardType={current.category}
+      />
+      ))
     }
     return (
       <main className="main">
