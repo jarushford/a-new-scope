@@ -4,7 +4,7 @@
 
 The goal of this project was to build an app in React using the Star Wars API. Data is fetched from the SWAPI and displayed in categories, from which users can select favorites, which will persist in localStorage. This app also features the iconic Star Wars opening crawl and is fully tested and responsive.
 
-#### View the live site [here](), or follow the instructions below to install locally
+#### View the live site [here](https://jakelauer27.github.io/a-new-scope/), or follow the instructions below to install locally
 
 ### Setup
 
@@ -33,6 +33,7 @@ npm start
 - Jest/Enzyme
 - React Router
 - Sass
+- Canvas API
 
 ### Authors
 
