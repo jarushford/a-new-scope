@@ -100,6 +100,7 @@ ShallowWrapper {
               }
             }
             cardType=""
+            favorite="vehicles"
             handleStoreData={
               [MockFunction] {
                 "calls": Array [
@@ -127,6 +128,7 @@ ShallowWrapper {
                 ],
               }
             }
+            updateFavorites={[Function]}
           />
           <Card
             cardData={
@@ -137,6 +139,7 @@ ShallowWrapper {
               }
             }
             cardType=""
+            favorite="vehicles"
             handleStoreData={
               [MockFunction] {
                 "calls": Array [
@@ -164,6 +167,7 @@ ShallowWrapper {
                 ],
               }
             }
+            updateFavorites={[Function]}
           />
         </section>,
         <Link
@@ -381,6 +385,7 @@ ShallowWrapper {
                 }
               }
               cardType=""
+              favorite="vehicles"
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -408,6 +413,7 @@ ShallowWrapper {
                   ],
                 }
               }
+              updateFavorites={[Function]}
             />,
             <Card
               cardData={
@@ -418,6 +424,7 @@ ShallowWrapper {
                 }
               }
               cardType=""
+              favorite="vehicles"
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -445,6 +452,7 @@ ShallowWrapper {
                   ],
                 }
               }
+              updateFavorites={[Function]}
             />,
           ],
           "className": "card-section",
@@ -462,6 +470,7 @@ ShallowWrapper {
                 "species": "Human",
               },
               "cardType": "",
+              "favorite": "vehicles",
               "handleStoreData": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -487,6 +496,7 @@ ShallowWrapper {
                   },
                 ],
               },
+              "updateFavorites": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -503,6 +513,7 @@ ShallowWrapper {
                 "species": "droid",
               },
               "cardType": "",
+              "favorite": "vehicles",
               "handleStoreData": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -528,6 +539,7 @@ ShallowWrapper {
                   },
                 ],
               },
+              "updateFavorites": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -630,6 +642,7 @@ ShallowWrapper {
                 }
               }
               cardType=""
+              favorite="vehicles"
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -657,6 +670,7 @@ ShallowWrapper {
                   ],
                 }
               }
+              updateFavorites={[Function]}
             />
             <Card
               cardData={
@@ -667,6 +681,7 @@ ShallowWrapper {
                 }
               }
               cardType=""
+              favorite="vehicles"
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -694,6 +709,7 @@ ShallowWrapper {
                   ],
                 }
               }
+              updateFavorites={[Function]}
             />
           </section>,
           <Link
@@ -911,6 +927,7 @@ ShallowWrapper {
                   }
                 }
                 cardType=""
+                favorite="vehicles"
                 handleStoreData={
                   [MockFunction] {
                     "calls": Array [
@@ -938,6 +955,7 @@ ShallowWrapper {
                     ],
                   }
                 }
+                updateFavorites={[Function]}
               />,
               <Card
                 cardData={
@@ -948,6 +966,7 @@ ShallowWrapper {
                   }
                 }
                 cardType=""
+                favorite="vehicles"
                 handleStoreData={
                   [MockFunction] {
                     "calls": Array [
@@ -975,6 +994,7 @@ ShallowWrapper {
                     ],
                   }
                 }
+                updateFavorites={[Function]}
               />,
             ],
             "className": "card-section",
@@ -992,6 +1012,7 @@ ShallowWrapper {
                   "species": "Human",
                 },
                 "cardType": "",
+                "favorite": "vehicles",
                 "handleStoreData": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -1017,6 +1038,7 @@ ShallowWrapper {
                     },
                   ],
                 },
+                "updateFavorites": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -1033,6 +1055,7 @@ ShallowWrapper {
                   "species": "droid",
                 },
                 "cardType": "",
+                "favorite": "vehicles",
                 "handleStoreData": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -1058,6 +1081,7 @@ ShallowWrapper {
                     },
                   ],
                 },
+                "updateFavorites": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -1223,6 +1247,7 @@ ShallowWrapper {
               }
             }
             cardType=""
+            favorite="vehicles"
             handleStoreData={
               [MockFunction] {
                 "calls": Array [
@@ -1250,6 +1275,7 @@ ShallowWrapper {
                 ],
               }
             }
+            updateFavorites={[Function]}
           />
           <Card
             cardData={
@@ -1260,6 +1286,7 @@ ShallowWrapper {
               }
             }
             cardType=""
+            favorite="vehicles"
             handleStoreData={
               [MockFunction] {
                 "calls": Array [
@@ -1287,6 +1314,7 @@ ShallowWrapper {
                 ],
               }
             }
+            updateFavorites={[Function]}
           />
         </section>,
         <Link
@@ -1504,6 +1532,7 @@ ShallowWrapper {
                 }
               }
               cardType=""
+              favorite="vehicles"
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -1531,6 +1560,7 @@ ShallowWrapper {
                   ],
                 }
               }
+              updateFavorites={[Function]}
             />,
             <Card
               cardData={
@@ -1541,6 +1571,7 @@ ShallowWrapper {
                 }
               }
               cardType=""
+              favorite="vehicles"
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -1568,6 +1599,7 @@ ShallowWrapper {
                   ],
                 }
               }
+              updateFavorites={[Function]}
             />,
           ],
           "className": "card-section",
@@ -1585,6 +1617,7 @@ ShallowWrapper {
                 "species": "Human",
               },
               "cardType": "",
+              "favorite": "vehicles",
               "handleStoreData": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -1610,6 +1643,7 @@ ShallowWrapper {
                   },
                 ],
               },
+              "updateFavorites": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -1626,6 +1660,7 @@ ShallowWrapper {
                 "species": "droid",
               },
               "cardType": "",
+              "favorite": "vehicles",
               "handleStoreData": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -1651,6 +1686,7 @@ ShallowWrapper {
                   },
                 ],
               },
+              "updateFavorites": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -1753,6 +1789,7 @@ ShallowWrapper {
                 }
               }
               cardType=""
+              favorite="vehicles"
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -1780,6 +1817,7 @@ ShallowWrapper {
                   ],
                 }
               }
+              updateFavorites={[Function]}
             />
             <Card
               cardData={
@@ -1790,6 +1828,7 @@ ShallowWrapper {
                 }
               }
               cardType=""
+              favorite="vehicles"
               handleStoreData={
                 [MockFunction] {
                   "calls": Array [
@@ -1817,6 +1856,7 @@ ShallowWrapper {
                   ],
                 }
               }
+              updateFavorites={[Function]}
             />
           </section>,
           <Link
@@ -2034,6 +2074,7 @@ ShallowWrapper {
                   }
                 }
                 cardType=""
+                favorite="vehicles"
                 handleStoreData={
                   [MockFunction] {
                     "calls": Array [
@@ -2061,6 +2102,7 @@ ShallowWrapper {
                     ],
                   }
                 }
+                updateFavorites={[Function]}
               />,
               <Card
                 cardData={
@@ -2071,6 +2113,7 @@ ShallowWrapper {
                   }
                 }
                 cardType=""
+                favorite="vehicles"
                 handleStoreData={
                   [MockFunction] {
                     "calls": Array [
@@ -2098,6 +2141,7 @@ ShallowWrapper {
                     ],
                   }
                 }
+                updateFavorites={[Function]}
               />,
             ],
             "className": "card-section",
@@ -2115,6 +2159,7 @@ ShallowWrapper {
                   "species": "Human",
                 },
                 "cardType": "",
+                "favorite": "vehicles",
                 "handleStoreData": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -2140,6 +2185,7 @@ ShallowWrapper {
                     },
                   ],
                 },
+                "updateFavorites": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -2156,6 +2202,7 @@ ShallowWrapper {
                   "species": "droid",
                 },
                 "cardType": "",
+                "favorite": "vehicles",
                 "handleStoreData": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -2181,6 +2228,7 @@ ShallowWrapper {
                     },
                   ],
                 },
+                "updateFavorites": [Function],
               },
               "ref": null,
               "rendered": null,

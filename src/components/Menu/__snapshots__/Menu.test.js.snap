@@ -34,6 +34,11 @@ ShallowWrapper {
               className="favorites-planet"
               role="presentation"
             >
+              <h2
+                className="favoritesCount"
+              >
+                0
+              </h2>
               <h3
                 className="planet-label"
               >
@@ -194,6 +199,11 @@ ShallowWrapper {
                 className="favorites-planet"
                 role="presentation"
               >
+                <h2
+                  className="favoritesCount"
+                >
+                  0
+                </h2>
                 <h3
                   className="planet-label"
                 >
@@ -272,6 +282,11 @@ ShallowWrapper {
                 className="favorites-planet"
                 role="presentation"
               >
+                <h2
+                  className="favoritesCount"
+                >
+                  0
+                </h2>
                 <h3
                   className="planet-label"
                 >
@@ -287,27 +302,48 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <h3
-                  className="planet-label"
-                >
-                  Favorites
-                </h3>,
+                "children": Array [
+                  <h2
+                    className="favoritesCount"
+                  >
+                    0
+                  </h2>,
+                  <h3
+                    className="planet-label"
+                  >
+                    Favorites
+                  </h3>,
+                ],
                 "className": "favorites-planet",
                 "role": "presentation",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Favorites",
-                  "className": "planet-label",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                    "className": "favoritesCount",
+                  },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "h2",
                 },
-                "ref": null,
-                "rendered": "Favorites",
-                "type": "h3",
-              },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Favorites",
+                    "className": "planet-label",
+                  },
+                  "ref": null,
+                  "rendered": "Favorites",
+                  "type": "h3",
+                },
+              ],
               "type": "div",
             },
             "type": [Function],
@@ -898,6 +934,11 @@ ShallowWrapper {
                 className="favorites-planet"
                 role="presentation"
               >
+                <h2
+                  className="favoritesCount"
+                >
+                  0
+                </h2>
                 <h3
                   className="planet-label"
                 >
@@ -1058,6 +1099,11 @@ ShallowWrapper {
                   className="favorites-planet"
                   role="presentation"
                 >
+                  <h2
+                    className="favoritesCount"
+                  >
+                    0
+                  </h2>
                   <h3
                     className="planet-label"
                   >
@@ -1136,6 +1182,11 @@ ShallowWrapper {
                   className="favorites-planet"
                   role="presentation"
                 >
+                  <h2
+                    className="favoritesCount"
+                  >
+                    0
+                  </h2>
                   <h3
                     className="planet-label"
                   >
@@ -1151,27 +1202,48 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <h3
-                    className="planet-label"
-                  >
-                    Favorites
-                  </h3>,
+                  "children": Array [
+                    <h2
+                      className="favoritesCount"
+                    >
+                      0
+                    </h2>,
+                    <h3
+                      className="planet-label"
+                    >
+                      Favorites
+                    </h3>,
+                  ],
                   "className": "favorites-planet",
                   "role": "presentation",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Favorites",
-                    "className": "planet-label",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 0,
+                      "className": "favoritesCount",
+                    },
+                    "ref": null,
+                    "rendered": 0,
+                    "type": "h2",
                   },
-                  "ref": null,
-                  "rendered": "Favorites",
-                  "type": "h3",
-                },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Favorites",
+                      "className": "planet-label",
+                    },
+                    "ref": null,
+                    "rendered": "Favorites",
+                    "type": "h3",
+                  },
+                ],
                 "type": "div",
               },
               "type": [Function],

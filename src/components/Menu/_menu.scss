@@ -81,6 +81,17 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
+.favoritesCount {
+  color: black;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+  font-family: 'Pathway Gothic One';
+  position: absolute;
+  transform: rotate(-20deg);
+  z-index: 10;
+  right: 12px;
+  top: -16px;
+}
+
 .favorites-path {
   @include path(620px, 620px, 0, 10px);
   margin: 20px auto;
