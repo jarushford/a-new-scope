@@ -9,7 +9,7 @@ The goal of this project was to build an app in React using the Star Wars API. D
 ### Setup
 
 ```
-git clone https://github.com/jakelauer27/a-new-scope.git
+git clone https://github.com/jarushford/a-new-scope.git
 
 cd a-new-scope
 
