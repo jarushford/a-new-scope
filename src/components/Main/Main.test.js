@@ -59,6 +59,17 @@ describe('Main', () => {
   })
 
   describe('ComponentDidMount', () => {
+    
+    it('Should call UpdateCards', () => {
+    wrapper = shallow(<Main />, { disableLifecycleMethods: true })
+    const spy = jest.spyOn(wrapper.instance(), 'updateCards')
+
+    wrapper.instance().componentDidMount()
+    expect(spy).toHaveBeenCalled()
+    })
+  })
+
+  describe('updateCards', () => {
     it('Should return category data when everything is ok', async () => {
       const expected = [
         {
@@ -73,7 +84,7 @@ describe('Main', () => {
         }
       ]
 
-      await wrapper.instance().componentDidMount()
+      await wrapper.instance().updateCards()
       expect(wrapper.state().categoryData).toEqual(expected)
     })
 
@@ -82,7 +93,7 @@ describe('Main', () => {
         throw new Error()
       })
 
-      await wrapper.instance().componentDidMount()
+      await wrapper.instance().updateCards()
       expect(mockSetError).toBeCalledWith(true)
     })
 
@@ -117,7 +128,7 @@ describe('Main', () => {
         handleStoreData={handleStoreData}
       />)
 
-      wrapper.instance().componentDidMount()
+      wrapper.instance().updateCards()
 
       expect(wrapper.state().categoryData).toEqual(mockCategoryData)
     })

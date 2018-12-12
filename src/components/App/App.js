@@ -14,7 +14,7 @@ export default class App extends Component {
     super()
     this.state = {
       error: false,
-      landingScroll: ''
+      landingScroll: '',
     }
   }
 
@@ -37,7 +37,8 @@ export default class App extends Component {
           title: film.title,
           year: film.release_date,
           text: film.opening_crawl
-        }
+        },
+        updateFav: false
       })
     } catch (error) {
       this.setState({ error: true })
@@ -89,7 +90,7 @@ export default class App extends Component {
   }
 
   render() {
-    const { error, landingScroll } = this.state
+    const { error, landingScroll, updateFav } = this.state
 
     if (error) {
       return (

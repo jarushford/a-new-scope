@@ -1,6 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import Card from './Card'
+import { O_TRUNC } from 'constants';
 
 describe('Card', () => {
   let wrapper
@@ -16,6 +17,8 @@ describe('Card', () => {
   }
   let formattedData
   const handleStoreData = jest.fn()
+  const updateFavorites = jest.fn()
+  let favorite = 'planets'
 
   beforeEach(() => {
     wrapper = shallow(
@@ -23,6 +26,8 @@ describe('Card', () => {
         cardType="planets"
         cardData={mockData}
         handleStoreData={handleStoreData}
+        updateFavorites={updateFavorites}
+        favorite='favorites'
       />
     )
     formattedData = {
@@ -202,5 +207,12 @@ describe('Card', () => {
       wrapper.instance().toggleFavorite(mockData)
       expect(handleStoreData).toHaveBeenCalled()
     })
+
+    it('Should run updateCards if the category is favorites', () => {
+      wrapper.instance().toggleFavorite(mockData)
+      expect(updateFavorites).toHaveBeenCalled()
+    })
+
+    
   })
 })
