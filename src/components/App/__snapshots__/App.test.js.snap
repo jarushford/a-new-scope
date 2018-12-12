@@ -45,6 +45,10 @@ ShallowWrapper {
             path="/favorites"
             render={[Function]}
           />
+          <Route
+            path=""
+            render={[Function]}
+          />
         </Switch>,
       ],
       "className": "App",
@@ -89,6 +93,10 @@ ShallowWrapper {
             />,
             <Route
               path="/favorites"
+              render={[Function]}
+            />,
+            <Route
+              path=""
               render={[Function]}
             />,
           ],
@@ -168,6 +176,18 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "path": "",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": [Function],
       },
@@ -206,6 +226,10 @@ ShallowWrapper {
             />
             <Route
               path="/favorites"
+              render={[Function]}
+            />
+            <Route
+              path=""
               render={[Function]}
             />
           </Switch>,
@@ -252,6 +276,10 @@ ShallowWrapper {
               />,
               <Route
                 path="/favorites"
+                render={[Function]}
+              />,
+              <Route
+                path=""
                 render={[Function]}
               />,
             ],
@@ -325,6 +353,18 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "path": "/favorites",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "path": "",
                 "render": [Function],
               },
               "ref": null,
@@ -403,6 +443,10 @@ ShallowWrapper {
             path="/favorites"
             render={[Function]}
           />
+          <Route
+            path=""
+            render={[Function]}
+          />
         </Switch>,
       ],
       "className": "App",
@@ -447,6 +491,10 @@ ShallowWrapper {
             />,
             <Route
               path="/favorites"
+              render={[Function]}
+            />,
+            <Route
+              path=""
               render={[Function]}
             />,
           ],
@@ -526,6 +574,18 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "path": "",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": [Function],
       },
@@ -564,6 +624,10 @@ ShallowWrapper {
             />
             <Route
               path="/favorites"
+              render={[Function]}
+            />
+            <Route
+              path=""
               render={[Function]}
             />
           </Switch>,
@@ -610,6 +674,10 @@ ShallowWrapper {
               />,
               <Route
                 path="/favorites"
+                render={[Function]}
+              />,
+              <Route
+                path=""
                 render={[Function]}
               />,
             ],
@@ -683,6 +751,18 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "path": "/favorites",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "path": "",
                 "render": [Function],
               },
               "ref": null,

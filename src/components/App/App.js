@@ -170,6 +170,21 @@ export default class App extends Component {
               />
             )}
           />
+          <Route
+            path=""
+            render={() => {
+              return (
+                <div>
+                  <StarHousingComponent />
+                  <Error
+                    returnToLanding={this.handleTitleScroll}
+                    setError={this.setError}
+                  />
+                </div>  
+              )
+            }}
+          >
+          </Route>
         </Switch>
       </div>
     )
