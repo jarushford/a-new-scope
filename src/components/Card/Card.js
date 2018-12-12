@@ -69,12 +69,14 @@ export default class Card extends Component {
     }
   }
 
-  toggleFavorite = (cardObj) => {
+  toggleFavorite = async (cardObj) => {
     const newCardObj = { ...cardObj, favorite: !cardObj.favorite }
     const { handleStoreData } = this.props
-    this.setState({ cardObj: newCardObj }, () => {
-      handleStoreData('favorites', newCardObj, newCardObj.favorite, cardObj.category)
-    })
+    await this.setState({ cardObj: newCardObj })
+    handleStoreData('favorites', newCardObj, newCardObj.favorite, cardObj.category)
+    if (this.props.favorite === 'favorites') {
+      this.props.updateFavorites()
+    }
   }
 
   render() {

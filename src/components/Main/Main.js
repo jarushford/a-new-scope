@@ -15,7 +15,11 @@ export default class Main extends Component {
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.updateCards()
+  }
+
+  updateCards = async () => {
     const { category, handleStoreData, setError } = this.props
     if (category === 'favorites') {
       const favorites = JSON.parse(localStorage.getItem('favorites'))
@@ -73,6 +77,8 @@ export default class Main extends Component {
         cardData={current}
         key={uid(current)}
         cardType={current.category}
+        updateFavorites={this.updateCards}
+        favorite={category}
       />
       ))
     }

@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Menu() {
+
+  const favoritesCount = JSON.parse(localStorage.getItem('favorites'))
+
   return (
     <div className="menu">
       <h1 className="main-title">a new scope</h1>
@@ -11,6 +14,7 @@ export default function Menu() {
             role="presentation"
             className="favorites-planet"
           >
+            <h2 className="favoritesCount">{favoritesCount.length || 0}</h2>
             <h3 className="planet-label">Favorites</h3>
           </div>
         </Link>
