@@ -40,7 +40,7 @@ export default class App extends Component {
         }
       })
     } catch (error) {
-      this.setState({error: true})
+      this.setState({ error: true })
     }
   }
 
@@ -85,7 +85,7 @@ export default class App extends Component {
   }
 
   setError = (error) => {
-    this.setState({error})
+    this.setState({ error })
   }
 
   render() {
@@ -95,14 +95,14 @@ export default class App extends Component {
       return (
         <div className="App">
           <StarHousingComponent />
-          <Error 
-              returnToLanding={this.handleTitleScroll}
-              setError={this.setError}  
+          <Error
+            returnToLanding={this.handleTitleScroll}
+            setError={this.setError}
           />
         </div>
       )
     }
-     
+
     if (!landingScroll) {
       return (
         <div className="App">
@@ -115,53 +115,62 @@ export default class App extends Component {
     return (
       <div className="App">
         <StarHousingComponent />
-          <Switch>
-            <Route path='/menu' component={Menu}/>
-            <Route exact path='/' render={() => {
-              return <Landing
-              episode={landingScroll}
-            /> }} />
-            <Route path='/people' render={() => {
-              return (
-                <Main
+        <Switch>
+          <Route path="/menu" component={Menu} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Landing
+                episode={landingScroll}
+              />
+            )}
+          />
+          <Route
+            path="/people"
+            render={() => (
+              <Main
                 handleStoreData={this.handleStoreData}
-                category='people'
+                category="people"
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-                />
-              )
-            }} />
-            <Route path='/vehicles' render={() => {
-              return (
-                <Main
+              />
+            )}
+          />
+          <Route
+            path="/vehicles"
+            render={() => (
+              <Main
                 handleStoreData={this.handleStoreData}
-                category='vehicles'
+                category="vehicles"
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-                />
-              )
-            }} />
-            <Route path='/planets' render={() => {
-              return (
-                <Main
+              />
+            )}
+          />
+          <Route
+            path="/planets"
+            render={() => (
+              <Main
                 handleStoreData={this.handleStoreData}
-                category='planets'
+                category="planets"
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-                />
-              )
-            }} />
-            <Route path='/favorites' render={() => {
-              return (
-                <Main
+              />
+            )}
+          />
+          <Route
+            path="/favorites"
+             render={() => (
+              <Main
                 handleStoreData={this.handleStoreData}
-                category='favorites'
+                category="favorites"
                 returnToLanding={this.handleTitleScroll}
                 setError={this.setError}
-                />
-              )
-            }} />
-          </Switch> 
+              />
+            )}
+          />
+        </Switch>
       </div>
     )
   }

@@ -47,6 +47,7 @@ ShallowWrapper {
             className="continue-to-site-btn"
           >
             <Link
+              className="enter-btn-link"
               replace={false}
               to="/menu"
             >
@@ -136,6 +137,7 @@ ShallowWrapper {
               className="continue-to-site-btn"
             >
               <Link
+                className="enter-btn-link"
                 replace={false}
                 to="/menu"
               >
@@ -227,6 +229,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Link
+                  className="enter-btn-link"
                   replace={false}
                   to="/menu"
                 >
@@ -268,6 +271,7 @@ ShallowWrapper {
                   >
                     ENTER
                   </h2>,
+                  "className": "enter-btn-link",
                   "replace": false,
                   "to": "/menu",
                 },
@@ -496,6 +500,7 @@ ShallowWrapper {
               className="continue-to-site-btn"
             >
               <Link
+                className="enter-btn-link"
                 replace={false}
                 to="/menu"
               >
@@ -585,6 +590,7 @@ ShallowWrapper {
                 className="continue-to-site-btn"
               >
                 <Link
+                  className="enter-btn-link"
                   replace={false}
                   to="/menu"
                 >
@@ -676,6 +682,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Link
+                    className="enter-btn-link"
                     replace={false}
                     to="/menu"
                   >
@@ -717,6 +724,7 @@ ShallowWrapper {
                     >
                       ENTER
                     </h2>,
+                    "className": "enter-btn-link",
                     "replace": false,
                     "to": "/menu",
                   },

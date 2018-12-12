@@ -3,9 +3,9 @@ import { shallow } from 'enzyme'
 import Error from './Error'
 
 describe('Error', () => {
-    const mockReturnToLanding = jest.fn()
-    const mockSetError = jest.fn()
-    const wrapper = shallow(<Error returnToLanding={mockReturnToLanding} setError={mockSetError}/>)
+  const mockReturnToLanding = jest.fn()
+  const mockSetError = jest.fn()
+  const wrapper = shallow(<Error returnToLanding={mockReturnToLanding} setError={mockSetError} />)
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })

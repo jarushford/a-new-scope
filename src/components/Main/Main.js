@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { uid } from 'react-uid'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import Card from '../Card/Card'
 import Loading from '../Loading/Loading'
-import { Link } from 'react-router-dom'
 import * as APIHelper from '../../utils/api/apiHelper'
 
 
@@ -37,7 +37,7 @@ export default class Main extends Component {
         return setError(true)
       }
     }
-   return this.setState({ categoryData: storage[category] })
+    return this.setState({ categoryData: storage[category] })
   }
 
   getFavorites(favorites) {
@@ -79,20 +79,20 @@ export default class Main extends Component {
     return (
       <main className="main">
         <div className="header-container">
-        <Link to='/menu'>
-          <div className="continue-to-site-btn back-rings" role="presentation">
-            <img src="./images/outerring.svg" alt="ring" className="outerring ring" />
-            <img src="./images/outerring.svg" alt="ring" className="middlering ring" />
-            <img src="./images/outerring.svg" alt="ring" className="innerring ring" />
-            <h3 className="planet-label back-to-menu">Menu</h3>
-          </div>
-        </Link>
+          <Link to="/menu">
+            <div className="continue-to-site-btn back-rings" role="presentation">
+              <img src="./images/outerring.svg" alt="ring" className="outerring ring" />
+              <img src="./images/outerring.svg" alt="ring" className="middlering ring" />
+              <img src="./images/outerring.svg" alt="ring" className="innerring ring" />
+              <h3 className="planet-label back-to-menu">Menu</h3>
+            </div>
+          </Link>
           <h1 className="main-header">{category}</h1>
         </div>
         <section className="card-section">
           {render}
         </section>
-        <Link to='/'>
+        <Link to="/">
           <img
             className="return-to-landing-btn"
             alt="Landing Btn"

@@ -11,7 +11,7 @@ export default function Landing({ episode }) {
           <h2 className="landing-year">{episode.year.substring(0, 4)}</h2>
         </div>
         <div className="continue-to-site-btn">
-          <Link className="enter-btn-link" to='/menu'>
+          <Link className="enter-btn-link" to="/menu">
             <h2 className="enter-btn" role="presentation">ENTER</h2>
           </Link>
           <img src="./images/outerring.svg" alt="ring" className="outerring ring" />
