@@ -20,7 +20,9 @@ ShallowWrapper {
       }
     }
     cardType="planets"
+    favorite="favorites"
     handleStoreData={[MockFunction]}
+    updateFavorites={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

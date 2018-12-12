@@ -113,8 +113,8 @@ export default class Main extends Component {
 }
 
 Main.propTypes = {
-  returnToLanding: PropTypes.func.isRequired,
-  category: PropTypes.string.isRequired,
-  handleStoreData: PropTypes.func.isRequired,
-  setError: PropTypes.func.isRequired
+  returnToLanding: PropTypes.func,
+  category: PropTypes.string,
+  handleStoreData: PropTypes.func,
+  setError: PropTypes.func
 }

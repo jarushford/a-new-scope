@@ -146,7 +146,9 @@ export default class Card extends Component {
 Card.propTypes = {
   cardType: PropTypes.string,
   cardData: PropTypes.object.isRequired,
-  handleStoreData: PropTypes.func
+  handleStoreData: PropTypes.func,
+  favorite: PropTypes.string,
+  updateFavorites: PropTypes.func
 }
 
 Card.defaultProps = {

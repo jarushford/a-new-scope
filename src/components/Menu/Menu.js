@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Menu() {
 
-  const favoritesCount = JSON.parse(localStorage.getItem('favorites'))
+  const favoritesCount = JSON.parse(localStorage.getItem('favorites')) || []
 
   return (
     <div className="menu">
